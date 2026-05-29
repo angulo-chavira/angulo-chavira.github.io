@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Recursos - Armando Q. Angulo Chavira</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Recursos, bases de datos y materiales de investigación de Armando Q. Angulo Chavira" />
+  
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    .resource-card {
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 30px;
+      background-color: #fafbfc;
+    }
+    .resource-title {
+      color: var(--blue-title);
+      font-size: 1.4rem;
+      margin-top: 0;
+      margin-bottom: 15px;
+    }
+    .citation-box {
+      background-color: var(--bg-color);
+      border-left: 4px solid var(--blue-title);
+      padding: 15px;
+      margin: 20px 0;
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: var(--blue-link);
+      color: #ffffff;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background-color 0.2s;
+    }
+    .download-btn:hover {
+      background-color: var(--blue-title);
+      color: #ffffff;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <header id="header">
+    <div id="header-placeholder"></div>
+  </header>
+
+  <div id="layout-container">
+    
+    <aside id="sidebar">
+      <div id="sidebar-placeholder"></div>
+    </aside>
+
+    <main id="main-content">
+      
+      <section class="content-section">
+        <h3 class="section-title" data-i18n="resourcesTitle">Recursos</h3>
+        
+        <div class="resource-card">
+          <h4 class="resource-title" data-i18n="res1Title">Mexican Spanish adaptation for the Affective Norms for English Words (ANEW)</h4>
+          
+          <p data-i18n="res1Desc">
+            La Adaptación al Español de México de ANEW es una base de datos que contiene las evaluaciones de 1,028 palabras, calificadas por 753 participantes. Es una herramienta metodológica basada en la escala pictórica SAM (Self-Assessment Manikin) que permite estudiar el procesamiento emocional de las palabras en tres dimensiones: valencia (agrado), activación (arousal) y dominancia (control) dentro de un contexto lingüístico y culturalmente relevante para México.
+          </p>
+          
+          <div class="citation-box">
+            <strong data-i18n="citeText">Para citar esta base de datos:</strong><br>
+            Huerta-Chavez, V., Llamas-Alonso, L. A., &amp; Angulo-Chavira, A. Q. (2025). Mexican Spanish adaptation for the Affective Norms for English Words (ANEW). <em>Behavior Research Methods</em>, 57(169).
+          </div>
+
+          <a href="files/ANEW_mexican_word_average.csv" download class="download-btn">
+            <span data-i18n="res1Btn">Descargar Base de Datos (CSV)</span>
+          </a>
+        </div>
+
+        <div class="resource-card">
+          <h4 class="resource-title" data-i18n="res2Title">Sentence‐final completion norms for 2925 Mexican Spanish sentence contexts</h4>
+          
+          <p data-i18n="res2Desc">
+            La Base de Datos de Normas de Completamiento proporciona un extenso corpus de 2,925 contextos de oraciones evaluados por 1,470 participantes adultos en México. Incluye medidas calculadas para estimar la predictibilidad de la palabra final, tales como la probabilidad de cierre (cloze probability), sorpresa (surprisal) y el nivel de incertidumbre o entropía del contexto. Es una herramienta ideal para investigaciones en psicolingüística, mecanismos predictivos del lenguaje y ciencias cognitivas.
+          </p>
+          
+          <div class="citation-box">
+            <strong data-i18n="citeText">Para citar esta base de datos:</strong><br>
+            Angulo-Chavira, A. Q., Castellón-Flores, A. M., Ciria, A., &amp; Arias-Trejo, N. (2023). Sentence-final completion norms for 2925 Mexican Spanish sentence contexts. <em>Behavior Research Methods</em>.
+          </div>
+
+          <a href="files/corpus_data_clean5.xlsx" download class="download-btn">
+            <span data-i18n="res2Btn">Descargar Base de Datos (xlsx)</span>
+          </a>
+        </div>
+
+      </section>
+
+    </main>
+  </div>
+
+  <footer id="footer-placeholder" class="footer"></footer>
+
+  <script src="main.js"></script>
+
+</body>
+</html>
