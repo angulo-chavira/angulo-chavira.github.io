@@ -17,7 +17,7 @@ const i18n = {
     navBlog: "Blog",
 
     // Barra Lateral
-    roleTitle: "Técnico Académico Titular A<br>(Tiempo Completo Definitivo)",
+    roleTitle: "Investigador en Psicología Cognitiva y Psicolingüística",
     affilUni: "<strong>Facultad de Psicología, UNAM</strong>",
     affilLoc: "Ciudad de México, México",
     memberTitle: "<strong>Miembro:</strong>",
@@ -27,6 +27,50 @@ const i18n = {
     member3: "Interdisciplinary Network for Cognitive and Behavioral Sciences",
 
     // Inicio
+    homeEyebrow: "Psicolingüística · Neurociencia cognitiva",
+    homeTitle: "Lenguaje, predicción y cerebro",
+    homeLead: "Investigo cómo las personas anticipan, reconocen y aprenden el lenguaje. Combino experimentos conductuales y psicofisiológicos con análisis computacionales para estudiar cómo interactúan el significado, el sonido y el contexto.",
+    homeCredential1: "Doctor en Psicología · Neurociencias de la Conducta",
+    homeCredential2: "Facultad de Psicología · UNAM",
+    homeCtaPubs: "Explorar publicaciones <span aria-hidden=\"true\">↗</span>",
+    homeCtaProjects: "Ver proyectos",
+    homePhotoCaption: "Psicología · Psicolingüística",
+    homeFocusEyebrow: "Líneas de trabajo",
+    homeFocusTitle: "Preguntas que guían mi investigación",
+    homeFocusIntro: "Del procesamiento de una palabra al desarrollo de sistemas de lenguaje y pensamiento.",
+    homeArea1Title: "Comprensión y predicción",
+    homeArea1Desc: "Cómo el significado, los sonidos y el contexto guían la comprensión del lenguaje en tiempo real.",
+    homeArea2Title: "Bilingüismo y acceso léxico",
+    homeArea2Desc: "Cómo interactúan las lenguas de una persona bilingüe durante el reconocimiento de palabras.",
+    homeArea3Title: "Desarrollo del lenguaje",
+    homeArea3Desc: "Cómo cambian el aprendizaje y la predicción lingüística desde las primeras etapas de la vida.",
+    homeArea4Title: "Lenguaje y cognición multimodal",
+    homeArea4Desc: "Cómo se relacionan palabras, imágenes, sonidos y señales conductuales o neurales.",
+    homeAreaLink: "Líneas y proyectos <span aria-hidden=\"true\">↗</span>",
+    homeMethodsEyebrow: "Métodos",
+    homeMethodsTitle: "Medir el lenguaje mientras ocurre",
+    homeMethodPupil: "Pupilometría",
+    homeMethodModels: "Modelos computacionales",
+    homeMethodNetworks: "Redes léxico-semánticas",
+    homeRecentEyebrow: "Producción académica",
+    homeRecentTitle: "Publicaciones recientes",
+    homeAllPubs: "Ver todas las publicaciones <span aria-hidden=\"true\">↗</span>",
+    homeRecentIntro: "Una selección que se actualiza a partir del catálogo de publicaciones del sitio.",
+    homeLoading: "Cargando publicaciones…",
+    homeTrainingEyebrow: "Formación",
+    homeTrainingTitle: "Trayectoria académica",
+    homeTeachingLink: "Docencia y actividades <span aria-hidden=\"true\">↗</span>",
+    homePhd: "Doctorado en Psicología · Neurociencias de la Conducta",
+    homeMsc: "Maestría en Ciencias del Comportamiento · Neurociencias",
+    homeBa: "Licenciatura en Psicología",
+    homeContactEyebrow: "Contacto",
+    homeContactTitle: "¿Te interesa colaborar?",
+    homeContactText: "Estoy abierto a conversaciones sobre investigación, datos y proyectos en ciencias cognitivas.",
+    homeContactButton: "Escríbeme <span aria-hidden=\"true\">↗</span>",
+    homePubsLoading: "Cargando publicaciones…",
+    homePublicationLink: "Ver publicación <span aria-hidden=\"true\">↗</span>",
+    homeFirstAuthor: "Primer autor",
+    homeCorrespondingAuthor: "Autor de correspondencia",
     aboutTitle: "Acerca de mi",
     aboutP1: "Soy Doctor en Psicología (Neurociencias de la Conducta, UNAM; examen 28 de enero de 2025), con formación previa como Maestro en Ciencias del Comportamiento (Neurociencias, UdeG, 2018) y Licenciado en Psicología (UdeG, 2015).",
     aboutP2: "He realizado estancias y colaboración académica en instituciones como el Department of Experimental Psychology (University of Oxford, proyecto “Modelling the Infant Bilingual Lexicon”) y el Center for Brain and Cognition (Universitat Pompeu Fabra).",
@@ -50,14 +94,14 @@ const i18n = {
 
     // Grupo de investigación
     groupPageTitle: "Miembros del Grupo de Investigación",
-    groupDesc: "Nuestro equipo está formado por estudiantes e investigadores dedicados al estudio de la psicolingüística y las neurociencias cognitivas de la conducta.",
+    groupDesc: "Estudiantes y colegas que colaboran en proyectos del Laboratorio de Psicolingüística y en investigación sobre lenguaje y cognición.",
     
     m1Name: "Alexandra Rosselli González Balderrama",
-    m1Bio: "Estudiando psicología, actualmente estoy trabajando como ingeniera en monitoreo de redes empresariales en Totalplay.",
+    m1Bio: "Estudiante de Psicología y especialista en monitoreo de redes empresariales en Totalplay.",
     
-    m2Name: "Arely Perez Ramirez",
-    m2Bio1: "Profesora dedicada a la Enseñanza de Idiomas (Inglés y Francés) a niños, adolescentes y adultos. Apasionada por la Educación Consciente, la Psicolingüística y las Neurociencias.",
-    m2Bio2: "Actualmente, además de mi labor docente, formo parte del equipo de investigación dirigido por el Dr. Armando Angulo Chavira en el Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM como parte de mi servicio social.",
+    m2Name: "Arely Pérez Ramírez",
+    m2Bio1: "Profesora de inglés y francés para niñas, niños, adolescentes y adultos. Sus intereses incluyen la educación consciente, la psicolingüística y las neurociencias.",
+    m2Bio2: "Colabora en proyectos del Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM como parte de su servicio social.",
 
     // Proyectos
     projTitle: "Proyectos de Investigación",
@@ -75,53 +119,54 @@ const i18n = {
 
     // Colaboraciones
     collabTitle: "Colaboraciones",
+    collabDesc: "Una red de colegas e instituciones con quienes he colaborado en proyectos y publicaciones sobre lenguaje, desarrollo y ciencias cognitivas.",
     
     c1Name: "Dra. Natalia Arias Trejo",
     c1Degree: "Doctora en Psicología.",
     c1Position: "Profesora de Tiempo Completo en la Universidad Nacional Autónoma de México (UNAM).",
-    c1IntL: "<strong>Temas de interés:</strong>",
+    c1IntL: "<strong>Áreas de investigación:</strong>",
     c1IntT: "Adquisición del lenguaje, normas de asociación de palabras.",
 
     c2Name: "Dr. Anuenue Baker Kukona",
     c2Degree: "Doctor en Psicología.",
     c2Position: "Profesor Titular en Psicología en la Universidad de Greenwich.",
-    c2IntL: "<strong>Temas de interés:</strong>",
+    c2IntL: "<strong>Áreas de investigación:</strong>",
     c2IntT: "Cognición, lingüística y métodos cuantitativos.",
 
     c3Name: "Dr. Luis Ángel Llamas Alonso",
     c3Degree: "Doctor en Neurociencias de la Conducta.",
     c3Position: "Profesor de Tiempo Completo en la Universidad Autónoma de Baja California (UABC).",
-    c3IntL: "<strong>Temas de interés:</strong>",
+    c3IntL: "<strong>Áreas de investigación:</strong>",
     c3IntT: "Neurociencia cognitiva, neurociencia afectiva, psicología experimental.",
 
     c4Name: "Dr. Julio César Llamas Alonso",
     c4Degree: "Doctor en Psicología.",
     c4Position: "Profesor Investigador de Tiempo Completo en la Universidad Autónoma del Estado de Hidalgo (UAEH).",
-    c4IntL: "<strong>Temas de interés:</strong>",
+    c4IntL: "<strong>Áreas de investigación:</strong>",
     c4IntT: "Neurociencias, cognición, psicopatología, adicciones, memoria, creatividad.",
 
     c5Name: "Dr. Vladimir Huerta Chávez",
     c5Degree: "Doctor en Psicología.",
     c5Position: "Miembro del Instituto de Neurociencias de la Universidad de Guadalajara (UdeG).",
-    c5IntL: "<strong>Temas de interés:</strong>",
+    c5IntL: "<strong>Áreas de investigación:</strong>",
     c5IntT: "Emoción y cognición, ERPs y rastreo ocular (eye-tracking).",
 
     c6Name: "Dr. Kim Plunkett",
     c6Degree: "Doctor en Psicología Experimental.",
     c6Position: "Profesor Emérito de Ciencias Cognitivas.",
-    c6IntL: "<strong>Temas de interés:</strong>",
+    c6IntL: "<strong>Áreas de investigación:</strong>",
     c6IntT: "Reconocimiento de palabras, aprendizaje de palabras, desarrollo semántico y formación de categorías.",
 
     c7Name: "Prof. Bruno Lara",
     c7Degree: "Profesor.",
     c7Position: "Laboratorio de Robótica Cognitiva, CInC, Universidad Autónoma del Estado de Morelos (UAEM).",
-    c7IntL: "<strong>Temas de interés:</strong>",
+    c7IntL: "<strong>Áreas de investigación:</strong>",
     c7IntT: "Robótica cognitiva, así como el estudio y modelado de procesos predictivos, perceptuales, afectivos y atencionales en agentes biológicos y artificiales.",
 
     c8Name: "Dra. Alejandra Ciria",
     c8Degree: "Doctora en Ciencias.",
     c8Position: "Investigadora Asociada (Tiempo Completo), Departamento de Ciencias de la Computación, IIMAS, UNAM.",
-    c8IntL: "<strong>Temas de interés:</strong>",
+    c8IntL: "<strong>Áreas de investigación:</strong>",
     c8IntT: "Intersección entre la cognición corporizada, inteligencia artificial y robótica cognitiva; procesamiento de información multimodal y adaptación en sistemas biológicos y artificiales.",
     
     // Recursos
@@ -169,7 +214,7 @@ const i18n = {
     navBlog: "Blog",
 
     // Sidebar
-    roleTitle: "Senior Academic Technician A<br>(Full-Time)",
+    roleTitle: "Researcher in Cognitive Psychology and Psycholinguistics",
     affilUni: "<strong>Faculty of Psychology, UNAM</strong>",
     affilLoc: "Mexico City, Mexico",
     memberTitle: "<strong>Member:</strong>",
@@ -179,6 +224,50 @@ const i18n = {
     member3: "Interdisciplinary Network for Cognitive and Behavioral Sciences",
 
     // Home
+    homeEyebrow: "Psycholinguistics · Cognitive neuroscience",
+    homeTitle: "Language, prediction, and the brain",
+    homeLead: "I study how people anticipate, recognize, and learn language. I combine behavioral and psychophysiological experiments with computational analyses to understand how meaning, sound, and context interact.",
+    homeCredential1: "PhD in Psychology · Behavioral Neuroscience",
+    homeCredential2: "Faculty of Psychology · UNAM",
+    homeCtaPubs: "Explore publications <span aria-hidden=\"true\">↗</span>",
+    homeCtaProjects: "View projects",
+    homePhotoCaption: "Psychology · Psycholinguistics",
+    homeFocusEyebrow: "Research areas",
+    homeFocusTitle: "Questions that guide my research",
+    homeFocusIntro: "From processing a single word to the development of language and thought.",
+    homeArea1Title: "Comprehension and prediction",
+    homeArea1Desc: "How meaning, sounds, and context guide language comprehension in real time.",
+    homeArea2Title: "Bilingualism and lexical access",
+    homeArea2Desc: "How a bilingual person's languages interact during word recognition.",
+    homeArea3Title: "Language development",
+    homeArea3Desc: "How learning and linguistic prediction change from the earliest stages of life.",
+    homeArea4Title: "Language and multimodal cognition",
+    homeArea4Desc: "How words, images, sounds, and behavioral or neural signals relate to one another.",
+    homeAreaLink: "Research and projects <span aria-hidden=\"true\">↗</span>",
+    homeMethodsEyebrow: "Methods",
+    homeMethodsTitle: "Measuring language as it unfolds",
+    homeMethodPupil: "Pupillometry",
+    homeMethodModels: "Computational models",
+    homeMethodNetworks: "Lexical-semantic networks",
+    homeRecentEyebrow: "Research output",
+    homeRecentTitle: "Recent publications",
+    homeAllPubs: "Browse all publications <span aria-hidden=\"true\">↗</span>",
+    homeRecentIntro: "A selection drawn from the website's publication catalog.",
+    homeLoading: "Loading publications…",
+    homeTrainingEyebrow: "Education",
+    homeTrainingTitle: "Academic background",
+    homeTeachingLink: "Teaching and activities <span aria-hidden=\"true\">↗</span>",
+    homePhd: "PhD in Psychology · Behavioral Neuroscience",
+    homeMsc: "MSc in Behavioral Sciences · Neuroscience",
+    homeBa: "BA in Psychology",
+    homeContactEyebrow: "Contact",
+    homeContactTitle: "Interested in collaborating?",
+    homeContactText: "I welcome conversations about research, data, and projects in cognitive science.",
+    homeContactButton: "Get in touch <span aria-hidden=\"true\">↗</span>",
+    homePubsLoading: "Loading publications…",
+    homePublicationLink: "View publication <span aria-hidden=\"true\">↗</span>",
+    homeFirstAuthor: "First author",
+    homeCorrespondingAuthor: "Corresponding author",
     aboutTitle: "About me",
     aboutP1: "I hold a PhD in Psychology (Behavioral Neuroscience, UNAM; examination January 28, 2025), and previously completed an MSc in Behavioral Sciences (Neuroscience, UdeG, 2018) and a BA in Psychology (UdeG, 2015).",
     aboutP2: "I have conducted research stays and collaborations at institutions such as the Department of Experimental Psychology (University of Oxford, “Modelling the Infant Bilingual Lexicon” project) and the Center for Brain and Cognition (Universitat Pompeu Fabra).",
@@ -202,14 +291,14 @@ const i18n = {
 
     // Research Group
     groupPageTitle: "Research Group Members",
-    groupDesc: "Our team consists of students and researchers dedicated to the study of psycholinguistics and cognitive neuroscience.",
+    groupDesc: "Students and colleagues collaborating on Psycholinguistics Laboratory projects and research on language and cognition.",
     
     m1Name: "Alexandra Rosselli González Balderrama",
-    m1Bio: "Currently studying Psychology and working as an Enterprise Network Monitoring Engineer at Totalplay.",
+    m1Bio: "Psychology student and enterprise network monitoring specialist at Totalplay.",
     
-    m2Name: "Arely Perez Ramirez",
-    m2Bio1: "Language teacher (English and French) for children, teenagers, and adults. Passionate about Conscious Education, Psycholinguistics, and Neuroscience.",
-    m2Bio2: "Currently, in addition to my teaching work, I am part of the research team led by Dr. Armando Angulo Chavira at the Psycholinguistics Laboratory of the Faculty of Psychology (UNAM) as part of my social service.",
+    m2Name: "Arely Pérez Ramírez",
+    m2Bio1: "English and French teacher for children, teenagers, and adults. Her interests include conscious education, psycholinguistics, and neuroscience.",
+    m2Bio2: "She collaborates on projects at the Psycholinguistics Laboratory, Faculty of Psychology, UNAM, as part of her social service.",
 
     // Projects
     projTitle: "Research Projects",
@@ -227,53 +316,54 @@ const i18n = {
 
     // Collaborations
     collabTitle: "Collaborations",
+    collabDesc: "A network of colleagues and institutions with whom I have collaborated on projects and publications about language, development, and cognitive science.",
     
     c1Name: "Dr. Natalia Arias Trejo",
     c1Degree: "Doctor of Psychology.",
     c1Position: "Full Time Professor at National Autonomous University of Mexico (UNAM).",
-    c1IntL: "<strong>Interests Topics:</strong>",
+    c1IntL: "<strong>Research areas:</strong>",
     c1IntT: "Language acquisition, word association norms.",
 
     c2Name: "Dr. Anuenue Baker Kukona",
     c2Degree: "PhD in Psychology.",
     c2Position: "Senior Lecturer in Psychology at University of Greenwich.",
-    c2IntL: "<strong>Interests Topics:</strong>",
+    c2IntL: "<strong>Research areas:</strong>",
     c2IntT: "Cognition, linguistics and quantitative methods.",
 
     c3Name: "Dr. Luis Angel Llamas Alonso",
     c3Degree: "PhD in Behavioral Neuroscience.",
     c3Position: "Full Time Professor at Autonomous University of Baja California.",
-    c3IntL: "<strong>Interests Topics:</strong>",
+    c3IntL: "<strong>Research areas:</strong>",
     c3IntT: "Cognitive Neuroscience, Affective Neuroscience, Experimental Psychology.",
 
     c4Name: "Dr. Julio César Llamas Alonso",
     c4Degree: "Doctor of Psychology.",
     c4Position: "Full Time Researcher Lecturer at Autonomous University of Hidalgo State.",
-    c4IntL: "<strong>Interests Topics:</strong>",
+    c4IntL: "<strong>Research areas:</strong>",
     c4IntT: "Neurosciences, cognition, psychopathology, addictions, memory, creativity.",
 
     c5Name: "Dr. Vladimir Huerta Chavez",
     c5Degree: "Doctor of Psychology.",
     c5Position: "Member of the Neuroscience Institute at the University of Guadalajara.",
-    c5IntL: "<strong>Interests Topics:</strong>",
+    c5IntL: "<strong>Research areas:</strong>",
     c5IntT: "Emotion and cognition, ERP's & eye tracking.",
 
     c6Name: "Dr. Kim Plunkett",
     c6Degree: "PhD in Experimental Psychology.",
     c6Position: "Emeritus Professor of Cognitive Science.",
-    c6IntL: "<strong>Interests Topics:</strong>",
+    c6IntL: "<strong>Research areas:</strong>",
     c6IntT: "Word recognition, word learning, semantic development and category formation.",
 
     c7Name: "Prof. Bruno Lara",
     c7Degree: "Professor.",
     c7Position: "Cognitive Robotics Laboratory, CInC, Autonomous University of the State of Morelos (UAEM).",
-    c7IntL: "<strong>Interests Topics:</strong>",
+    c7IntL: "<strong>Research areas:</strong>",
     c7IntT: "Cognitive Robotics as well as the study and modeling of predictive, perceptual, affective, and attentional processes in biological and artificial agents.",
 
     c8Name: "Dr. Alejandra Ciria",
     c8Degree: "Ph.D.",
     c8Position: "Associate Researcher (Full-time), Department of Computer Science, IIMAS, UNAM.",
-    c8IntL: "<strong>Interests Topics:</strong>",
+    c8IntL: "<strong>Research areas:</strong>",
     c8IntT: "Intersection of embodied cognition, artificial intelligence, and cognitive robotics; multimodal information processing and adaptation in biological and artificial systems.",
 
     // Resources
@@ -364,9 +454,12 @@ function setTheme(theme) {
   if (label) label.textContent = selected === "dark"
     ? (isSpanish ? "Modo claro" : "Light mode")
     : (isSpanish ? "Modo oscuro" : "Dark mode");
-  if (button) button.setAttribute("aria-label", selected === "dark"
-    ? (isSpanish ? "Cambiar a modo claro" : "Switch to light mode")
-    : (isSpanish ? "Cambiar a modo oscuro" : "Switch to dark mode"));
+  if (button) {
+    button.setAttribute("aria-label", selected === "dark"
+      ? (isSpanish ? "Cambiar a modo claro" : "Switch to light mode")
+      : (isSpanish ? "Cambiar a modo oscuro" : "Switch to dark mode"));
+    button.setAttribute("aria-pressed", String(selected === "dark"));
+  }
   try { localStorage.setItem("site_theme", selected); } catch (_) { /* storage is optional */ }
 }
 

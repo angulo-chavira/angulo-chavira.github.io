@@ -2,81 +2,99 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Armando Q. Angulo Chavira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Página académica de Armando Q. Angulo Chavira" />
-  
+  <meta name="description" content="Armando Q. Angulo Chavira: psicolingüística, predicción lingüística y neurociencia cognitiva." />
+  <meta name="theme-color" content="#111111" />
+  <title>Armando Q. Angulo Chavira | Psicolingüística y neurociencia cognitiva</title>
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <header id="header">
-    <div id="header-placeholder"></div>
-  </header>
+  <header id="header"><div id="header-placeholder"></div></header>
 
-  <div id="layout-container">
-    
-    <aside id="sidebar">
-      <div id="sidebar-placeholder"></div>
-    </aside>
-
-    <main id="main-content">
-      
-      <section class="content-section">
-        <h3 class="section-title" data-i18n="aboutTitle">Acerca de mi</h3>
-        <p data-i18n="aboutP1">
-          Soy Doctor en Psicología (Neurociencias de la Conducta, UNAM; examen 28 de enero de 2025),
-          con formación previa como Maestro en Ciencias del Comportamiento (Neurociencias, UdeG, 2018)
-          y Licenciado en Psicología (UdeG, 2015).
-        </p>
-        <p data-i18n="aboutP2">
-          He realizado estancias y colaboración académica en instituciones como el Department of Experimental Psychology
-          (University of Oxford, proyecto “Modelling the Infant Bilingual Lexicon”) y el Center for Brain and Cognition
-          (Universitat Pompeu Fabra).
-        </p>
-      </section>
-
-      <section class="content-section">
-        <h3 class="section-title" data-i18n="resTitle">Intereses de investigación</h3>
-        <p data-i18n="resIntro">
-          Mi trabajo se enfoca en cómo se organiza y anticipa la información lingüística durante la comprensión,
-          considerando factores semánticos, fonológicos y contextuales, y usando medidas experimentales y análisis
-          computacionales.
-        </p>
-        <ul class="clean-list">
-          <li data-i18n="int1">Predicción lingüística en población típica y clínica</li>
-          <li data-i18n="int2">Adquisición del lenguaje (infancia temprana)</li>
-          <li data-i18n="int3">Bilingüismo y acceso léxico</li>
-          <li data-i18n="int4">Medidas conductuales y psicofisiológicas (eye-tracking, pupilometría, EEG)</li>
-          <li data-i18n="int5">Análisis computacional (RSA, series de tiempo, redes léxico-semánticas)</li>
-        </ul>
-      </section>
-
-      <section class="content-section">
-        <h3 class="section-title" data-i18n="keyTitle">Palabras Clave</h3>
-        <div class="badges-container">
-          <span class="badge" data-i18n="k1">Psicolingüística</span>
-          <span class="badge" data-i18n="k2">Predicción</span>
-          <span class="badge" data-i18n="k3">Bilingüismo</span>
-          <span class="badge" data-i18n="k4">Adquisición del lenguaje</span>
-          <span class="badge" data-i18n="k5">Rastreo ocular</span>
-          <span class="badge" data-i18n="k6">Pupilometría</span>
-          <span class="badge" data-i18n="k7">EEG/ERP</span>
-          <span class="badge" data-i18n="k8">Redes semánticas</span>
-          <span class="badge" data-i18n="k9">IA aplicada</span>
-          <span class="badge" data-i18n="k10">Normas de completamiento oracional</span>
+  <main class="home-shell">
+    <section class="home-hero" aria-labelledby="homeTitle">
+      <div class="hero-copy">
+        <p class="eyebrow" data-i18n="homeEyebrow">Psicolingüística · Neurociencia cognitiva</p>
+        <h1 id="homeTitle" data-i18n="homeTitle">Lenguaje, predicción y cerebro</h1>
+        <p class="hero-lead" data-i18n="homeLead">Investigo cómo las personas anticipan, reconocen y aprenden el lenguaje. Combino experimentos conductuales y psicofisiológicos con análisis computacionales para estudiar cómo interactúan el significado, el sonido y el contexto.</p>
+        <div class="hero-credentials">
+          <span data-i18n="homeCredential1">Doctor en Psicología · Neurociencias de la Conducta</span>
+          <span data-i18n="homeCredential2">Facultad de Psicología · UNAM</span>
         </div>
-      </section>
+        <div class="hero-actions">
+          <a class="action-button" href="publications.html" data-i18n="homeCtaPubs">Explorar publicaciones <span aria-hidden="true">↗</span></a>
+          <a class="action-button secondary" href="projects.html" data-i18n="homeCtaProjects">Ver proyectos</a>
+        </div>
+        <div class="profile-links" aria-label="Perfiles académicos">
+          <a class="profile-link" href="https://scholar.google.com/citations?user=4qdTuuMAAAAJ&amp;hl=es&amp;oi=ao" target="_blank" rel="noopener noreferrer">
+            <img src="img/Google_Scholar_logo.png" alt="" /><span>Google Scholar</span><span class="profile-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="profile-link" href="https://orcid.org/0000-0002-6756-6717" target="_blank" rel="noopener noreferrer">
+            <img src="img/ORCID.png" alt="" /><span>ORCID</span><span class="profile-arrow" aria-hidden="true">↗</span>
+          </a>
+          <a class="profile-link" href="https://www.researchgate.net/profile/Armando-Angulo-Chavira" target="_blank" rel="noopener noreferrer">
+            <img src="img/ResearchGate.png" alt="" /><span>ResearchGate</span><span class="profile-arrow" aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+      <figure class="hero-portrait">
+        <img src="img/profile.jpeg" alt="Armando Q. Angulo Chavira" fetchpriority="high" />
+        <figcaption><span data-i18n="homePhotoCaption">Psicología · Psicolingüística</span><span aria-hidden="true">UNAM</span></figcaption>
+      </figure>
+    </section>
 
-    </main>
-  </div>
+    <section class="home-section research-section" aria-labelledby="researchFocusTitle">
+      <div class="home-section-heading">
+        <div><p class="eyebrow" data-i18n="homeFocusEyebrow">Líneas de trabajo</p><h2 id="researchFocusTitle" data-i18n="homeFocusTitle">Preguntas que guían mi investigación</h2></div>
+        <p data-i18n="homeFocusIntro">Del procesamiento de una palabra al desarrollo de sistemas de lenguaje y pensamiento.</p>
+      </div>
+      <div class="research-grid">
+        <article class="research-card"><span class="card-index">01</span><h3 data-i18n="homeArea1Title">Comprensión y predicción</h3><p data-i18n="homeArea1Desc">Cómo el significado, los sonidos y el contexto guían la comprensión del lenguaje en tiempo real.</p><a href="projects.html" data-i18n="homeAreaLink">Líneas y proyectos <span aria-hidden="true">↗</span></a></article>
+        <article class="research-card"><span class="card-index">02</span><h3 data-i18n="homeArea2Title">Bilingüismo y acceso léxico</h3><p data-i18n="homeArea2Desc">Cómo interactúan las lenguas de una persona bilingüe durante el reconocimiento de palabras.</p><a href="publications.html" data-i18n="homeAreaLink">Líneas y proyectos <span aria-hidden="true">↗</span></a></article>
+        <article class="research-card"><span class="card-index">03</span><h3 data-i18n="homeArea3Title">Desarrollo del lenguaje</h3><p data-i18n="homeArea3Desc">Cómo cambian el aprendizaje y la predicción lingüística desde las primeras etapas de la vida.</p><a href="publications.html" data-i18n="homeAreaLink">Líneas y proyectos <span aria-hidden="true">↗</span></a></article>
+        <article class="research-card"><span class="card-index">04</span><h3 data-i18n="homeArea4Title">Lenguaje y cognición multimodal</h3><p data-i18n="homeArea4Desc">Cómo se relacionan palabras, imágenes, sonidos y señales conductuales o neurales.</p><a href="projects.html" data-i18n="homeAreaLink">Líneas y proyectos <span aria-hidden="true">↗</span></a></article>
+      </div>
+    </section>
+
+    <section class="methods-band" aria-label="Métodos de investigación">
+      <div class="methods-intro"><p class="eyebrow" data-i18n="homeMethodsEyebrow">Métodos</p><h2 data-i18n="homeMethodsTitle">Medir el lenguaje mientras ocurre</h2></div>
+      <div class="methods-list"><span>Eye-tracking</span><span data-i18n="homeMethodPupil">Pupilometría</span><span>EEG / ERP</span><span data-i18n="homeMethodModels">Modelos computacionales</span><span>RSA</span><span data-i18n="homeMethodNetworks">Redes léxico-semánticas</span></div>
+    </section>
+
+    <section class="home-section recent-section" aria-labelledby="recentTitle">
+      <div class="home-section-heading">
+        <div><p class="eyebrow" data-i18n="homeRecentEyebrow">Producción académica</p><h2 id="recentTitle" data-i18n="homeRecentTitle">Publicaciones recientes</h2></div>
+        <a class="text-link" href="publications.html" data-i18n="homeAllPubs">Ver todas las publicaciones <span aria-hidden="true">↗</span></a>
+      </div>
+      <p class="home-section-intro" data-i18n="homeRecentIntro">Una selección que se actualiza a partir del catálogo de publicaciones del sitio.</p>
+      <div id="homePublications" class="home-publications" aria-live="polite">
+        <p class="muted-note" data-i18n="homeLoading">Cargando publicaciones…</p>
+      </div>
+    </section>
+
+    <section class="home-section training-section" aria-labelledby="trainingTitle">
+      <div class="home-section-heading">
+        <div><p class="eyebrow" data-i18n="homeTrainingEyebrow">Formación</p><h2 id="trainingTitle" data-i18n="homeTrainingTitle">Trayectoria académica</h2></div>
+        <a class="text-link" href="teaching.html" data-i18n="homeTeachingLink">Docencia y actividades <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="training-grid">
+        <article><span>2025</span><div><h3 data-i18n="homePhd">Doctorado en Psicología · Neurociencias de la Conducta</h3><p>Universidad Nacional Autónoma de México</p></div></article>
+        <article><span>2018</span><div><h3 data-i18n="homeMsc">Maestría en Ciencias del Comportamiento · Neurociencias</h3><p>Universidad de Guadalajara</p></div></article>
+        <article><span>2015</span><div><h3 data-i18n="homeBa">Licenciatura en Psicología</h3><p>Universidad de Guadalajara</p></div></article>
+      </div>
+    </section>
+
+    <section class="home-contact">
+      <div><p class="eyebrow" data-i18n="homeContactEyebrow">Contacto</p><h2 data-i18n="homeContactTitle">¿Te interesa colaborar?</h2><p data-i18n="homeContactText">Estoy abierto a conversaciones sobre investigación, datos y proyectos en ciencias cognitivas.</p></div>
+      <a class="action-button" href="mailto:angulo_chavira@comunidad.unam.mx" data-i18n="homeContactButton">Escríbeme <span aria-hidden="true">↗</span></a>
+    </section>
+  </main>
 
   <footer id="footer-placeholder" class="footer"></footer>
-
   <script src="main.js"></script>
-
+  <script src="home.js"></script>
 </body>
 </html>
