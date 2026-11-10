@@ -3,43 +3,29 @@
     <div class="logo">
       <a href="index.html">Armando Q. Angulo Chavira</a>
     </div>
-    
-    <div class="header-logos">
-      <a href="https://www.unam.mx/" target="_blank" title="UNAM">
-        <img src="img/unam.png" alt="Logo UNAM" class="inst-logo">
-      </a>
-      
-      <a href="https://psicologia.unam.mx/" target="_blank" title="Facultad de Psicología UNAM">
-        <img src="img/facultad.png" alt="Logo Facultad de Psicología" class="inst-logo">
-      </a>
-      
-      <a href="https://www.labpsicolinguistica.psicol.unam.mx/" target="_blank" title="Laboratorio de Psicolingüística">
-        <img src="img/linguistica.png" alt="Logo Laboratorio de Psicolingüística" class="inst-logo">
-      </a>
-      
-      <a href="https://incobes.github.io" target="_blank" title="INCOBES">
-        <img src="img/incobesB.png" alt="Logo INCOBES" class="inst-logo">
-      </a>
+    <div class="header-logos" aria-label="Afiliaciones">
+      <a href="https://www.unam.mx/" target="_blank" rel="noopener noreferrer" title="UNAM"><img src="img/unam.png" alt="UNAM" class="inst-logo"></a>
+      <a href="https://psicologia.unam.mx/" target="_blank" rel="noopener noreferrer" title="Facultad de Psicología UNAM"><img src="img/facultad.png" alt="Facultad de Psicología" class="inst-logo"></a>
+      <a href="https://www.labpsicolinguistica.psicol.unam.mx/" target="_blank" rel="noopener noreferrer" title="Laboratorio de Psicolingüística"><img src="img/linguistica.png" alt="Laboratorio de Psicolingüística" class="inst-logo"></a>
+      <a href="https://incobes.github.io" target="_blank" rel="noopener noreferrer" title="INCOBES"><img src="img/incobesB.png" alt="INCOBES" class="inst-logo"></a>
     </div>
-
-    <a href="#" id="langToggle" class="lang-toggle" title="Cambiar idioma">
-      <img src="img/usa.jpg" alt="Bandera EN" id="langImg" class="lang-img">
-      <span id="langText">EN</span>
-    </a>
+    <div class="header-controls">
+      <button class="icon-toggle" id="themeToggle" type="button" aria-label="Cambiar tema" title="Cambiar tema"><span class="toggle-glyph" aria-hidden="true">◐</span><span class="toggle-label" id="themeLabel">Tema oscuro</span></button>
+      <button class="icon-toggle" id="langToggle" type="button" aria-label="Cambiar idioma" title="Cambiar idioma"><span id="langText">EN</span></button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="siteNavigation"><span aria-hidden="true">☰</span><span class="toggle-label" data-i18n="navMenu">Menú</span></button>
+    </div>
   </div>
-
-  <nav class="nav-menu">
+  <nav class="nav-menu" id="siteNavigation" aria-label="Navegación principal">
     <ul>
-      <li><a href="index.html" data-i18n="navHome">Home</a></li>
+      <li><a href="index.html" data-i18n="navHome">Inicio</a></li>
       <li><a href="publications.html" data-i18n="navPubs">Publicaciones</a></li>
       <li><a href="presentations.html" data-i18n="navPres">Presentaciones</a></li>
       <li><a href="divulgacion.html" data-i18n="navOutreach">Divulgación</a></li>
       <li><a href="projects.html" data-i18n="navProjects">Proyectos</a></li>
       <li><a href="teaching.html" data-i18n="navTeaching">Docencia</a></li>
-      <li><a href="group.html" data-i18n="navGroup">Research Group</a></li>
+      <li><a href="group.html" data-i18n="navGroup">Grupo</a></li>
       <li><a href="collaborations.html" data-i18n="navCollab">Colaboraciones</a></li>
-      <li><a href="resources.html" data-i18n="navResources">Resources</a></li>
-      <!--<li><a href="blog.html" data-i18n="navBlog">Blog</a></li>-->
+      <li><a href="resources.html" data-i18n="navResources">Recursos</a></li>
     </ul>
   </nav>
 </div>

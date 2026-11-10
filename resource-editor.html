@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Editor privado de recursos — Armando Q. Angulo Chavira</title>
+  <meta name="description" content="Editor local para el almacén personal cifrado. No usa backend." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="header"><div id="header-placeholder"></div></header>
+  <div id="layout-container">
+    <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
+    <main id="main-content">
+      <section class="content-section">
+        <div id="editorGate" class="vault-gate">
+          <p class="eyebrow">HERRAMIENTA PERSONAL</p>
+          <h1 class="section-title">Editor de recursos privados</h1>
+          <p>Agrega enlaces y notas; el archivo se cifra en este navegador antes de descargarlo. El sitio no recibe ni almacena tu frase de paso.</p>
+          <div class="private-notice"><strong>Antes de empezar:</strong> elige una frase de paso larga que puedas conservar. Si la pierdes, no hay forma de recuperar el contenido cifrado. Esta herramienta no está pensada para almacenar documentos confidenciales ni contraseñas.</div>
+          <form id="editorUnlockForm" class="vault-form">
+            <label for="editorPassphrase">Frase de paso<input id="editorPassphrase" type="password" autocomplete="current-password" minlength="14" required /></label>
+            <label id="confirmGroup" for="confirmPassphrase" hidden>Confirmar frase de paso<input id="confirmPassphrase" type="password" autocomplete="new-password" minlength="14" /></label>
+            <button id="openEditor" class="action-button" type="submit">Abrir almacén</button>
+          </form>
+          <p id="editorStatus" class="status-message" aria-live="polite"></p>
+          <p class="muted-note">El archivo cifrado se guarda en <code>data/private-resources.enc.json</code>. Si el navegador pregunta, confirma la descarga.</p>
+        </div>
+        <div id="resourceEditor" hidden>
+          <div class="vault-toolbar">
+            <div><p class="eyebrow">HERRAMIENTA PERSONAL</p><h1 class="section-title" style="margin-bottom:0">Editar recursos</h1></div>
+            <button id="closeEditor" class="action-button secondary" type="button">Bloquear</button>
+          </div>
+          <p class="muted-note">Los borradores se mantienen en esta pestaña hasta que descargues la nueva versión cifrada. Después sustituye el archivo en GitHub.</p>
+          <form id="resourceForm" class="vault-form">
+            <label for="resourceTitle">Nombre<input id="resourceTitle" required maxlength="120" /></label>
+            <label for="resourceCategoryInput">Categoría<input id="resourceCategoryInput" placeholder="R, análisis, docencia, trámites…" maxlength="80" /></label>
+            <label for="resourceUrl">Enlace (opcional)<input id="resourceUrl" type="url" placeholder="https://…" /></label>
+            <label for="resourceTags">Etiquetas (separadas por comas)<input id="resourceTags" placeholder="R, EEG, escritura" /></label>
+            <label for="resourceNotes">Nota personal<textarea id="resourceNotes" maxlength="3000" placeholder="Comandos, contexto o pasos que quieras recordar"></textarea></label>
+            <button class="action-button" type="submit">Agregar recurso</button>
+          </form>
+          <div class="editor-actions">
+            <button id="downloadVault" class="action-button" type="button">Descargar archivo cifrado</button>
+            <button id="lockVault" class="action-button secondary" type="button">Bloquear y salir</button>
+          </div>
+          <p id="resourceEditorStatus" class="status-message" aria-live="polite"></p>
+          <div id="resourceEditorList" class="editor-items"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer id="footer-placeholder" class="footer"></footer>
+  <script src="main.js"></script>
+  <script src="vault-crypto.js"></script>
+  <script src="resource-editor.js"></script>
+</body>
+</html>

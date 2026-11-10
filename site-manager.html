@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Administrador de publicaciones — Armando Q. Angulo Chavira</title>
+  <meta name="description" content="Editor local de datos públicos de publicaciones. No usa backend." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="header"><div id="header-placeholder"></div></header>
+  <div id="layout-container">
+    <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
+    <main id="main-content">
+      <section class="content-section">
+        <h1 class="section-title">Editar publicaciones</h1>
+        <p>Esta herramienta modifica el archivo de datos del catálogo, no el diseño del sitio. Los cambios se procesan en este navegador y no se envían a un servidor.</p>
+        <div class="private-notice"><strong>Todo lo que escribas aquí será público</strong> al reemplazar el archivo del sitio. No agregues comprobantes, datos personales ni información confidencial.</div>
+        <ol class="tool-steps">
+          <li>Agrega o corrige registros en esta página. Los cambios se guardan como borrador local en este navegador.</li>
+          <li>Descarga <code>publications.json</code> y reemplaza <code>data/publications.json</code> en GitHub.</li>
+          <li>GitHub Pages actualizará el catálogo después del commit. No necesitas tocar HTML, CSS o JavaScript.</li>
+        </ol>
+        <div class="editor-actions">
+          <button id="addPublication" class="action-button" type="button">+ Agregar publicación</button>
+          <button id="downloadData" class="action-button" type="button">Descargar publications.json</button>
+          <button id="importData" class="action-button secondary" type="button">Importar JSON</button>
+          <button id="resetData" class="action-button secondary" type="button">Recargar datos publicados</button>
+          <input id="fileInput" type="file" accept="application/json,.json" hidden />
+        </div>
+        <p id="managerStatus" class="status-message" aria-live="polite"></p>
+        <div id="publicationEditor" class="editor-items"></div>
+      </section>
+    </main>
+  </div>
+  <footer id="footer-placeholder" class="footer"></footer>
+  <script src="main.js"></script>
+  <script src="site-manager.js"></script>
+</body>
+</html>

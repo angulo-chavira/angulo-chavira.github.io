@@ -4,15 +4,16 @@
 const i18n = {
   es: {
     // Navegación
-    navHome: "Home",
+    navHome: "Inicio",
+    navMenu: "Menú",
     navPubs: "Publicaciones",
     navPres: "Presentaciones",
     navOutreach: "Divulgación",
     navProjects: "Proyectos",
     navTeaching: "Docencia",
-    navGroup: "Research Group",
+    navGroup: "Grupo de investigación",
     navCollab: "Colaboraciones",
-    navResources: "Resources",
+    navResources: "Recursos",
     navBlog: "Blog",
 
     // Barra Lateral
@@ -40,8 +41,8 @@ const i18n = {
     k1: "Psicolingüística", k2: "Predicción", k3: "Bilingüismo", k4: "Adquisición del lenguaje", k5: "Rastreo ocular", k6: "Pupilometría", k7: "EEG/ERP", k8: "Redes semánticas", k9: "IA aplicada", k10: "Normas de completamiento oracional",
     
     // Publicaciones
-    pubsTitle: "Artículos de revista",
-    pubsDesc: "Artículos indexados en revistas con revisión por pares ordenados cronológicamente.",
+    pubsTitle: "Publicaciones",
+    pubsDesc: "Explora la lista por año, tema y tipo de autoría. Los resúmenes y etiquetas se pueden completar o actualizar desde el administrador de contenidos.",
 
     // Presentaciones
     presTitle: "Presentaciones y Conferencias",
@@ -156,6 +157,7 @@ const i18n = {
   en: {
     // Navigation
     navHome: "Home",
+    navMenu: "Menu",
     navPubs: "Publications",
     navPres: "Presentations",
     navOutreach: "Outreach",
@@ -191,8 +193,8 @@ const i18n = {
     k1: "Psycholinguistics", k2: "Prediction", k3: "Bilingualism", k4: "Language acquisition", k5: "Eye-tracking", k6: "Pupillometry", k7: "EEG/ERP", k8: "Semantic networks", k9: "Applied AI", k10: "Sentence completion norms",
 
     // Publications
-    pubsTitle: "Journal Articles",
-    pubsDesc: "Peer-reviewed journal articles arranged chronologically.",
+    pubsTitle: "Publications",
+    pubsDesc: "Browse by year, topic, and author role. Abstracts and tags can be added or updated through the content manager.",
 
     // Presentations
     presTitle: "Presentations and Conferences",
@@ -329,75 +331,76 @@ async function loadComponents() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if(footerPlaceholder) footerPlaceholder.innerHTML = footerHtml;
 
-    initLanguage();
-    highlightCurrentPage();
-
   } catch (error) {
     console.error("Error cargando los componentes HTML:", error);
   }
 }
 
 // ==========================================
-// 3. LÓGICA DE IDIOMAS Y DELEGACIÓN DE EVENTOS
+// 3. IDIOMA, TEMA Y NAVEGACIÓN
 // ==========================================
 function setLanguage(lang) {
-  const dict = i18n[lang] || i18n.es;
-  document.documentElement.lang = lang; 
+  const selected = i18n[lang] ? lang : "es";
+  const dict = i18n[selected];
+  document.documentElement.lang = selected;
 
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
-    if (key && dict[key]) {
-      el.innerHTML = dict[key];
-    }
+    if (key && dict[key]) el.innerHTML = dict[key];
   });
 
-  const langImg = document.getElementById("langImg");
   const langText = document.getElementById("langText");
-
-  if (langImg && langText) {
-    if (lang === "es") {
-      langText.textContent = "EN";
-      langImg.src = "img/usa.jpg"; 
-      langImg.alt = "Bandera EN";
-    } else {
-      langText.textContent = "ES";
-      langImg.src = "img/mx.jpg"; 
-      langImg.alt = "Bandera ES";
-    }
-  }
-
-  localStorage.setItem("site_lang", lang);
+  if (langText) langText.textContent = selected === "es" ? "EN" : "ES";
+  try { localStorage.setItem("site_lang", selected); } catch (_) { /* storage is optional */ }
+  document.dispatchEvent(new CustomEvent("site:language", { detail: { lang: selected } }));
 }
 
-function initLanguage() {
-  const savedLang = localStorage.getItem("site_lang") || "es";
-  setLanguage(savedLang);
+function setTheme(theme) {
+  const selected = theme === "dark" ? "dark" : "light";
+  document.documentElement.dataset.theme = selected;
+  const label = document.getElementById("themeLabel");
+  const button = document.getElementById("themeToggle");
+  const isSpanish = document.documentElement.lang !== "en";
+  if (label) label.textContent = selected === "dark"
+    ? (isSpanish ? "Modo claro" : "Light mode")
+    : (isSpanish ? "Modo oscuro" : "Dark mode");
+  if (button) button.setAttribute("aria-label", selected === "dark"
+    ? (isSpanish ? "Cambiar a modo claro" : "Switch to light mode")
+    : (isSpanish ? "Cambiar a modo oscuro" : "Switch to dark mode"));
+  try { localStorage.setItem("site_theme", selected); } catch (_) { /* storage is optional */ }
+}
 
-  // Delegación de eventos (A prueba de balas)
-  document.addEventListener("click", (e) => {
-    const toggleBtn = e.target.closest("#langToggle");
-    
-    if (toggleBtn) {
-      e.preventDefault(); 
-      const currentLang = document.documentElement.lang || "es";
-      const newLang = currentLang === "es" ? "en" : "es";
-      setLanguage(newLang);
+function initControls() {
+  let savedLanguage = "es";
+  try { savedLanguage = localStorage.getItem("site_lang") || "es"; } catch (_) { /* storage is optional */ }
+  setLanguage(savedLanguage);
+
+  document.addEventListener("click", (event) => {
+    if (event.target.closest("#langToggle")) {
+      const next = document.documentElement.lang === "es" ? "en" : "es";
+      setLanguage(next);
+      setTheme(document.documentElement.dataset.theme || "light");
+    }
+    if (event.target.closest("#themeToggle")) {
+      setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    }
+    const menuButton = event.target.closest("#menuToggle");
+    if (menuButton) {
+      const nav = document.getElementById("siteNavigation");
+      const isOpen = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isOpen));
+      nav?.classList.toggle("is-open", !isOpen);
     }
   });
 }
 
 // ==========================================
-// 4. RESALTAR PÁGINA ACTUAL EN EL MENÚ
+// 4. RESALTAR LA PÁGINA ACTUAL
 // ==========================================
 function highlightCurrentPage() {
-  const links = document.querySelectorAll(".nav-menu a");
   const currentPath = window.location.pathname.split("/").pop() || "index.html";
-  
-  links.forEach(link => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === currentPath) {
-      link.classList.add("active");
-    }
+  document.querySelectorAll(".nav-menu a").forEach((link) => {
+    link.classList.toggle("active", link.getAttribute("href") === currentPath);
   });
 }
 
@@ -405,5 +408,17 @@ function highlightCurrentPage() {
 // 5. INICIAR TODO AL CARGAR LA PÁGINA
 // ==========================================
 document.addEventListener("DOMContentLoaded", () => {
-  loadComponents();
+  let savedTheme = "light";
+  let savedLanguage = "es";
+  try {
+    savedTheme = localStorage.getItem("site_theme") || "light";
+    savedLanguage = localStorage.getItem("site_lang") || "es";
+  } catch (_) { /* storage is optional */ }
+  document.documentElement.dataset.theme = savedTheme;
+  document.documentElement.lang = savedLanguage;
+  loadComponents().then(() => {
+    initControls();
+    setTheme(savedTheme);
+    highlightCurrentPage();
+  });
 });

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Recursos personales — Armando Q. Angulo Chavira</title>
+  <meta name="description" content="Espacio personal cifrado para consultar enlaces y notas de trabajo." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="header"><div id="header-placeholder"></div></header>
+  <div id="layout-container">
+    <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
+    <main id="main-content">
+      <section class="content-section">
+        <div id="vaultGate" class="vault-gate">
+          <p class="eyebrow">ESPACIO PERSONAL</p>
+          <h1 class="section-title">Recursos privados</h1>
+          <p>Enlaces y notas personales guardados en un archivo cifrado. La clave se procesa en este navegador y no se guarda ni se envía.</p>
+          <div class="private-notice"><strong>Importante:</strong> usa una frase de paso larga. El cifrado protege el archivo publicado, pero la seguridad depende de que la clave no sea predecible. Conserva los documentos y comprobantes en tu almacenamiento privado; aquí es mejor guardar enlaces y notas.</div>
+          <form id="unlockForm" class="vault-form">
+            <label for="passphrase">Frase de paso<input id="passphrase" type="password" autocomplete="current-password" required /></label>
+            <button id="unlockButton" class="action-button" type="submit">Desbloquear</button>
+          </form>
+          <p id="vaultStatus" class="status-message" aria-live="polite"></p>
+          <p id="vaultSetupLink" class="muted-note" hidden>El archivo aún no está configurado. Abre <a href="resource-editor.html">el editor de recursos</a> para crear tu almacén cifrado.</p>
+        </div>
+        <div id="vaultContent" hidden>
+          <div class="vault-toolbar">
+            <div><p class="eyebrow">ESPACIO PERSONAL</p><h1 class="section-title" style="margin-bottom:0">Mis recursos</h1></div>
+            <button id="lockButton" class="action-button secondary" type="button">Bloquear</button>
+          </div>
+          <div class="pub-tools">
+            <input id="resourceSearch" type="search" placeholder="Buscar recursos" aria-label="Buscar recursos" />
+            <select id="resourceCategory" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option></select>
+          </div>
+          <p id="resourceCount" class="results-line" aria-live="polite"></p>
+          <div id="resourceList" class="vault-grid"></div>
+        </div>
+      </section>
+    </main>
+  </div>
+  <footer id="footer-placeholder" class="footer"></footer>
+  <script src="main.js"></script>
+  <script src="vault-crypto.js"></script>
+  <script src="private-resources.js"></script>
+</body>
+</html>
