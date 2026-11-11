@@ -4,8 +4,8 @@
   "profile": {
     "name": "Armando Q. Angulo Chavira",
     "role": {
-      "es": "Investigador en Psicología Cognitiva y Psicolingüística",
-      "en": "Researcher in Cognitive Psychology and Psycholinguistics"
+      "es": "Investigador en Neurociencia Cognitiva",
+      "en": "Cognitive Neuroscience Researcher"
     },
     "affiliation": {
       "es": "Facultad de Psicología, UNAM",
@@ -77,16 +77,16 @@
   },
   "homeCopy": {
     "homeEyebrow": {
-      "es": "Neurociencia cognitiva · Modelado computacional",
-      "en": "Cognitive neuroscience · Computational modeling"
+      "es": "Neurociencia cognitiva · Métodos experimentales",
+      "en": "Cognitive neuroscience · Experimental methods"
     },
     "homeTitle": {
-      "es": "Cerebro, cognición y computación",
-      "en": "Brain, cognition, and computation"
+      "es": "Cerebro, cognición y conducta",
+      "en": "Brain, cognition, and behavior"
     },
     "homeLead": {
-      "es": "Investigo cómo representamos, anticipamos y producimos información. Actualmente desarrollo proyectos de modelado computacional del lenguaje, decodificación de habla interna con EEG, experimentación en línea y juicios morales, desde una perspectiva de neurociencia cognitiva.",
-      "en": "I study how we represent, anticipate, and produce information. I am currently developing projects in computational language modeling, EEG decoding of inner speech, online experimentation, and moral judgment from a cognitive neuroscience perspective."
+      "es": "Estudio cómo el cerebro anticipa, integra y transforma información. Combino experimentos conductuales con seguimiento ocular, pupilometría, EEG y análisis computacional. Mis publicaciones hasta ahora se han centrado principalmente en predicción y desarrollo del lenguaje, con trabajos también sobre atención, emoción y cognición en poblaciones clínicas. Actualmente amplío esta trayectoria con proyectos de modelado computacional del lenguaje, decodificación de habla interna, juicios morales y experimentación en línea.",
+      "en": "I study how the brain anticipates, integrates, and transforms information. I combine behavioral experiments with eye tracking, pupillometry, EEG, and computational analyses. My publications to date have focused mainly on language prediction and development, with additional work on attention, emotion, and cognition in clinical populations. I am now extending this trajectory through projects in computational language modeling, inner-speech decoding, moral judgment, and online experimentation."
     },
     "homeCredential1": {
       "es": "Doctor en Psicología · Neurociencias de la Conducta",
@@ -97,24 +97,24 @@
       "en": "Faculty of Psychology · UNAM"
     },
     "homeFocusEyebrow": {
-      "es": "Agenda de investigación",
-      "en": "Research agenda"
+      "es": "Proyectos en desarrollo",
+      "en": "Projects in development"
     },
     "homeFocusTitle": {
-      "es": "Cerebro, modelos y experimentos",
-      "en": "Brains, models, and experiments"
+      "es": "Nuevas preguntas sobre cerebro y cognición",
+      "en": "New questions about brain and cognition"
     },
     "homeFocusIntro": {
-      "es": "Una agenda que conecta procesos cognitivos, herramientas computacionales y nuevas formas de investigar.",
-      "en": "An agenda connecting cognitive processes, computational tools, and new ways of doing research."
+      "es": "Estas líneas extienden mi trayectoria publicada hacia el modelado computacional, el habla interna, la cognición social y los experimentos en línea.",
+      "en": "These lines extend my published work into computational modeling, inner speech, social cognition, and online experiments."
     },
     "homeMethodsEyebrow": {
       "es": "Métodos",
       "en": "Methods"
     },
     "homeMethodsTitle": {
-      "es": "Del fenómeno cognitivo al modelo y al experimento",
-      "en": "From cognitive phenomena to models and experiments"
+      "es": "Conducta, actividad cerebral y análisis computacional",
+      "en": "Behavior, brain activity, and computational analysis"
     },
     "homeRecentEyebrow": {
       "es": "Producción académica",

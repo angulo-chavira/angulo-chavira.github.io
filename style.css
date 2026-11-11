@@ -72,8 +72,8 @@ img { max-width: 100%; }
 .header-logos a { display: grid; place-items: center; width: auto; height: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; transition: transform .18s ease, opacity .18s ease; }
 .header-logos a:hover { transform: translateY(-2px); opacity: .82; }
 .inst-logo { display: block; width: auto; height: 39px; max-width: 84px; object-fit: contain; opacity: .96; }
-.header-logos .incobes-mark { width: 46px; height: 44px; padding: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,.24); border-radius: 11px; background: #fff; }
-.header-logos .incobes-mark .inst-logo { width: 100%; height: 100%; max-width: none; opacity: 1; }
+.header-logos .incobes-mark { width: 52px; height: 48px; padding: 4px; overflow: hidden; border: 1px solid rgba(255,255,255,.5); border-radius: 11px; background: #fff; box-shadow: 0 3px 12px rgba(0,0,0,.18); }
+.header-logos .incobes-mark .inst-logo { width: 100%; height: 100%; max-width: none; object-fit: contain; opacity: 1; filter: none; mix-blend-mode: normal; }
 .header-controls { display: flex; align-items: center; gap: 8px; }
 .icon-toggle, .menu-toggle {
   display: inline-flex; align-items: center; justify-content: center; gap: 7px;
@@ -379,7 +379,7 @@ img { max-width: 100%; }
 @media (max-width: 720px) {
   .header-logos { gap: 8px; }
   .inst-logo { height: 30px; max-width: 60px; }
-  .header-logos .incobes-mark { width: 39px; height: 38px; padding: 3px; }
+  .header-logos .incobes-mark { width: 42px; height: 40px; padding: 3px; }
 }
 
 /* Interacciones discretas y cursor contextual */
