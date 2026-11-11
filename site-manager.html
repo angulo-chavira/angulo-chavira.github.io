@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="robots" content="noindex, nofollow" />
-  <title>Administrador de publicaciones — Armando Q. Angulo Chavira</title>
-  <meta name="description" content="Editor local de datos públicos de publicaciones. No usa backend." />
+  <title>Administrador del sitio — Armando Q. Angulo Chavira</title>
+  <meta name="description" content="Editor de contenido del sitio personal." />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -13,29 +13,56 @@
   <div id="layout-container">
     <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
     <main id="main-content">
-      <section class="content-section">
-        <h1 class="section-title">Editar publicaciones</h1>
-        <p>Esta herramienta modifica el archivo de datos del catálogo, no el diseño del sitio. Los cambios se procesan en este navegador y no se envían a un servidor.</p>
-        <div class="private-notice"><strong>Todo lo que escribas aquí será público</strong> al reemplazar el archivo del sitio. No agregues comprobantes, datos personales ni información confidencial.</div>
-        <ol class="tool-steps">
-          <li>Agrega o corrige registros en esta página. Los cambios se guardan como borrador local en este navegador.</li>
-          <li>Descarga <code>publications.json</code> y reemplaza <code>data/publications.json</code> en GitHub.</li>
-          <li>GitHub Pages actualizará el catálogo después del commit. No necesitas tocar HTML, CSS o JavaScript.</li>
-        </ol>
-        <div class="editor-actions">
-          <button id="addPublication" class="action-button" type="button">+ Agregar publicación</button>
-          <button id="downloadData" class="action-button" type="button">Descargar publications.json</button>
-          <button id="importData" class="action-button secondary" type="button">Importar JSON</button>
-          <button id="resetData" class="action-button secondary" type="button">Recargar datos publicados</button>
-          <input id="fileInput" type="file" accept="application/json,.json" hidden />
+      <section class="content-section cms-page">
+        <p class="eyebrow">HERRAMIENTA PERSONAL</p>
+        <h1 class="section-title">Administrador del sitio</h1>
+        <p>Desde aquí puedes actualizar la información de las páginas. Los cambios se guardan primero como borrador en este navegador; al final puedes enviarlos a GitHub con un commit.</p>
+
+        <div class="private-notice"><strong>Lo que subas al repositorio será público.</strong> Puedes subir imágenes, bases de datos y PDFs que tengas permiso de compartir. No subas comprobantes, expedientes ni archivos confidenciales. Los documentos privados deben quedarse en un servicio con acceso restringido.</div>
+
+        <details class="cms-help">
+          <summary>Conectar GitHub por primera vez</summary>
+          <ol class="tool-steps">
+            <li>En GitHub crea un token detallado (fine-grained), con vencimiento, acceso solo al repositorio de esta página y permiso <strong>Contents: Read and write</strong>.</li>
+            <li>Pega el token aquí y pulsa <strong>Conectar</strong>. El token permanece en memoria en esta pestaña; no se guarda en el repositorio ni en el borrador.</li>
+            <li>Elige una sección, edita sus datos y pulsa <strong>Guardar cambios y hacer commit</strong>. GitHub Pages publicará el cambio después del commit.</li>
+          </ol>
+          <p><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Abrir la página de GitHub para crear el token ↗</a></p>
+          <p class="muted-note">Nunca pegues el token en un correo, documento o conversación. Al cerrar esta pestaña tendrás que introducirlo de nuevo.</p>
+        </details>
+
+        <section class="cms-auth" aria-labelledby="githubConnectionTitle">
+          <div class="cms-auth-heading"><div><h2 id="githubConnectionTitle">Conexión con GitHub</h2><p id="repoName">Repositorio: angulo-chavira/angulo-chavira.github.io</p></div><span id="githubConnectionState" class="cms-connection-state">Sin conectar</span></div>
+          <div class="cms-auth-form">
+            <label for="githubToken">Token detallado de GitHub<input id="githubToken" type="password" autocomplete="off" spellcheck="false" placeholder="Pega aquí el token; no se guardará" /></label>
+            <div class="cms-auth-actions"><button id="connectGitHub" class="action-button" type="button">Conectar</button><button id="forgetGitHub" class="action-button secondary" type="button" disabled>Desconectar</button></div>
+          </div>
+          <p id="connectionStatus" class="status-message" aria-live="polite"></p>
+        </section>
+
+        <div class="cms-commit-bar">
+          <label for="commitMessage">Mensaje del commit<input id="commitMessage" value="Actualizar contenido del sitio" maxlength="120" /></label>
+          <button id="commitChanges" class="action-button" type="button" disabled>Guardar cambios y hacer commit</button>
         </div>
-        <p id="managerStatus" class="status-message" aria-live="polite"></p>
-        <div id="publicationEditor" class="editor-items"></div>
+        <p id="managerStatus" class="status-message" aria-live="polite">Cargando contenido administrable…</p>
+
+        <div class="cms-workspace">
+          <nav id="cmsSectionTabs" class="cms-tabs" aria-label="Secciones editables"></nav>
+          <section id="cmsEditorPanel" class="cms-editor-panel" aria-live="polite"></section>
+        </div>
+
+        <aside class="cms-private-link">
+          <div><strong>Recursos personales</strong><p>La lista se cifra antes de guardarse. Los archivos enlazados deben conservar sus propios permisos privados.</p></div>
+          <a class="action-button secondary" href="resource-editor.html">Abrir editor privado</a>
+        </aside>
+        <p class="muted-note">El panel permite cambiar textos y registros. Los cambios de diseño, navegación y estructura de las páginas todavía requieren actualizar el código.</p>
       </section>
     </main>
   </div>
   <footer id="footer-placeholder" class="footer"></footer>
   <script src="main.js"></script>
+  <script src="site-content.js"></script>
+  <script src="github-publisher.js"></script>
   <script src="site-manager.js"></script>
 </body>
 </html>

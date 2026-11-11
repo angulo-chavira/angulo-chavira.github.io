@@ -16,8 +16,8 @@
     <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
     <main id="main-content">
       <section class="content-section">
-        <h1 class="section-title" data-i18n="pubsTitle">Publicaciones</h1>
-        <p class="pubs-intro" data-i18n="pubsDesc">Explora la lista por año, tema y tipo de autoría. Los resúmenes y etiquetas se pueden completar o actualizar desde el administrador de contenidos.</p>
+        <h1 class="section-title" data-cms-copy="pageCopy.publications.title" data-i18n="pubsTitle">Publicaciones</h1>
+        <p class="pubs-intro" data-cms-copy="pageCopy.publications.intro" data-i18n="pubsDesc">Explora la lista por año, tema y tipo de autoría. Los resúmenes y etiquetas se pueden completar o actualizar desde el administrador de contenidos.</p>
         <div class="pub-tools" role="search">
           <input id="pubSearch" type="search" autocomplete="off" placeholder="Buscar por título, autor, revista o palabra clave" aria-label="Buscar publicaciones" />
           <select id="yearFilter" aria-label="Filtrar por año"><option value="">Todos los años</option></select>
@@ -40,6 +40,7 @@
   </div>
   <footer id="footer-placeholder" class="footer"></footer>
   <script src="main.js"></script>
+  <script src="site-content.js"></script>
   <script src="publications.js"></script>
 </body>
 </html>

@@ -1,0 +1,1376 @@
+{
+  "schemaVersion": 1,
+  "updated": "2026-11-11",
+  "profile": {
+    "name": "Armando Q. Angulo Chavira",
+    "role": {
+      "es": "Investigador en Psicología Cognitiva y Psicolingüística",
+      "en": "Researcher in Cognitive Psychology and Psycholinguistics"
+    },
+    "affiliation": {
+      "es": "Facultad de Psicología, UNAM",
+      "en": "Faculty of Psychology, UNAM"
+    },
+    "location": {
+      "es": "Ciudad de México, México",
+      "en": "Mexico City, Mexico"
+    },
+    "photo": "img/profile.jpeg",
+    "email": "angulo_chavira@comunidad.unam.mx",
+    "memberships": [
+      {
+        "text": {
+          "es": "Sistema Nacional de Investigadores Nivel I",
+          "en": "National System of Researchers (SNI) Level I"
+        },
+        "url": ""
+      },
+      {
+        "text": {
+          "es": "Laboratorio de Psicolingüística",
+          "en": "Psycholinguistics Laboratory"
+        },
+        "url": "https://www.labpsicolinguistica.psicol.unam.mx/"
+      },
+      {
+        "text": {
+          "es": "Interdisciplinary Network for Cognitive and Behavioral Sciences",
+          "en": "Interdisciplinary Network for Cognitive and Behavioral Sciences"
+        },
+        "url": ""
+      }
+    ],
+    "socialLinks": [
+      {
+        "label": {
+          "es": "angulo_chavira@comunidad.unam.mx",
+          "en": "angulo_chavira@comunidad.unam.mx"
+        },
+        "url": "mailto:angulo_chavira@comunidad.unam.mx",
+        "icon": "img/correo.png"
+      },
+      {
+        "label": {
+          "es": "Google Scholar",
+          "en": "Google Scholar"
+        },
+        "url": "https://scholar.google.com/citations?user=4qdTuuMAAAAJ&hl=es&oi=ao",
+        "icon": "img/Google_Scholar_logo.png"
+      },
+      {
+        "label": {
+          "es": "ORCID",
+          "en": "ORCID"
+        },
+        "url": "https://orcid.org/0000-0002-6756-6717",
+        "icon": "img/ORCID.png"
+      },
+      {
+        "label": {
+          "es": "ResearchGate",
+          "en": "ResearchGate"
+        },
+        "url": "https://www.researchgate.net/profile/Armando-Angulo-Chavira",
+        "icon": "img/ResearchGate.png"
+      }
+    ]
+  },
+  "homeCopy": {
+    "homeEyebrow": {
+      "es": "Neurociencia cognitiva · Modelado computacional",
+      "en": "Cognitive neuroscience · Computational modeling"
+    },
+    "homeTitle": {
+      "es": "Cerebro, cognición y computación",
+      "en": "Brain, cognition, and computation"
+    },
+    "homeLead": {
+      "es": "Investigo cómo representamos, anticipamos y producimos información. Actualmente desarrollo proyectos de modelado computacional del lenguaje, decodificación de habla interna con EEG, experimentación en línea y juicios morales, desde una perspectiva de neurociencia cognitiva.",
+      "en": "I study how we represent, anticipate, and produce information. I am currently developing projects in computational language modeling, EEG decoding of inner speech, online experimentation, and moral judgment from a cognitive neuroscience perspective."
+    },
+    "homeCredential1": {
+      "es": "Doctor en Psicología · Neurociencias de la Conducta",
+      "en": "PhD in Psychology · Behavioral Neuroscience"
+    },
+    "homeCredential2": {
+      "es": "Facultad de Psicología · UNAM",
+      "en": "Faculty of Psychology · UNAM"
+    },
+    "homeFocusEyebrow": {
+      "es": "Agenda de investigación",
+      "en": "Research agenda"
+    },
+    "homeFocusTitle": {
+      "es": "Cerebro, modelos y experimentos",
+      "en": "Brains, models, and experiments"
+    },
+    "homeFocusIntro": {
+      "es": "Una agenda que conecta procesos cognitivos, herramientas computacionales y nuevas formas de investigar.",
+      "en": "An agenda connecting cognitive processes, computational tools, and new ways of doing research."
+    },
+    "homeMethodsEyebrow": {
+      "es": "Métodos",
+      "en": "Methods"
+    },
+    "homeMethodsTitle": {
+      "es": "Del fenómeno cognitivo al modelo y al experimento",
+      "en": "From cognitive phenomena to models and experiments"
+    },
+    "homeRecentEyebrow": {
+      "es": "Producción académica",
+      "en": "Research output"
+    },
+    "homeRecentTitle": {
+      "es": "Publicaciones recientes",
+      "en": "Recent publications"
+    },
+    "homeRecentIntro": {
+      "es": "Una selección que se actualiza a partir del catálogo de publicaciones del sitio.",
+      "en": "A selection drawn from the website's publication catalog."
+    },
+    "homeTrainingEyebrow": {
+      "es": "Formación",
+      "en": "Education"
+    },
+    "homeTrainingTitle": {
+      "es": "Trayectoria académica",
+      "en": "Academic background"
+    },
+    "homeContactEyebrow": {
+      "es": "Contacto",
+      "en": "Contact"
+    },
+    "homeContactTitle": {
+      "es": "¿Te interesa colaborar?",
+      "en": "Interested in collaborating?"
+    },
+    "homeContactText": {
+      "es": "Estoy abierto a conversaciones sobre investigación, datos y proyectos en ciencias cognitivas.",
+      "en": "I welcome conversations about research, data, and projects in cognitive science."
+    },
+    "homeCtaPubs": {
+      "es": "Explorar publicaciones ↗",
+      "en": "Explore publications ↗"
+    },
+    "homeCtaProjects": {
+      "es": "Ver proyectos",
+      "en": "View projects"
+    },
+    "homeContactButton": {
+      "es": "Escríbeme ↗",
+      "en": "Get in touch ↗"
+    },
+    "homeAreaLink": {
+      "es": "Proyectos relacionados ↗",
+      "en": "Related projects ↗"
+    }
+  },
+  "pageCopy": {
+    "presentations": {
+      "title": {
+        "es": "Presentaciones y Conferencias",
+        "en": "Presentations and Conferences"
+      },
+      "intro": {
+        "es": "Selección de ponencias, conferencias magistrales, carteles y talleres presentados en congresos e instituciones académicas.",
+        "en": "Selection of lectures, keynotes, posters, and workshops presented at academic conferences and institutions."
+      }
+    },
+    "publications": {
+      "title": {
+        "es": "Publicaciones",
+        "en": "Publications"
+      },
+      "intro": {
+        "es": "Explora la lista por año, tema y tipo de autoría. Los resúmenes y etiquetas se pueden completar o actualizar desde el administrador de contenidos.",
+        "en": "Browse by year, topic, and author role. Abstracts and tags can be added or updated through the content manager."
+      }
+    },
+    "outreach": {
+      "title": {
+        "es": "Divulgación Científica",
+        "en": "Science Communication & Outreach"
+      },
+      "articlesTitle": {
+        "es": "Artículos de Divulgación",
+        "en": "Outreach Publications"
+      },
+      "eventsTitle": {
+        "es": "Organización de Eventos",
+        "en": "Event Organization"
+      },
+      "interviewsTitle": {
+        "es": "Entrevistas en Medios",
+        "en": "Media Interviews"
+      }
+    },
+    "projects": {
+      "eyebrow": {
+        "es": "Neurociencia cognitiva · Modelado · Experimentación",
+        "en": "Cognitive neuroscience · Modeling · Experimentation"
+      },
+      "title": {
+        "es": "Proyectos de investigación",
+        "en": "Research projects"
+      },
+      "intro": {
+        "es": "Mi trabajo actual combina preguntas sobre cognición y cerebro con herramientas computacionales y experimentales.",
+        "en": "My current work combines questions about cognition and the brain with computational and experimental tools."
+      },
+      "currentEyebrow": {
+        "es": "En desarrollo",
+        "en": "In development"
+      },
+      "currentTitle": {
+        "es": "Líneas de trabajo",
+        "en": "Research directions"
+      },
+      "currentIntro": {
+        "es": "Proyectos que conectan modelos, actividad cerebral y diseño experimental.",
+        "en": "Projects connecting models, brain activity, and experimental design."
+      },
+      "archiveTitle": {
+        "es": "Otros proyectos y colaboraciones",
+        "en": "Other projects and collaborations"
+      },
+      "archiveIntro": {
+        "es": "Participación en proyectos institucionales y colaborativos en distintas etapas de mi trayectoria.",
+        "en": "Participation in institutional and collaborative projects at different stages of my career."
+      }
+    },
+    "teaching": {
+      "title": {
+        "es": "Docencia",
+        "en": "Teaching"
+      },
+      "undergraduateTitle": {
+        "es": "Cursos de Licenciatura",
+        "en": "Undergraduate Courses"
+      },
+      "graduateTitle": {
+        "es": "Cursos de Posgrado",
+        "en": "Graduate Courses"
+      }
+    },
+    "group": {
+      "title": {
+        "es": "Miembros del Grupo de Investigación",
+        "en": "Research Group Members"
+      },
+      "intro": {
+        "es": "Estudiantes y colegas que colaboran en proyectos del Laboratorio de Psicolingüística y en investigación sobre lenguaje y cognición.",
+        "en": "Students and colleagues collaborating on Psycholinguistics Laboratory projects and research on language and cognition."
+      }
+    },
+    "collaborations": {
+      "title": {
+        "es": "Colaboraciones",
+        "en": "Collaborations"
+      },
+      "intro": {
+        "es": "Una red de colegas e instituciones con quienes he colaborado en proyectos y publicaciones sobre lenguaje, desarrollo y ciencias cognitivas.",
+        "en": "A network of colleagues and institutions with whom I have collaborated on projects and publications about language, development, and cognitive science."
+      }
+    },
+    "resources": {
+      "title": {
+        "es": "Recursos",
+        "en": "Resources"
+      },
+      "citationLabel": {
+        "es": "Para citar esta base de datos:",
+        "en": "To cite this database:"
+      }
+    },
+    "blog": {
+      "title": {
+        "es": "Blog",
+        "en": "Blog"
+      },
+      "intro": {
+        "es": "Reflexiones, noticias y notas breves sobre psicolingüística, ciencia cognitiva y tecnología.",
+        "en": "Reflections, news, and short notes on psycholinguistics, cognitive science, and technology."
+      },
+      "readMore": {
+        "es": "Leer más →",
+        "en": "Read more →"
+      }
+    }
+  },
+  "areas": [
+    {
+      "number": "01",
+      "title": {
+        "es": "Modelado computacional del lenguaje",
+        "en": "Computational language modeling"
+      },
+      "description": {
+        "es": "Construir y comparar modelos que expliquen cómo se representa, comprende y anticipa el lenguaje.",
+        "en": "Building and comparing models to explain how language is represented, understood, and predicted."
+      },
+      "link": "projects.html#modelado"
+    },
+    {
+      "number": "02",
+      "title": {
+        "es": "Habla interna y decodificación",
+        "en": "Inner speech and decoding"
+      },
+      "description": {
+        "es": "Usar EEG y análisis computacional para estudiar las representaciones cerebrales del habla no pronunciada.",
+        "en": "Using EEG and computational analyses to study the neural representations of unspoken language."
+      },
+      "link": "projects.html#habla-interna"
+    },
+    {
+      "number": "03",
+      "title": {
+        "es": "Juicios morales y cognición social",
+        "en": "Moral judgment and social cognition"
+      },
+      "description": {
+        "es": "Diseñar experimentos para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.",
+        "en": "Designing experiments to study how people evaluate actions, intentions, and social situations."
+      },
+      "link": "projects.html#juicios-morales"
+    },
+    {
+      "number": "04",
+      "title": {
+        "es": "Herramientas digitales para investigar",
+        "en": "Digital research tools"
+      },
+      "description": {
+        "es": "Desarrollar aplicaciones de experimentación en línea, validación de tareas y flujos reproducibles.",
+        "en": "Developing online experiment applications, task validation, and reproducible workflows."
+      },
+      "link": "projects.html#experimentacion-en-linea"
+    }
+  ],
+  "methods": [
+    {
+      "label": {
+        "es": "EEG / ERP",
+        "en": "EEG / ERP"
+      }
+    },
+    {
+      "label": {
+        "es": "Eye-tracking",
+        "en": "Eye-tracking"
+      }
+    },
+    {
+      "label": {
+        "es": "Pupilometría",
+        "en": "Pupillometry"
+      }
+    },
+    {
+      "label": {
+        "es": "Modelos computacionales",
+        "en": "Computational models"
+      }
+    },
+    {
+      "label": {
+        "es": "RSA",
+        "en": "RSA"
+      }
+    },
+    {
+      "label": {
+        "es": "Experimentos en línea",
+        "en": "Online experiments"
+      }
+    },
+    {
+      "label": {
+        "es": "Ciencia abierta",
+        "en": "Open science"
+      }
+    }
+  ],
+  "education": [
+    {
+      "year": "2025",
+      "degree": {
+        "es": "Doctorado en Psicología · Neurociencias de la Conducta",
+        "en": "PhD in Psychology · Behavioral Neuroscience"
+      },
+      "institution": {
+        "es": "Universidad Nacional Autónoma de México",
+        "en": "Universidad Nacional Autónoma de México"
+      }
+    },
+    {
+      "year": "2018",
+      "degree": {
+        "es": "Maestría en Ciencias del Comportamiento · Neurociencias",
+        "en": "MSc in Behavioral Sciences · Neuroscience"
+      },
+      "institution": {
+        "es": "Universidad de Guadalajara",
+        "en": "Universidad de Guadalajara"
+      }
+    },
+    {
+      "year": "2015",
+      "degree": {
+        "es": "Licenciatura en Psicología",
+        "en": "BA in Psychology"
+      },
+      "institution": {
+        "es": "Universidad de Guadalajara",
+        "en": "Universidad de Guadalajara"
+      }
+    }
+  ],
+  "presentations": [
+    {
+      "year": "2025",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (February 24, 2025). Lecture: Paths of Memory: Aging and Cognition in Down Syndrome. Integración Down, Mexico City, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (February 24, 2025). Lecture: Paths of Memory: Aging and Cognition in Down Syndrome. Integración Down, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (March 10, 2025). Can Machines Think? A Neuroscience Perspective, Brain Awareness Week, Tecnológico de Monterrey, Monterrey Campus, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (March 10, 2025). Can Machines Think? A Neuroscience Perspective, Brain Awareness Week, Tecnológico de Monterrey, Monterrey Campus, Mexico."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (March 21, 2025). Caregiver Care in Down Syndrome, World Down Syndrome Day, Mexico City, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (March 21, 2025). Caregiver Care in Down Syndrome, World Down Syndrome Day, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Castellón-Flores, A. M., Arias-Trejo, N. (June 2025). From Meaning to Sound: Emergent Hierarchical Prediction in Spanish-Speaking Toddlers. Institute of Philological Research, UNAM.",
+        "en": "Angulo-Chavira, A.Q., Castellón-Flores, A. M., Arias-Trejo, N. (June 2025). From Meaning to Sound: Emergent Hierarchical Prediction in Spanish-Speaking Toddlers. Institute of Philological Research, UNAM."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Castellón-Flores, A. M., Angulo-Chavira, A.Q., Arias-Trejo, N. (June 2025). Words Reflect Minds: Language and Cognition in Down Syndrome. Institute of Philological Research, UNAM.",
+        "en": "Castellón-Flores, A. M., Angulo-Chavira, A.Q., Arias-Trejo, N. (June 2025). Words Reflect Minds: Language and Cognition in Down Syndrome. Institute of Philological Research, UNAM."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Beyart, T., Castellón-Flores, A. M., Arias-Trejo, N., Angulo-Chavira, A.Q. (June 2025). Linguistic Prediction in School-Aged Children: A Phonosyntactic Approach. Institute of Philological Research, UNAM.",
+        "en": "Beyart, T., Castellón-Flores, A. M., Arias-Trejo, N., Angulo-Chavira, A.Q. (June 2025). Linguistic Prediction in School-Aged Children: A Phonosyntactic Approach. Institute of Philological Research, UNAM."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Castellón-Flores, A. M., Arias-Trejo, N. (August 2025). From Meaning to Sound: Development of Language Prediction in Toddlers. 47th Annual Meeting COGSCI2025, San Francisco, USA.",
+        "en": "Angulo-Chavira, A.Q., Castellón-Flores, A. M., Arias-Trejo, N. (August 2025). From Meaning to Sound: Development of Language Prediction in Toddlers. 47th Annual Meeting COGSCI2025, San Francisco, USA."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Castellón-Flores, A. M., Angulo-Chavira, A.Q., Arias-Trejo, N. (August 2025). Emerging Morphosyntactic Prediction in Early Childhood: A Visual Tracking Study. 47th Annual Meeting COGSCI2025, San Francisco, USA.",
+        "en": "Castellón-Flores, A. M., Angulo-Chavira, A.Q., Arias-Trejo, N. (August 2025). Emerging Morphosyntactic Prediction in Early Childhood: A Visual Tracking Study. 47th Annual Meeting COGSCI2025, San Francisco, USA."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (March 7, 2024). Can Machines Dream? Learning in Artificial Intelligence. Universidad Autónoma de Baja California, Baja California, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (March 7, 2024). Can Machines Dream? Learning in Artificial Intelligence. Universidad Autónoma de Baja California, Baja California, Mexico."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (March 8, 2024). Workshop: Use of Generative Artificial Intelligence in Education. Universidad Autónoma de Baja California, Baja California, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (March 8, 2024). Workshop: Use of Generative Artificial Intelligence in Education. Universidad Autónoma de Baja California, Baja California, Mexico."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Arias-Trejo, N., Castellón-Flores, A. M., Rodríguez-Lázaro, A., Oropeza-García, V., Angulo-Chavira, A.Q. (April 2024). Phonological Prediction in Language Learning: Insights from Spanish-Speaking Toddlers. V Neurobiology Congress of the Mexican Society of Biochemistry.",
+        "en": "Arias-Trejo, N., Castellón-Flores, A. M., Rodríguez-Lázaro, A., Oropeza-García, V., Angulo-Chavira, A.Q. (April 2024). Phonological Prediction in Language Learning: Insights from Spanish-Speaking Toddlers. V Neurobiology Congress of the Mexican Society of Biochemistry."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Angulo-Chavira, A.Q. (November 2024). Development of Phonological Anticipation in Language Acquisition: A Study in Mexican Spanish-Speaking Children. International Congress of Psycholinguistics, Cognition, Reading and Writing, UNMSM, Peru.",
+        "en": "Angulo-Chavira, A.Q. (November 2024). Development of Phonological Anticipation in Language Acquisition: A Study in Mexican Spanish-Speaking Children. International Congress of Psycholinguistics, Cognition, Reading and Writing, UNMSM, Peru."
+      }
+    },
+    {
+      "year": "2023",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. Lecture: Predictive Mechanisms for Language Comprehension, Faculty of Psychology, UNAM (September 20, 2023).",
+        "en": "Angulo-Chavira, A. Q. Lecture: Predictive Mechanisms for Language Comprehension, Faculty of Psychology, UNAM (September 20, 2023)."
+      }
+    },
+    {
+      "year": "2023",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Castellón-Flores, A.M., Arias-Trejo, N. (September 2023). Exploring Linguistic Prediction Mechanisms in Early Development: A Visual World Paradigm Study. XXII Language Acquisition Meeting, Universidad de Guadalajara, Mexico.",
+        "en": "Angulo-Chavira, A.Q., Castellón-Flores, A.M., Arias-Trejo, N. (September 2023). Exploring Linguistic Prediction Mechanisms in Early Development: A Visual World Paradigm Study. XXII Language Acquisition Meeting, Universidad de Guadalajara, Mexico."
+      }
+    },
+    {
+      "year": "2023",
+      "text": {
+        "es": "Castellón-Flores, A.M., Arias-Trejo, N., Angulo-Chavira, A.Q. (September 2023). Lexical and Conceptual Relations between Words in Children. XXII Language Acquisition Meeting, Universidad de Guadalajara, Mexico.",
+        "en": "Castellón-Flores, A.M., Arias-Trejo, N., Angulo-Chavira, A.Q. (September 2023). Lexical and Conceptual Relations between Words in Children. XXII Language Acquisition Meeting, Universidad de Guadalajara, Mexico."
+      }
+    },
+    {
+      "year": "2023",
+      "text": {
+        "es": "Mulik, S., Angulo-Chavira, A.Q., Arias-Trejo, N. (Sep, 2023). The Effect of Vocabulary Size on New Word Learning in Mexican Infants: A Visual Tracking Study. XXII Language Acquisition Meeting, Universidad de Guadalajara, Mexico.",
+        "en": "Mulik, S., Angulo-Chavira, A.Q., Arias-Trejo, N. (Sep, 2023). The Effect of Vocabulary Size on New Word Learning in Mexican Infants: A Visual Tracking Study. XXII Language Acquisition Meeting, Universidad de Guadalajara, Mexico."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. Keynote Lecture: Linguistic Prediction in Typical and Down Syndrome Populations at the XXIII Student Dialogue in Linguistics (September 20, 2022).",
+        "en": "Angulo-Chavira, A. Q. Keynote Lecture: Linguistic Prediction in Typical and Down Syndrome Populations at the XXIII Student Dialogue in Linguistics (September 20, 2022)."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (June 2022). Linguistic Anticipation in 30-Month-Old Infants Facing Correction Disfluencies and Syntactic-Semantic Information. Workshop on Interaction and Modality in Language Acquisition (virtual).",
+        "en": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (June 2022). Linguistic Anticipation in 30-Month-Old Infants Facing Correction Disfluencies and Syntactic-Semantic Information. Workshop on Interaction and Modality in Language Acquisition (virtual)."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Castellón-Flores, A.M., Arias-Trejo, N. (July 2022). Prediction during Sentence Correction in 30-Month-Old Toddlers. XXIII ICIS Developmental Cascades Congress, Ottawa, Canada.",
+        "en": "Angulo-Chavira, A.Q., Castellón-Flores, A.M., Arias-Trejo, N. (July 2022). Prediction during Sentence Correction in 30-Month-Old Toddlers. XXIII ICIS Developmental Cascades Congress, Ottawa, Canada."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Castellón-Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (July 2022). Linguistic Anticipation in Children’s Correction Sentences. Annual Meeting of the Cognitive Science Society.",
+        "en": "Castellón-Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (July 2022). Linguistic Anticipation in Children’s Correction Sentences. Annual Meeting of the Cognitive Science Society."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (July 2021). Theory and Technique of the Electroencephalogram in Psychology. Universidad Enrique Díaz de León.",
+        "en": "Angulo-Chavira, A. Q. (July 2021). Theory and Technique of the Electroencephalogram in Psychology. Universidad Enrique Díaz de León."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Luna-Umanzor, D.I., Angulo-Chavira, A.Q., Arias-Trejo, N. (October 29-31, 2020). Exploring Semantic Memory in Alzheimer’s Patients through Word Association Tasks [Conference]. I Virtual Congress.",
+        "en": "Luna-Umanzor, D.I., Angulo-Chavira, A.Q., Arias-Trejo, N. (October 29-31, 2020). Exploring Semantic Memory in Alzheimer’s Patients through Word Association Tasks [Conference]. I Virtual Congress."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Arias-Trejo, N. Manipulation Knowledge of Objects as a Principle of Lexical Organization in Toddlers. SRCD 2021 Virtual Biennial Meeting, April 7-9, 2021.",
+        "en": "Angulo-Chavira, A.Q., Arias-Trejo, N. Manipulation Knowledge of Objects as a Principle of Lexical Organization in Toddlers. SRCD 2021 Virtual Biennial Meeting, April 7-9, 2021."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Chua-Rodríguez, F., Avila, D., Arias-Trejo, N. Longitudinal Analysis of Early Semantic and Phonological Networks. SRCD 2021 Virtual Biennial Meeting, April 7-9, 2021.",
+        "en": "Angulo-Chavira, A.Q., Chua-Rodríguez, F., Avila, D., Arias-Trejo, N. Longitudinal Analysis of Early Semantic and Phonological Networks. SRCD 2021 Virtual Biennial Meeting, April 7-9, 2021."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (June 16-19, 2021). Linguistic Anticipation in Response to Correction Disfluencies in Spanish. XI International Congress Brain and Mind: Integration (virtual).",
+        "en": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (June 16-19, 2021). Linguistic Anticipation in Response to Correction Disfluencies in Spanish. XI International Congress Brain and Mind: Integration (virtual)."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Angulo-Chavira, A.Q. (July 20-22, 2021). Prediction vs Integration in Language Comprehension: Theoretical and Methodological Review. XI Neurosciences in July Congress, Universidad de Guadalajara (virtual).",
+        "en": "Angulo-Chavira, A.Q. (July 20-22, 2021). Prediction vs Integration in Language Comprehension: Theoretical and Methodological Review. XI Neurosciences in July Congress, Universidad de Guadalajara (virtual)."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (July 20-22, 2021). Syntactic and Lexical Relations in Linguistic Anticipation. XI Neurosciences in July Congress, Universidad de Guadalajara (virtual).",
+        "en": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (July 20-22, 2021). Syntactic and Lexical Relations in Linguistic Anticipation. XI Neurosciences in July Congress, Universidad de Guadalajara (virtual)."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (September 8-9, 2021). Effect of Semantic Relations between Nouns on Plausibility. X Computational Linguistics Colloquium, UNAM (virtual).",
+        "en": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (September 8-9, 2021). Effect of Semantic Relations between Nouns on Plausibility. X Computational Linguistics Colloquium, UNAM (virtual)."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (November 11-13, 2021). Lexical Relations and Syntactic Skills in 30-Month-Old Infants. V LINGUAQ Linguistics Conference (virtual).",
+        "en": "Castellón Flores, A.M., Angulo-Chavira, A.Q., Arias-Trejo, N. (November 11-13, 2021). Lexical Relations and Syntactic Skills in 30-Month-Old Infants. V LINGUAQ Linguistics Conference (virtual)."
+      }
+    },
+    {
+      "year": "2020",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (October 23, 2020). Participation in the Journal Club with the talk Structure of the Mental Lexicon in Infants. Cognitive Robotics Laboratory, Universidad Autónoma del Estado de Morelos.",
+        "en": "Angulo-Chavira, A. Q. (October 23, 2020). Participation in the Journal Club with the talk Structure of the Mental Lexicon in Infants. Cognitive Robotics Laboratory, Universidad Autónoma del Estado de Morelos."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Arias-Trejo, N., Angulo-Chavira, A. Q., Flores-Coronado, M., Vargas-García, E., & Abreu-Mendoza, R. (October 17-19, 2019). The Ability to Remember a Novel Word is Related to Mutual Exclusivity Ability in Children with Down Syndrome [Poster]. Bi-Ennial Conference Cognitive Development Society 2019, Louisville, Kentucky, USA.",
+        "en": "Arias-Trejo, N., Angulo-Chavira, A. Q., Flores-Coronado, M., Vargas-García, E., & Abreu-Mendoza, R. (October 17-19, 2019). The Ability to Remember a Novel Word is Related to Mutual Exclusivity Ability in Children with Down Syndrome [Poster]. Bi-Ennial Conference Cognitive Development Society 2019, Louisville, Kentucky, USA."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Fernández-Alejo, L., & Arias-Trejo, N. (October 17-19, 2019). Pure Mediated Semantic Language Activation in Toddlers [Poster]. Bi-Ennial Conference Cognitive Development Society 2019, Louisville, Kentucky, USA.",
+        "en": "Angulo-Chavira, A. Q., Fernández-Alejo, L., & Arias-Trejo, N. (October 17-19, 2019). Pure Mediated Semantic Language Activation in Toddlers [Poster]. Bi-Ennial Conference Cognitive Development Society 2019, Louisville, Kentucky, USA."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (November 29, 2019). Word Learning is Related to Disambiguation but Not Extension in Children with Down Syndrome. Faculty of Psychology, UNAM, Mexico City, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (November 29, 2019). Word Learning is Related to Disambiguation but Not Extension in Children with Down Syndrome. Faculty of Psychology, UNAM, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2017",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. Lexical Access in Infants (2017, May 26). World Psychologist Day, Universidad de Especialidades, Jalisco, Mexico.",
+        "en": "Angulo-Chavira, A. Q. Lexical Access in Infants (2017, May 26). World Psychologist Day, Universidad de Especialidades, Jalisco, Mexico."
+      }
+    },
+    {
+      "year": "2017",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Ramos-Loyo, J. & Müller, M. (July 17-21, 2017). Effect of Joint Goal and Feedback on Joint Action [Conference]. Neurosciences in July 2017, Guadalajara, Jalisco, Mexico.",
+        "en": "Angulo-Chavira, A. Q., Ramos-Loyo, J. & Müller, M. (July 17-21, 2017). Effect of Joint Goal and Feedback on Joint Action [Conference]. Neurosciences in July 2017, Guadalajara, Jalisco, Mexico."
+      }
+    },
+    {
+      "year": "2017",
+      "text": {
+        "es": "Angulo-Chavira, A.Q. Brain Electrical Activity during Joint Action: Effects of Feedback. 48th Annual Meeting of the Society for Neuroscience, San Diego.",
+        "en": "Angulo-Chavira, A.Q. Brain Electrical Activity during Joint Action: Effects of Feedback. 48th Annual Meeting of the Society for Neuroscience, San Diego."
+      }
+    },
+    {
+      "year": "2016",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. & Arias-Trejo, N. (March 3-4, 2016). Mediated Priming during the Second Year of Life [Conference]. XVII Language Acquisition Meeting, Mexico City, Mexico.",
+        "en": "Angulo-Chavira, A. Q. & Arias-Trejo, N. (March 3-4, 2016). Mediated Priming during the Second Year of Life [Conference]. XVII Language Acquisition Meeting, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2016",
+      "text": {
+        "es": "Gutiérrez, E., Ramos-Loyo, J., & Angulo-Chavira, A. Q. (May 18-21, 2016). Differences between Adolescents and Adults in Response Inhibition as a Function of Sex [Poster]. IX International Congress Brain and Mind, Guadalajara, Mexico.",
+        "en": "Gutiérrez, E., Ramos-Loyo, J., & Angulo-Chavira, A. Q. (May 18-21, 2016). Differences between Adolescents and Adults in Response Inhibition as a Function of Sex [Poster]. IX International Congress Brain and Mind, Guadalajara, Mexico."
+      }
+    },
+    {
+      "year": "2015",
+      "text": {
+        "es": "Peralta-Ramírez, M., Angulo-Chavira, A. Q., Arias-Trejo, N., & García, O. (September 9-11, 2015). Determination of TSP-1 Levels in Blood and Saliva and Their Association with Intellectual Functions in People with Down Syndrome [Conference]. 4th Neuropsychology Meeting, Mexico City, Mexico.",
+        "en": "Peralta-Ramírez, M., Angulo-Chavira, A. Q., Arias-Trejo, N., & García, O. (September 9-11, 2015). Determination of TSP-1 Levels in Blood and Saliva and Their Association with Intellectual Functions in People with Down Syndrome [Conference]. 4th Neuropsychology Meeting, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2015",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Arias-Trejo, N., & García, O. (September 9-11, 2015). Differences between Spatial Memory and Verbal Memory in People with Down Syndrome [Conference]. 4th Neuropsychology Meeting, Mexico City, Mexico.",
+        "en": "Angulo-Chavira, A. Q., Arias-Trejo, N., & García, O. (September 9-11, 2015). Differences between Spatial Memory and Verbal Memory in People with Down Syndrome [Conference]. 4th Neuropsychology Meeting, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2015",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Signoret-Dorcasberro, A., Rodríguez-Lázaro, A. L., & Arias-Trejo, N. (November 6-7, 2015). Lexical Discrimination in Bilinguals through Eye-Tracking [Conference]. 3rd Forum on Bilingualism: Bilingualism and Academic Performance, Mexico City, Mexico.",
+        "en": "Angulo-Chavira, A. Q., Signoret-Dorcasberro, A., Rodríguez-Lázaro, A. L., & Arias-Trejo, N. (November 6-7, 2015). Lexical Discrimination in Bilinguals through Eye-Tracking [Conference]. 3rd Forum on Bilingualism: Bilingualism and Academic Performance, Mexico City, Mexico."
+      }
+    },
+    {
+      "year": "2014",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Ramos-Loyo, J., & Llamas-Alonso, L. (October 16-17, 2014). Sex Differences in ERPs Due to Emotional Context Influence on Inhibition [Poster]. XVI Neuroimaging Meeting, Guanajuato, Mexico.",
+        "en": "Angulo-Chavira, A. Q., Ramos-Loyo, J., & Llamas-Alonso, L. (October 16-17, 2014). Sex Differences in ERPs Due to Emotional Context Influence on Inhibition [Poster]. XVI Neuroimaging Meeting, Guanajuato, Mexico."
+      }
+    },
+    {
+      "year": "2014",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Cortez-Monter, D., & Arias-Trejo, N. (November 10-14, 2014). Eye-Tracking Access to Semantic, Phonological, and Shape Knowledge in Child Readers [Conference]. XXIV Mexican Congress of Behavior Analysis, Guadalajara, Jalisco, Mexico.",
+        "en": "Angulo-Chavira, A. Q., Cortez-Monter, D., & Arias-Trejo, N. (November 10-14, 2014). Eye-Tracking Access to Semantic, Phonological, and Shape Knowledge in Child Readers [Conference]. XXIV Mexican Congress of Behavior Analysis, Guadalajara, Jalisco, Mexico."
+      }
+    },
+    {
+      "year": "2014",
+      "text": {
+        "es": "Angulo-Chavira, A. Q., Jove-Mendoza, J., & Arias-Trejo, N. (November 10-14, 2014). How Do Infants Group Words by Semantic Field or Shape Similarity? [Conference]. XXIV Mexican Congress of Behavior Analysis, Guadalajara, Jalisco, Mexico.",
+        "en": "Angulo-Chavira, A. Q., Jove-Mendoza, J., & Arias-Trejo, N. (November 10-14, 2014). How Do Infants Group Words by Semantic Field or Shape Similarity? [Conference]. XXIV Mexican Congress of Behavior Analysis, Guadalajara, Jalisco, Mexico."
+      }
+    },
+    {
+      "year": "2013",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (June 4, 2013). Implications of Social Support Networks in the Treatment of People with Drug Dependence. I Conference Against Addictions, High School 6, Universidad de Guadalajara, Jalisco, Mexico.",
+        "en": "Angulo-Chavira, A. Q. (June 4, 2013). Implications of Social Support Networks in the Treatment of People with Drug Dependence. I Conference Against Addictions, High School 6, Universidad de Guadalajara, Jalisco, Mexico."
+      }
+    },
+    {
+      "year": "2013",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. & Arias-Trejo, N. (August 21-24, 2013). Learning Homophones in 24-Month-Old Infants [Conference]. XVIII Summer of Scientific and Technological Research of the Pacific, Nayarit, Mexico.",
+        "en": "Angulo-Chavira, A. Q. & Arias-Trejo, N. (August 21-24, 2013). Learning Homophones in 24-Month-Old Infants [Conference]. XVIII Summer of Scientific and Technological Research of the Pacific, Nayarit, Mexico."
+      }
+    },
+    {
+      "year": "2012",
+      "text": {
+        "es": "Angulo-Chavira, A. (December 8, 2012). How to Deliver Bad News. Program for Mental Health Promotion and Prevention for Children and Adolescents, CUCS, Universidad de Guadalajara, Jalisco, Mexico.",
+        "en": "Angulo-Chavira, A. (December 8, 2012). How to Deliver Bad News. Program for Mental Health Promotion and Prevention for Children and Adolescents, CUCS, Universidad de Guadalajara, Jalisco, Mexico."
+      }
+    }
+  ],
+  "projectsCurrent": [
+    {
+      "id": "modelado",
+      "status": {
+        "es": "En desarrollo",
+        "en": "In development"
+      },
+      "title": {
+        "es": "Modelado computacional del lenguaje",
+        "en": "Computational language modeling"
+      },
+      "description": {
+        "es": "Desarrollo de modelos para estudiar cómo se representan y procesan el lenguaje y sus significados.",
+        "en": "Developing models to study how language and meaning are represented and processed."
+      },
+      "topics": {
+        "es": "Lenguaje · Modelos computacionales",
+        "en": "Language · Computational models"
+      }
+    },
+    {
+      "id": "habla-interna",
+      "status": {
+        "es": "En desarrollo",
+        "en": "In development"
+      },
+      "title": {
+        "es": "Decodificación de habla interna",
+        "en": "Inner speech decoding"
+      },
+      "description": {
+        "es": "Estudio con EEG y análisis computacional de las representaciones implicadas en el habla interna y su relación con la producción verbal.",
+        "en": "Using EEG and computational analyses to study the representations involved in inner speech and their relation to verbal production."
+      },
+      "topics": {
+        "es": "EEG · Decodificación · RSA",
+        "en": "EEG · Decodificación · RSA"
+      }
+    },
+    {
+      "id": "experimentacion-en-linea",
+      "status": {
+        "es": "En desarrollo",
+        "en": "In development"
+      },
+      "title": {
+        "es": "Experimentación en línea",
+        "en": "Online experimentation"
+      },
+      "description": {
+        "es": "Desarrollo de una aplicación web para diseñar, ejecutar y validar experimentos desde el navegador.",
+        "en": "Developing a web application to design, run, and validate experiments in a browser."
+      },
+      "topics": {
+        "es": "Aplicaciones web · Métodos abiertos",
+        "en": "Web applications · Open methods"
+      }
+    },
+    {
+      "id": "juicios-morales",
+      "status": {
+        "es": "En desarrollo",
+        "en": "In development"
+      },
+      "title": {
+        "es": "Juicios morales y cognición social",
+        "en": "Moral judgment and social cognition"
+      },
+      "description": {
+        "es": "Diseño y validación de una tarea experimental para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.",
+        "en": "Designing and validating an experimental task to study how we evaluate actions, intentions, and social situations."
+      },
+      "topics": {
+        "es": "Cognición social · Diseño experimental",
+        "en": "Social cognition · Experimental design"
+      }
+    }
+  ],
+  "projectsArchive": [
+    {
+      "year": "2025",
+      "text": {
+        "es": "Colaborador en IN304825, “Representación del conocimiento conceptual: análisis del contenido sensoriomotor de los conceptos mediante herramientas de inteligencia artificial y experimentación con contextos oracionales” (2025–2027).",
+        "en": "Colaborador en IN304825, “Representación del conocimiento conceptual: análisis del contenido sensoriomotor de los conceptos mediante herramientas de inteligencia artificial y experimentación con contextos oracionales” (2025–2027)."
+      },
+      "category": "PAPIIT · UNAM"
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Colaborador en AG300224, “Predicción lingüística en monolingües y bilingües español-inglés” (2024–2026).",
+        "en": "Colaborador en AG300224, “Predicción lingüística en monolingües y bilingües español-inglés” (2024–2026)."
+      },
+      "category": "PAPIIT · UNAM"
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Colaborador en IN303221, “Efecto de la restricción oracional y la similitud entre palabras en la actividad EEG” (2021–2023).",
+        "en": "Colaborador en IN303221, “Efecto de la restricción oracional y la similitud entre palabras en la actividad EEG” (2021–2023)."
+      },
+      "category": "PAPIIT · UNAM"
+    },
+    {
+      "year": "2014",
+      "text": {
+        "es": "Colaborador en el proyecto “Discriminación léxica en bilingües mediante seguimiento ocular”, Departamento de Lingüística Aplicada, bajo la dirección de la Dra. Alina María Signoret Dorcasberro (diciembre de 2014–diciembre de 2015).",
+        "en": "Colaborador en el proyecto “Discriminación léxica en bilingües mediante seguimiento ocular”, Departamento de Lingüística Aplicada, bajo la dirección de la Dra. Alina María Signoret Dorcasberro (diciembre de 2014–diciembre de 2015)."
+      },
+      "category": "PAPIIT · UNAM"
+    },
+    {
+      "year": "2013",
+      "text": {
+        "es": "Asistente de investigación en el Laboratorio de Psicolingüística, bajo la dirección de la Dra. Natalia Arias Trejo, en el proyecto “Mecanismos de formación y modulación de redes semánticas en adolescencia y adultez” (CONACyT-167900; junio de 2013–diciembre de 2015).",
+        "en": "Asistente de investigación en el Laboratorio de Psicolingüística, bajo la dirección de la Dra. Natalia Arias Trejo, en el proyecto “Mecanismos de formación y modulación de redes semánticas en adolescencia y adultez” (CONACyT-167900; junio de 2013–diciembre de 2015)."
+      },
+      "category": "Otros proyectos institucionales"
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Colaboración en proyectos del Laboratorio de Psicolingüística sobre predicción y redes léxicas en personas con síndrome de Down, y priming durante el envejecimiento con seguimiento ocular (semestre 2022-2).",
+        "en": "Colaboración en proyectos del Laboratorio de Psicolingüística sobre predicción y redes léxicas en personas con síndrome de Down, y priming durante el envejecimiento con seguimiento ocular (semestre 2022-2)."
+      },
+      "category": "Otros proyectos institucionales"
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Seminario-taller del proyecto PAPIIT-IG300224 “Predicción lingüística en monolingües y bilingües español-inglés”, ENALLT, UNAM (2 de agosto–22 de noviembre de 2024).",
+        "en": "Seminario-taller del proyecto PAPIIT-IG300224 “Predicción lingüística en monolingües y bilingües español-inglés”, ENALLT, UNAM (2 de agosto–22 de noviembre de 2024)."
+      },
+      "category": "Otros proyectos institucionales"
+    }
+  ],
+  "teachingUndergraduate": [
+    {
+      "year": "2024",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Time Series Analysis Applied to Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, August 6–December 10, 2024.",
+        "en": "Teaching of the Extracurricular Course Time Series Analysis Applied to Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, August 6–December 10, 2024."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Statistics Applied to Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, January 18–July 25, 2024.",
+        "en": "Teaching of the Extracurricular Course Statistics Applied to Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, January 18–July 25, 2024."
+      }
+    },
+    {
+      "year": "2023",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Applied Research in Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, January 16–July 26, 2023.",
+        "en": "Teaching of the Extracurricular Course Applied Research in Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, January 16–July 26, 2023."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Eye-Tracking Data Analysis, for students of the Psycholinguistics Laboratory, May 11–August 8, 2022.",
+        "en": "Teaching of the Extracurricular Course Eye-Tracking Data Analysis, for students of the Psycholinguistics Laboratory, May 11–August 8, 2022."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Theory and Analysis of Electroencephalogram, organized by the Psycholinguistics Laboratory. 32 hours, January 5–June 5, 2022.",
+        "en": "Teaching of the Extracurricular Course Theory and Analysis of Electroencephalogram, organized by the Psycholinguistics Laboratory. 32 hours, January 5–June 5, 2022."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Theory and Analysis of Time Series, organized by the Psycholinguistics Laboratory. 32 hours, August 10–December 6, 2021.",
+        "en": "Teaching of the Extracurricular Course Theory and Analysis of Time Series, organized by the Psycholinguistics Laboratory. 32 hours, August 10–December 6, 2021."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Teaching of the Extracurricular Course Statistics in SPSS, organized by the Psycholinguistics Laboratory. 32 hours, January 6–August 8, 2021.",
+        "en": "Teaching of the Extracurricular Course Statistics in SPSS, organized by the Psycholinguistics Laboratory. 32 hours, January 6–August 8, 2021."
+      }
+    },
+    {
+      "year": "2020",
+      "text": {
+        "es": "Teaching of the Extracurricular Workshop Basic Programming in R, organized by the Psycholinguistics Laboratory. 32 hours, August 8–December 10, 2020.",
+        "en": "Teaching of the Extracurricular Workshop Basic Programming in R, organized by the Psycholinguistics Laboratory. 32 hours, August 8–December 10, 2020."
+      }
+    },
+    {
+      "year": "2020",
+      "text": {
+        "es": "Teaching of the Extracurricular Workshop II Seminar on Priming and Linguistic Anticipation, organized by the Psycholinguistics Laboratory. 32 hours, February 3–July 5, 2020.",
+        "en": "Teaching of the Extracurricular Workshop II Seminar on Priming and Linguistic Anticipation, organized by the Psycholinguistics Laboratory. 32 hours, February 3–July 5, 2020."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Teaching of the Extracurricular Workshop Theory of Analysis of Brain Electrical Activity, organized by the Psycholinguistics Laboratory. 32 hours, August 10–November 10, 2019.",
+        "en": "Teaching of the Extracurricular Workshop Theory of Analysis of Brain Electrical Activity, organized by the Psycholinguistics Laboratory. 32 hours, August 10–November 10, 2019."
+      }
+    }
+  ],
+  "teachingGraduate": [
+    {
+      "year": "2019",
+      "text": {
+        "es": "Teaching of the Extracurricular Workshop Biological Signal Processing for Neuroscience Studies, for students of the Master’s in Behavioral Sciences, University of Guadalajara. 36 hours, January 25–May 24, 2019.",
+        "en": "Teaching of the Extracurricular Workshop Biological Signal Processing for Neuroscience Studies, for students of the Master’s in Behavioral Sciences, University of Guadalajara. 36 hours, January 25–May 24, 2019."
+      }
+    },
+    {
+      "year": "2018",
+      "text": {
+        "es": "Teaching of the Extracurricular Workshop “Programming in Matlab for Neuroscience Studies,” for students of the Master’s in Behavioral Sciences, University of Guadalajara, 36 hours, August 17–December 7, 2018.",
+        "en": "Teaching of the Extracurricular Workshop “Programming in Matlab for Neuroscience Studies,” for students of the Master’s in Behavioral Sciences, University of Guadalajara, 36 hours, August 17–December 7, 2018."
+      }
+    }
+  ],
+  "outreachArticles": [
+    {
+      "year": "2025",
+      "text": {
+        "es": "Angulo-Chavira, A.Q., Castellón-Flores, A. M., & Arias-Trejo, N. (2025). Between Languages and Borders: How Is the Bilingual Mind of Migrants Organized? PaCiencia Pa'Todos, FES Aragón, UNAM.",
+        "en": "Angulo-Chavira, A.Q., Castellón-Flores, A. M., & Arias-Trejo, N. (2025). Between Languages and Borders: How Is the Bilingual Mind of Migrants Organized? PaCiencia Pa'Todos, FES Aragón, UNAM."
+      }
+    },
+    {
+      "year": "2025",
+      "text": {
+        "es": "Mulik, S., Angulo-Chavira, A.Q., & Arias-Trejo, N. (2025). Why Is It Important to Include Understudied Populations in Psycholinguistic Research? Revista Digital Universitaria, UNAM.",
+        "en": "Mulik, S., Angulo-Chavira, A.Q., & Arias-Trejo, N. (2025). Why Is It Important to Include Understudied Populations in Psycholinguistic Research? Revista Digital Universitaria, UNAM."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (2022, November 10). Conference: How Prediction Supports Language – A Perspective from Association. Gaceta of the Faculty of Psychology, UNAM.",
+        "en": "Angulo-Chavira, A. Q. (2022, November 10). Conference: How Prediction Supports Language – A Perspective from Association. Gaceta of the Faculty of Psychology, UNAM."
+      }
+    },
+    {
+      "year": "2013",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (2013, June 24). Do You Rest Completely? Gaceta de la Universidad de Guadalajara.",
+        "en": "Angulo-Chavira, A. Q. (2013, June 24). Do You Rest Completely? Gaceta de la Universidad de Guadalajara."
+      }
+    }
+  ],
+  "outreachEvents": [
+    {
+      "year": "2025",
+      "text": {
+        "es": "Organizer of the III Cycle of Cognitive Sciences Seminars (Feb 25 – Mar 25, 2025, 4 h, UNAM).",
+        "en": "Organizer of the III Cycle of Cognitive Sciences Seminars (Feb 25 – Mar 25, 2025, 4 h, UNAM)."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Organizer of the I Cycle of Cognitive Sciences Seminars (Jan 22 – Jun 17, 2024, 12 h, UNAM).",
+        "en": "Organizer of the I Cycle of Cognitive Sciences Seminars (Jan 22 – Jun 17, 2024, 12 h, UNAM)."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Organizer of the conference Lexical Knowledge and its Influence on Inferences and Word Acquisition in Adolescent Readers, Dr. Ernesto Guerra (May 21, Zoom).",
+        "en": "Organizer of the conference Lexical Knowledge and its Influence on Inferences and Word Acquisition in Adolescent Readers, Dr. Ernesto Guerra (May 21, Zoom)."
+      }
+    },
+    {
+      "year": "2024",
+      "text": {
+        "es": "Moderator at the Conference Lexical Knowledge and its Influence on Inferences and Word Acquisition in Adolescent Readers, Dr. Ernesto Guerra, May 21 (Zoom).",
+        "en": "Moderator at the Conference Lexical Knowledge and its Influence on Inferences and Word Acquisition in Adolescent Readers, Dr. Ernesto Guerra, May 21 (Zoom)."
+      }
+    },
+    {
+      "year": "2023",
+      "text": {
+        "es": "Language and Prediction Lecture Series (Faculty of Psychology, UNAM, Mexico, September 2023).",
+        "en": "Language and Prediction Lecture Series (Faculty of Psychology, UNAM, Mexico, September 2023)."
+      }
+    },
+    {
+      "year": "2022",
+      "text": {
+        "es": "Language and Prediction Lecture Series (Faculty of Psychology, UNAM, Mexico, Sep–Nov 2022).",
+        "en": "Language and Prediction Lecture Series (Faculty of Psychology, UNAM, Mexico, Sep–Nov 2022)."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Organizer of the Seminar on Prediction and Behavior (Feb 26 – May 28, 2021, 14 h, Zoom).",
+        "en": "Organizer of the Seminar on Prediction and Behavior (Feb 26 – May 28, 2021, 14 h, Zoom)."
+      }
+    },
+    {
+      "year": "2021",
+      "text": {
+        "es": "Organizer of the Seminar on Prediction and Behavior (Aug 16 – Nov 29, 2021, 14 h, Zoom).",
+        "en": "Organizer of the Seminar on Prediction and Behavior (Aug 16 – Nov 29, 2021, 14 h, Zoom)."
+      }
+    },
+    {
+      "year": "2020",
+      "text": {
+        "es": "Logistic Support at the III Interdisciplinary Congress in Health, Faculty of Psychology, UNAM, October 21–23, 2020 (24 h).",
+        "en": "Logistic Support at the III Interdisciplinary Congress in Health, Faculty of Psychology, UNAM, October 21–23, 2020 (24 h)."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Logistic Support in Information Sessions about the Master’s Program, Faculty of Psychology, UNAM, January 21, 2019 (8 h).",
+        "en": "Logistic Support in Information Sessions about the Master’s Program, Faculty of Psychology, UNAM, January 21, 2019 (8 h)."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Logistic Support in the Book Presentation Internal and External Habitability of Housing. An Anthology, Faculty of Psychology, UNAM, November 6, 2019 (2 h).",
+        "en": "Logistic Support in the Book Presentation Internal and External Habitability of Housing. An Anthology, Faculty of Psychology, UNAM, November 6, 2019 (2 h)."
+      }
+    },
+    {
+      "year": "2019",
+      "text": {
+        "es": "Organization of the Book Presentation Methodological Aspects of Social Research: Structural Equation Models, Faculty of Psychology, UNAM, October 28, 2019 (2 h).",
+        "en": "Organization of the Book Presentation Methodological Aspects of Social Research: Structural Equation Models, Faculty of Psychology, UNAM, October 28, 2019 (2 h)."
+      }
+    }
+  ],
+  "outreachInterviews": [
+    {
+      "year": "2021",
+      "text": {
+        "es": "Angulo-Chavira, A. Q. (September 2021). Interview on PrismaRu Radio UNAM.",
+        "en": "Angulo-Chavira, A. Q. (September 2021). Interview on PrismaRu Radio UNAM."
+      }
+    }
+  ],
+  "groupMembers": [
+    {
+      "name": {
+        "es": "Alexandra Rosselli González Balderrama",
+        "en": "Alexandra Rosselli González Balderrama"
+      },
+      "bio": {
+        "es": "Estudiante de Psicología y especialista en monitoreo de redes empresariales en Totalplay.",
+        "en": "Psychology student and enterprise network monitoring specialist at Totalplay."
+      },
+      "photo": "img/alexandra.jpeg"
+    },
+    {
+      "name": {
+        "es": "Arely Pérez Ramírez",
+        "en": "Arely Pérez Ramírez"
+      },
+      "bio": {
+        "es": "Profesora de inglés y francés para niñas, niños, adolescentes y adultos. Sus intereses incluyen la educación consciente, la psicolingüística y las neurociencias.\nColabora en proyectos del Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM como parte de su servicio social.",
+        "en": "English and French teacher for children, teenagers, and adults. Her interests include conscious education, psycholinguistics, and neuroscience.\nShe collaborates on projects at the Psycholinguistics Laboratory, Faculty of Psychology, UNAM, as part of her social service."
+      },
+      "photo": "img/arely.jpeg"
+    }
+  ],
+  "collaborators": [
+    {
+      "name": {
+        "es": "Dra. Natalia Arias Trejo",
+        "en": "Dr. Natalia Arias Trejo"
+      },
+      "degree": {
+        "es": "Doctora en Psicología.",
+        "en": "Doctor of Psychology."
+      },
+      "position": {
+        "es": "Profesora de Tiempo Completo en la Universidad Nacional Autónoma de México (UNAM).",
+        "en": "Full Time Professor at National Autonomous University of Mexico (UNAM)."
+      },
+      "interests": {
+        "es": "Adquisición del lenguaje, normas de asociación de palabras.",
+        "en": "Language acquisition, word association norms."
+      },
+      "photo": "img/natalia.jpg"
+    },
+    {
+      "name": {
+        "es": "Dr. Anuenue Baker Kukona",
+        "en": "Dr. Anuenue Baker Kukona"
+      },
+      "degree": {
+        "es": "Doctor en Psicología.",
+        "en": "PhD in Psychology."
+      },
+      "position": {
+        "es": "Profesor Titular en Psicología en la Universidad de Greenwich.",
+        "en": "Senior Lecturer in Psychology at University of Greenwich."
+      },
+      "interests": {
+        "es": "Cognición, lingüística y métodos cuantitativos.",
+        "en": "Cognition, linguistics and quantitative methods."
+      },
+      "photo": "img/baker.jpg"
+    },
+    {
+      "name": {
+        "es": "Dr. Luis Ángel Llamas Alonso",
+        "en": "Dr. Luis Angel Llamas Alonso"
+      },
+      "degree": {
+        "es": "Doctor en Neurociencias de la Conducta.",
+        "en": "PhD in Behavioral Neuroscience."
+      },
+      "position": {
+        "es": "Profesor de Tiempo Completo en la Universidad Autónoma de Baja California (UABC).",
+        "en": "Full Time Professor at Autonomous University of Baja California."
+      },
+      "interests": {
+        "es": "Neurociencia cognitiva, neurociencia afectiva, psicología experimental.",
+        "en": "Cognitive Neuroscience, Affective Neuroscience, Experimental Psychology."
+      },
+      "photo": "img/luis.jpg"
+    },
+    {
+      "name": {
+        "es": "Dr. Julio César Llamas Alonso",
+        "en": "Dr. Julio César Llamas Alonso"
+      },
+      "degree": {
+        "es": "Doctor en Psicología.",
+        "en": "Doctor of Psychology."
+      },
+      "position": {
+        "es": "Profesor Investigador de Tiempo Completo en la Universidad Autónoma del Estado de Hidalgo (UAEH).",
+        "en": "Full Time Researcher Lecturer at Autonomous University of Hidalgo State."
+      },
+      "interests": {
+        "es": "Neurociencias, cognición, psicopatología, adicciones, memoria, creatividad.",
+        "en": "Neurosciences, cognition, psychopathology, addictions, memory, creativity."
+      },
+      "photo": "img/julio.jpg"
+    },
+    {
+      "name": {
+        "es": "Dr. Vladimir Huerta Chávez",
+        "en": "Dr. Vladimir Huerta Chavez"
+      },
+      "degree": {
+        "es": "Doctor en Psicología.",
+        "en": "Doctor of Psychology."
+      },
+      "position": {
+        "es": "Miembro del Instituto de Neurociencias de la Universidad de Guadalajara (UdeG).",
+        "en": "Member of the Neuroscience Institute at the University of Guadalajara."
+      },
+      "interests": {
+        "es": "Emoción y cognición, ERPs y rastreo ocular (eye-tracking).",
+        "en": "Emotion and cognition, ERP's & eye tracking."
+      },
+      "photo": "img/vladimir.jpg"
+    },
+    {
+      "name": {
+        "es": "Dr. Kim Plunkett",
+        "en": "Dr. Kim Plunkett"
+      },
+      "degree": {
+        "es": "Doctor en Psicología Experimental.",
+        "en": "PhD in Experimental Psychology."
+      },
+      "position": {
+        "es": "Profesor Emérito de Ciencias Cognitivas.",
+        "en": "Emeritus Professor of Cognitive Science."
+      },
+      "interests": {
+        "es": "Reconocimiento de palabras, aprendizaje de palabras, desarrollo semántico y formación de categorías.",
+        "en": "Word recognition, word learning, semantic development and category formation."
+      },
+      "photo": "img/kim.jpg"
+    },
+    {
+      "name": {
+        "es": "Prof. Bruno Lara",
+        "en": "Prof. Bruno Lara"
+      },
+      "degree": {
+        "es": "Profesor.",
+        "en": "Professor."
+      },
+      "position": {
+        "es": "Laboratorio de Robótica Cognitiva, CInC, Universidad Autónoma del Estado de Morelos (UAEM).",
+        "en": "Cognitive Robotics Laboratory, CInC, Autonomous University of the State of Morelos (UAEM)."
+      },
+      "interests": {
+        "es": "Robótica cognitiva, así como el estudio y modelado de procesos predictivos, perceptuales, afectivos y atencionales en agentes biológicos y artificiales.",
+        "en": "Cognitive Robotics as well as the study and modeling of predictive, perceptual, affective, and attentional processes in biological and artificial agents."
+      },
+      "photo": "img/bruno.png"
+    },
+    {
+      "name": {
+        "es": "Dra. Alejandra Ciria",
+        "en": "Dr. Alejandra Ciria"
+      },
+      "degree": {
+        "es": "Doctora en Ciencias.",
+        "en": "Ph.D."
+      },
+      "position": {
+        "es": "Investigadora Asociada (Tiempo Completo), Departamento de Ciencias de la Computación, IIMAS, UNAM.",
+        "en": "Associate Researcher (Full-time), Department of Computer Science, IIMAS, UNAM."
+      },
+      "interests": {
+        "es": "Intersección entre la cognición corporizada, inteligencia artificial y robótica cognitiva; procesamiento de información multimodal y adaptación en sistemas biológicos y artificiales.",
+        "en": "Intersection of embodied cognition, artificial intelligence, and cognitive robotics; multimodal information processing and adaptation in biological and artificial systems."
+      },
+      "photo": "img/alejandra.jpg"
+    }
+  ],
+  "publicResources": [
+    {
+      "title": {
+        "es": "Mexican Spanish adaptation for the Affective Norms for English Words (ANEW)",
+        "en": "Mexican Spanish adaptation for the Affective Norms for English Words (ANEW)"
+      },
+      "description": {
+        "es": "La Adaptación al Español de México de ANEW es una base de datos que contiene las evaluaciones de 1,028 palabras, calificadas por 753 participantes. Es una herramienta metodológica basada en la escala pictórica SAM (Self-Assessment Manikin) que permite estudiar el procesamiento emocional de las palabras en tres dimensiones: valencia (agrado), activación (arousal) y dominancia (control) dentro de un contexto lingüístico y culturalmente relevante para México.",
+        "en": "The Mexican Spanish Adaptation of ANEW is a database containing the evaluations of 1,028 words, rated by 753 participants. It is a methodological tool based on the Self-Assessment Manikin (SAM) pictorial scale that allows the study of emotional word processing in three dimensions: valence (pleasantness), arousal (activation), and dominance (control) within a linguistically and culturally relevant context for Mexico."
+      },
+      "citation": {
+        "es": "Huerta-Chavez, V., Llamas-Alonso, L. A., & Angulo-Chavira, A. Q. (2025). Mexican Spanish adaptation for the Affective Norms for English Words (ANEW). Behavior Research Methods, 57(169).",
+        "en": "Huerta-Chavez, V., Llamas-Alonso, L. A., & Angulo-Chavira, A. Q. (2025). Mexican Spanish adaptation for the Affective Norms for English Words (ANEW). Behavior Research Methods, 57(169)."
+      },
+      "button": {
+        "es": "Descargar Base de Datos (CSV)",
+        "en": "Download Database (CSV)"
+      },
+      "file": "files/ANEW_mexican_word_average.csv",
+      "url": ""
+    },
+    {
+      "title": {
+        "es": "Sentence‐final completion norms for 2925 Mexican Spanish sentence contexts",
+        "en": "Sentence‐final completion norms for 2925 Mexican Spanish sentence contexts"
+      },
+      "description": {
+        "es": "La Base de Datos de Normas de Completamiento proporciona un extenso corpus de 2,925 contextos de oraciones evaluados por 1,470 participantes adultos en México. Incluye medidas calculadas para estimar la predictibilidad de la palabra final, tales como la probabilidad de cierre (cloze probability), sorpresa (surprisal) y el nivel de incertidumbre o entropía del contexto. Es una herramienta ideal para investigaciones en psicolingüística, mecanismos predictivos del lenguaje y ciencias cognitivas.",
+        "en": "The Sentence Completion Norms Database provides an extensive corpus of 2,925 sentence contexts evaluated by 1,470 adult participants in Mexico. It includes calculated measures to estimate the predictability of the final word, such as cloze probability, surprisal, and the level of uncertainty or context entropy. It is an ideal tool for research in psycholinguistics, predictive language mechanisms, and cognitive sciences."
+      },
+      "citation": {
+        "es": "Angulo-Chavira, A. Q., Castellón-Flores, A. M., Ciria, A., & Arias-Trejo, N. (2023). Sentence-final completion norms for 2925 Mexican Spanish sentence contexts. Behavior Research Methods.",
+        "en": "Angulo-Chavira, A. Q., Castellón-Flores, A. M., Ciria, A., & Arias-Trejo, N. (2023). Sentence-final completion norms for 2925 Mexican Spanish sentence contexts. Behavior Research Methods."
+      },
+      "button": {
+        "es": "Descargar Base de Datos (XLSX)",
+        "en": "Download Database (XLSX)"
+      },
+      "file": "files/corpus_data_clean5.xlsx",
+      "url": ""
+    }
+  ],
+  "blogPosts": [
+    {
+      "title": {
+        "es": "El futuro de la IA en la psicolingüística",
+        "en": "The future of AI in psycholinguistics"
+      },
+      "date": {
+        "es": "15 de Marzo, 2026",
+        "en": "March 15, 2026"
+      },
+      "excerpt": {
+        "es": "Un breve análisis sobre cómo los modelos de lenguaje a gran escala (LLMs) están transformando nuestra forma de modelar y estudiar el léxico mental y el cerebro bilingüe...",
+        "en": "A brief analysis of how large language models (LLMs) are transforming the way we model and study the mental lexicon and the bilingual brain..."
+      },
+      "url": ""
+    },
+    {
+      "title": {
+        "es": "Consejos para sobrevivir al doctorado",
+        "en": "Tips for surviving a PhD"
+      },
+      "date": {
+        "es": "10 de Febrero, 2026",
+        "en": "February 10, 2026"
+      },
+      "excerpt": {
+        "es": "Después de defender mi tesis doctoral, comparto algunas estrategias que me ayudaron a mantener el equilibrio entre las exigencias del laboratorio, la escritura y la vida personal.",
+        "en": "After defending my doctoral thesis, I share some strategies that helped me balance the demands of the lab, writing, and personal life."
+      },
+      "url": ""
+    },
+    {
+      "title": {
+        "es": "Entendiendo el 'Eye-Tracking' en la infancia",
+        "en": "Understanding Eye-Tracking in infancy"
+      },
+      "date": {
+        "es": "5 de Enero, 2026",
+        "en": "January 5, 2026"
+      },
+      "excerpt": {
+        "es": "Una introducción amigable a la tecnología de rastreo ocular y cómo esta herramienta no invasiva nos permite descubrir qué saben los bebés mucho antes de que puedan articular palabras.",
+        "en": "A friendly introduction to eye-tracking technology and how this non-invasive tool allows us to discover what babies know long before they can articulate words."
+      },
+      "url": ""
+    }
+  ]
+}

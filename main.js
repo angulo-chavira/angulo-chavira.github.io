@@ -610,5 +610,6 @@ document.addEventListener("DOMContentLoaded", () => {
     initControls();
     setTheme(savedTheme);
     highlightCurrentPage();
+    window.dispatchEvent(new CustomEvent("site:components-loaded"));
   });
 });

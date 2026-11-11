@@ -16,13 +16,13 @@
     <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
     <main id="main-content">
       <section class="content-section projects-page">
-        <p class="eyebrow" data-i18n="projEyebrow">Neurociencia cognitiva · Modelado · Experimentación</p>
-        <h1 class="section-title" data-i18n="projTitle">Proyectos de investigación</h1>
-        <p class="projects-intro" data-i18n="projIntro">Mi trabajo actual combina preguntas sobre cognición y cerebro con herramientas computacionales y experimentales.</p>
+        <p class="eyebrow" data-cms-copy="pageCopy.projects.eyebrow" data-i18n="projEyebrow">Neurociencia cognitiva · Modelado · Experimentación</p>
+        <h1 class="section-title" data-cms-copy="pageCopy.projects.title" data-i18n="projTitle">Proyectos de investigación</h1>
+        <p class="projects-intro" data-cms-copy="pageCopy.projects.intro" data-i18n="projIntro">Mi trabajo actual combina preguntas sobre cognición y cerebro con herramientas computacionales y experimentales.</p>
 
         <section id="en-desarrollo" aria-labelledby="projCurrentTitle">
-          <div class="projects-heading"><div><p class="eyebrow" data-i18n="projCurrentEyebrow">En desarrollo</p><h2 id="projCurrentTitle" class="subsection-title" data-i18n="projCurrentTitleText">Líneas de trabajo</h2></div><p data-i18n="projCurrentDesc">Proyectos que conectan modelos, actividad cerebral y diseño experimental.</p></div>
-          <div class="projects-grid">
+          <div class="projects-heading"><div><p class="eyebrow" data-cms-copy="pageCopy.projects.currentEyebrow" data-i18n="projCurrentEyebrow">En desarrollo</p><h2 id="projCurrentTitle" class="subsection-title" data-cms-copy="pageCopy.projects.currentTitle" data-i18n="projCurrentTitleText">Líneas de trabajo</h2></div><p data-cms-copy="pageCopy.projects.currentIntro" data-i18n="projCurrentDesc">Proyectos que conectan modelos, actividad cerebral y diseño experimental.</p></div>
+          <div id="projectsCurrent" class="projects-grid">
             <article id="modelado" class="project-card" data-cursor-size="1.25">
               <span class="project-number">01</span><p class="project-status" data-i18n="projStatus">En desarrollo</p>
               <h3 data-i18n="projModelTitle">Modelado computacional del lenguaje</h3>
@@ -50,11 +50,11 @@
           </div>
         </section>
 
-        <details class="projects-archive">
-          <summary data-i18n="projOtherTitle">Otros proyectos y colaboraciones</summary>
-          <p class="muted-note" data-i18n="projOtherDesc">Participación en proyectos institucionales y colaborativos en distintas etapas de mi trayectoria.</p>
+        <details id="projectsArchive" class="projects-archive">
+          <summary data-cms-copy="pageCopy.projects.archiveTitle" data-i18n="projOtherTitle">Otros proyectos y colaboraciones</summary>
+          <p class="muted-note" data-cms-copy="pageCopy.projects.archiveIntro" data-i18n="projOtherDesc">Participación en proyectos institucionales y colaborativos en distintas etapas de mi trayectoria.</p>
           <h3 class="subsection-title" data-i18n="projPapiitTitle">PAPIIT · UNAM</h3>
-          <table class="publications-table"><tbody>
+          <table class="publications-table"><tbody id="projectsArchiveRows">
             <tr><td class="pub-year">2025</td><td class="pub-ref" data-i18n="projPapiit1">Colaborador en IN304825, “Representación del conocimiento conceptual: análisis del contenido sensoriomotor de los conceptos mediante herramientas de inteligencia artificial y experimentación con contextos oracionales” (2025–2027).</td></tr>
             <tr><td class="pub-year">2024</td><td class="pub-ref" data-i18n="projPapiit2">Colaborador en AG300224, “Predicción lingüística en monolingües y bilingües español-inglés” (2024–2026).</td></tr>
             <tr><td class="pub-year">2021</td><td class="pub-ref" data-i18n="projPapiit3">Colaborador en IN303221, “Efecto de la restricción oracional y la similitud entre palabras en la actividad EEG” (2021–2023).</td></tr>
@@ -72,5 +72,6 @@
   </div>
   <footer id="footer-placeholder" class="footer"></footer>
   <script src="main.js"></script>
+  <script src="site-content.js"></script>
 </body>
 </html>

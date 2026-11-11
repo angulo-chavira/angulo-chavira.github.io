@@ -26,10 +26,10 @@
     <main id="main-content">
       
       <section class="content-section">
-        <h3 class="section-title" data-i18n="blogTitle">Blog</h3>
-        <p data-i18n="blogDesc" style="margin-bottom: 40px; color: var(--text-muted);">Reflexiones, noticias y notas breves sobre psicolingüística, ciencia cognitiva y tecnología.</p>
+        <h3 class="section-title" data-cms-copy="pageCopy.blog.title" data-i18n="blogTitle">Blog</h3>
+        <p data-cms-copy="pageCopy.blog.intro" data-i18n="blogDesc" style="margin-bottom: 40px; color: var(--text-muted);">Reflexiones, noticias y notas breves sobre psicolingüística, ciencia cognitiva y tecnología.</p>
         
-        <div class="blog-posts-list">
+        <div id="blogPostsList" class="blog-posts-list">
           
           <article class="blog-post" style="border-bottom: 1px solid var(--border-color); padding-bottom: 30px; margin-bottom: 30px;">
             <h4 data-i18n="post1Title" style="color: var(--blue-title); font-size: 1.4rem; margin-top: 0; margin-bottom: 5px;">El futuro de la IA en la psicolingüística</h4>
@@ -62,6 +62,7 @@
   <footer id="footer-placeholder" class="footer"></footer>
 
   <script src="main.js"></script>
+  <script src="site-content.js"></script>
 
 </body>
 </html>

@@ -32,7 +32,17 @@
             <div><p class="eyebrow">HERRAMIENTA PERSONAL</p><h1 class="section-title" style="margin-bottom:0">Editar recursos</h1></div>
             <button id="closeEditor" class="action-button secondary" type="button">Bloquear</button>
           </div>
-          <p class="muted-note">Los borradores se mantienen en esta pestaña hasta que descargues la nueva versión cifrada. Después sustituye el archivo en GitHub.</p>
+          <p class="muted-note">Los recursos se descifran y editan solo en este navegador. Puedes guardarlos cifrados con un commit directo a GitHub o descargar el archivo como respaldo.</p>
+          <section class="cms-auth resource-github-auth" aria-labelledby="resourceGithubTitle">
+            <div class="cms-auth-heading"><div><h2 id="resourceGithubTitle">Guardar el almacén cifrado en GitHub</h2><p>Repositorio: angulo-chavira/angulo-chavira.github.io</p></div><span id="resourceGithubState" class="cms-connection-state">Sin conectar</span></div>
+            <p class="muted-note">Usa un token detallado con vencimiento, acceso solo a este repositorio y permiso <strong>Contents: Read and write</strong>. El token se conserva solo en esta pestaña. Se subirá únicamente el archivo cifrado.</p>
+            <p class="muted-note"><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">Crear token detallado en GitHub ↗</a></p>
+            <div class="cms-auth-form">
+              <label for="resourceGithubToken">Token detallado<input id="resourceGithubToken" type="password" autocomplete="off" spellcheck="false" placeholder="Pega aquí el token; no se guardará" /></label>
+              <div class="cms-auth-actions"><button id="connectResourceGithub" class="action-button" type="button">Conectar</button><button id="disconnectResourceGithub" class="action-button secondary" type="button" disabled>Desconectar</button></div>
+            </div>
+            <p id="resourceGithubStatus" class="status-message" aria-live="polite"></p>
+          </section>
           <form id="resourceForm" class="vault-form">
             <label for="resourceTitle">Nombre<input id="resourceTitle" required maxlength="120" /></label>
             <label for="resourceCategoryInput">Categoría<input id="resourceCategoryInput" placeholder="R, análisis, docencia, trámites…" maxlength="80" /></label>
@@ -40,8 +50,11 @@
             <label for="resourceTags">Etiquetas (separadas por comas)<input id="resourceTags" placeholder="R, EEG, escritura" /></label>
             <label for="resourceNotes">Nota personal<textarea id="resourceNotes" maxlength="3000" placeholder="Comandos, contexto o pasos que quieras recordar"></textarea></label>
             <button class="action-button" type="submit">Agregar recurso</button>
+            <button id="cancelResourceEdit" class="action-button secondary" type="button" hidden>Cancelar edición</button>
           </form>
           <div class="editor-actions">
+            <label for="privateCommitMessage" class="cms-commit-message">Mensaje del commit<input id="privateCommitMessage" value="Actualizar recursos personales cifrados" maxlength="120" /></label>
+            <button id="commitVault" class="action-button" type="button" disabled>Guardar cifrado y hacer commit</button>
             <button id="downloadVault" class="action-button" type="button">Descargar archivo cifrado</button>
             <button id="lockVault" class="action-button secondary" type="button">Bloquear y salir</button>
           </div>
@@ -54,6 +67,7 @@
   <footer id="footer-placeholder" class="footer"></footer>
   <script src="main.js"></script>
   <script src="vault-crypto.js"></script>
+  <script src="github-publisher.js"></script>
   <script src="resource-editor.js"></script>
 </body>
 </html>

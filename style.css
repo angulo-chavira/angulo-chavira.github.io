@@ -434,3 +434,96 @@ body.custom-pointer select { cursor: auto !important; }
   .projects-grid { grid-template-columns: 1fr; }
   .project-card { min-height: 0; }
 }
+
+/* Administrador de contenido */
+.cms-page > p:not(.eyebrow):not(.status-message) { max-width: 78ch; }
+.cms-help { margin: 18px 0; padding: 15px 17px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.cms-help summary { cursor: pointer; font-weight: 720; }
+.cms-help p { margin: 12px 0 0; }
+.cms-auth { margin: 18px 0; padding: 19px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface-2); }
+.cms-auth-heading { display: flex; justify-content: space-between; gap: 18px; align-items: center; margin-bottom: 13px; }
+.cms-auth-heading h2 { margin: 0; font-size: 1.03rem; }
+.cms-auth-heading p { margin: 4px 0 0; color: var(--muted); font-size: .82rem; }
+.cms-connection-state { flex: 0 0 auto; padding: 5px 10px; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--muted); font-size: .77rem; font-weight: 700; }
+.cms-connection-state.is-connected { border-color: var(--ink); color: var(--ink); }
+.cms-auth-form { display: grid; grid-template-columns: minmax(180px,1fr) auto; align-items: end; gap: 12px; }
+.cms-auth-form label, .cms-commit-bar label, .cms-commit-message { display: grid; gap: 5px; color: var(--muted); font-size: .81rem; font-weight: 650; }
+.cms-auth-form input, .cms-commit-bar input, .cms-commit-message input, .cms-field-grid input, .cms-field-grid textarea {
+  width: 100%; min-width: 0; min-height: 42px; padding: 9px 11px; border: 1px solid var(--line-strong); border-radius: 9px; background: var(--surface); color: var(--ink);
+}
+.cms-field-grid textarea { min-height: 90px; resize: vertical; }
+.cms-auth-actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.cms-auth-actions .action-button { min-height: 42px; }
+.cms-auth .status-message, .cms-commit-bar + .status-message, .resource-github-auth .status-message { overflow-wrap: anywhere; }
+.cms-commit-bar { display: grid; grid-template-columns: minmax(180px,1fr) auto; align-items: end; gap: 12px; margin: 18px 0 4px; padding: 15px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); }
+.cms-commit-bar .action-button { min-height: 43px; }
+.action-button:disabled { cursor: not-allowed; opacity: .48; }
+.cms-workspace { display: grid; grid-template-columns: 180px minmax(0,1fr); align-items: start; gap: 16px; margin-top: 20px; }
+.cms-tabs { position: sticky; top: 16px; display: grid; gap: 5px; padding: 7px; border: 1px solid var(--line); border-radius: 13px; background: var(--surface-2); }
+.cms-tab { width: 100%; padding: 9px 10px; border: 1px solid transparent; border-radius: 9px; background: transparent; color: var(--muted); cursor: pointer; font-size: .82rem; font-weight: 650; text-align: left; }
+.cms-tab:hover { color: var(--ink); background: var(--surface); }
+.cms-tab.is-active { border-color: var(--line); background: var(--surface); color: var(--ink); box-shadow: 0 2px 8px rgba(0,0,0,.05); }
+.cms-editor-panel { min-width: 0; padding: 18px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); }
+.cms-panel-heading { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-bottom: 16px; }
+.cms-panel-heading h2 { margin: 0; font-size: 1.25rem; letter-spacing: -.025em; }
+.cms-panel-heading .eyebrow { margin-bottom: 2px; }
+.cms-panel-heading .action-button { min-height: 36px; padding: 6px 10px; font-size: .76rem; }
+.cms-section-note { margin: 0 0 16px; padding: 10px 12px; border-left: 3px solid var(--line-strong); background: var(--surface-2); color: var(--muted); font-size: .8rem; }
+.cms-object-editor { min-width: 0; margin: 0 0 16px; padding: 15px; border: 1px solid var(--line); border-radius: 12px; }
+.cms-object-editor legend, .cms-localized legend { padding: 0 6px; font-size: .91rem; font-weight: 730; }
+.cms-field-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); align-items: start; gap: 12px; }
+.cms-field-grid > label, .cms-asset-field > label:first-child { display: grid; gap: 5px; min-width: 0; color: var(--muted); font-size: .78rem; font-weight: 650; }
+.cms-localized { min-width: 0; grid-column: 1 / -1; margin: 0; padding: 10px; border: 1px solid var(--line); border-radius: 10px; }
+.cms-locale-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 10px; }
+.cms-locale-field { display: grid; gap: 5px; min-width: 0; color: var(--muted); font-size: .74rem; font-weight: 650; }
+.cms-check-field { display: flex; align-items: center; gap: 8px; min-height: 42px; color: var(--ink); font-size: .82rem; font-weight: 620; }
+.cms-check-field input { width: 17px; min-height: 17px; accent-color: var(--ink); }
+.cms-asset-field { display: grid; grid-column: 1 / -1; grid-template-columns: minmax(0,1fr) minmax(125px,auto); align-items: end; gap: 9px; }
+.cms-file-picker { display: grid; gap: 5px; color: var(--muted); font-size: .75rem; font-weight: 650; }
+.cms-file-picker input { min-height: 42px; padding: 6px; border: 1px solid var(--line); border-radius: 9px; background: var(--surface-2); color: var(--muted); font-size: .72rem; }
+.cms-upload-pending { grid-column: 1 / -1; color: var(--muted); font-size: .76rem; }
+.cms-collection { margin-top: 17px; padding-top: 16px; border-top: 1px solid var(--line); }
+.cms-collection-heading { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-bottom: 11px; }
+.cms-collection-heading h3 { margin: 0; font-size: .98rem; }
+.cms-collection-heading span { color: var(--muted); font-size: .74rem; }
+.cms-collection-heading .action-button { min-height: 36px; padding: 6px 10px; font-size: .78rem; }
+.cms-records { display: grid; gap: 10px; }
+.cms-record { min-width: 0; padding: 13px; border: 1px solid var(--line); border-radius: 11px; background: var(--bg); }
+.cms-record-heading { display: flex; justify-content: space-between; gap: 10px; align-items: center; margin-bottom: 12px; }
+.cms-record-heading strong { min-width: 0; color: var(--ink); font-size: .82rem; line-height: 1.4; overflow-wrap: anywhere; }
+.cms-record-heading > div { display: flex; flex: 0 0 auto; gap: 4px; }
+.cms-order-button, .cms-record-heading .delete-button { min-width: 32px; min-height: 31px; padding: 4px 7px; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); color: var(--ink); cursor: pointer; font-size: .76rem; }
+.cms-record-heading .delete-button { padding: 4px 8px; }
+.cms-private-link { display: flex; justify-content: space-between; gap: 16px; align-items: center; margin-top: 21px; padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface-2); }
+.cms-private-link p { margin: 3px 0 0; color: var(--muted); font-size: .81rem; }
+.cms-private-link .action-button { flex: 0 0 auto; }
+.resource-github-auth { margin-top: 16px; }
+.resource-edit-button { min-height: 31px; padding: 4px 8px; font-size: .76rem; }
+.editor-item-head > div { display: flex; flex: 0 0 auto; gap: 6px; }
+.cms-commit-message { flex: 1 1 230px; min-width: 205px; }
+.editor-actions .action-button { flex: 0 0 auto; }
+
+@media (max-width: 900px) {
+  .cms-workspace { grid-template-columns: 1fr; }
+  .cms-tabs { position: static; display: flex; gap: 5px; overflow-x: auto; }
+  .cms-tab { width: auto; flex: 0 0 auto; white-space: nowrap; }
+}
+@media (max-width: 720px) {
+  .cms-auth-form, .cms-commit-bar { grid-template-columns: 1fr; }
+  .cms-auth-actions { width: 100%; }
+  .cms-auth-actions .action-button { flex: 1; }
+  .cms-editor-panel { padding: 13px; }
+  .cms-panel-heading, .cms-auth-heading, .cms-private-link { align-items: flex-start; }
+  .cms-field-grid, .cms-locale-grid { grid-template-columns: 1fr; }
+  .cms-asset-field { grid-template-columns: 1fr; }
+  .cms-asset-field, .cms-localized { grid-column: 1; }
+  .cms-record-heading { align-items: flex-start; }
+  .cms-record-heading > div { flex-wrap: wrap; justify-content: flex-end; }
+  .cms-private-link { flex-direction: column; }
+  .cms-panel-heading { flex-direction: column; align-items: flex-start; }
+  .editor-item-head { align-items: flex-start; }
+  .editor-item-head > div { flex-wrap: wrap; justify-content: flex-end; }
+  .editor-actions { align-items: stretch; }
+  .editor-actions .action-button { flex: 1 1 auto; }
+  .cms-commit-message { flex-basis: 100%; }
+}

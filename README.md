@@ -1,44 +1,59 @@
 # Página personal de Armando Q. Angulo Chavira
 
-Sitio estático bilingüe en español e inglés, preparado para GitHub Pages. El diseño usa una paleta en blanco, negro y grises; el tema claro/oscuro se puede cambiar desde el encabezado. No utiliza backend ni servicios de pago.
+Sitio estático bilingüe en español e inglés, preparado para GitHub Pages. El diseño conserva la paleta ejecutiva en blanco, negro y grises, con la fotografía y los logotipos institucionales a color. No requiere backend ni servicios de pago.
 
-## Actualizar publicaciones sin editar el código del sitio
+## Actualizar el sitio desde el navegador
 
-1. Abre `site-manager.html` en el sitio publicado. La página no aparece en el menú; guárdala en favoritos.
-2. Agrega o actualiza el registro. El borrador se guarda solo en el almacenamiento local de ese navegador.
-3. Descarga `publications.json`.
-4. En GitHub, reemplaza `data/publications.json` por el archivo descargado y confirma el cambio.
+El archivo `site-manager.html` funciona como un administrador sencillo para el contenido de las páginas. No aparece en el menú principal; conviene guardar la dirección en favoritos.
 
-La página pública de publicaciones permite buscar y filtrar por año, tema, primer autor y autor de correspondencia. Los resúmenes, etiquetas y roles de autoría se pueden completar en el administrador. El archivo JSON será público: no incluyas datos privados.
+Desde el administrador puedes editar:
 
-## Recursos personales cifrados
+- Perfil, enlaces académicos, membresías y textos de inicio.
+- Áreas de investigación, métodos y formación.
+- Publicaciones, con año, etiquetas, resumen, BibTeX, DOI/PDF y filtros de primer autor y autor de correspondencia.
+- Proyectos, presentaciones, divulgación, docencia, miembros del grupo y colaboradores.
+- Recursos públicos y entradas del blog.
 
-`private-resources.html` es una página fuera del menú y protegida por una frase de paso. `resource-editor.html` permite crear o actualizar el contenido. Guarda enlaces y notas personales; deja documentos, comprobantes y datos sensibles en tu almacenamiento privado.
+En cada lista puedes agregar registros, corregirlos, eliminarlos y cambiar su orden. Los campos bilingües se editan en español e inglés. Puedes subir archivos permitidos desde los registros; el archivo se agrega al mismo commit que los datos.
 
-### Primera configuración
+### Primera instalación
 
-1. Abre `resource-editor.html` en el sitio publicado.
-2. Crea una frase de paso larga (la herramienta exige al menos 14 caracteres) y conserva una copia segura. No hay recuperación si se pierde.
-3. Agrega recursos y descarga `private-resources.enc.json`.
-4. En GitHub, reemplaza `data/private-resources.enc.json` por el archivo descargado.
-5. Abre `private-resources.html` y escribe tu frase de paso para consultar los recursos.
+1. Descarga el ZIP actualizado y reemplaza en GitHub los archivos del sitio con esta versión.
+2. Espera a que GitHub Pages publique los cambios.
+3. Abre `site-manager.html` en la dirección de tu sitio y guarda esa página en favoritos.
 
-Para actualizar la lista, abre el editor, desbloquea con la misma frase, modifica los registros, descarga el nuevo archivo cifrado y reemplaza el archivo de datos en GitHub.
+Esta carga inicial todavía se hace desde GitHub. Después, las ediciones de contenido se pueden enviar directamente desde el administrador.
 
-El cifrado AES-GCM y la derivación de clave PBKDF2 se realizan dentro del navegador; la frase de paso no se transmite ni se guarda en el sitio. El repositorio sí contiene el archivo cifrado, así que elige una frase que no pueda adivinarse. Si guardas un enlace privado, protege también el destino con los permisos de Drive u otro servicio: cifrar la lista no cambia los permisos del documento al que apunta.
+### Crear y usar el token de GitHub
+
+1. En el administrador, abre **Conectar GitHub por primera vez** y sigue el enlace para crear un token *fine-grained*.
+2. Limita el token al repositorio de esta página, ponle vencimiento y concede **Contents: Read and write**.
+3. Pega el token en el administrador y pulsa **Conectar**.
+4. Edita todas las secciones que necesites y pulsa **Guardar cambios y hacer commit**.
+
+El token se conserva solo en la memoria de la pestaña y se borra al cerrar o recargar. No se guarda en el sitio, el repositorio ni el borrador local. Si abres el editor de recursos privados, tendrás que conectarlo también; el token no pasa de una página a otra. Cuando termine el commit, GitHub Pages publica la actualización automáticamente.
+
+Los borradores de texto se guardan en el almacenamiento local del navegador para que puedas volver a ellos. Los archivos que selecciones para subir se conservan temporalmente en memoria hasta hacer el commit; no recargues la pestaña antes de guardarlos. El editor acepta PDF, CSV, XLSX, DOCX, PPTX, PNG, JPG y WebP de hasta 12 MB por archivo.
+
+## Archivos públicos y recursos personales
+
+Todo archivo subido al administrador público, como fotos, PDFs o bases de datos, queda publicado en el repositorio y puede ser accesible para cualquiera. Sube solo material que tengas permiso de compartir.
+
+`resource-editor.html` permite guardar notas y enlaces personales en `data/private-resources.enc.json`. El cifrado AES-GCM y la derivación de clave PBKDF2 ocurren en el navegador antes del commit; solo el archivo cifrado se envía a GitHub. Puedes guardar los cambios directamente desde esa página o descargar el archivo cifrado como respaldo. La frase de paso no se transmite ni se guarda en el sitio; consérvala de forma segura porque no puede recuperarse si se pierde.
+
+El almacén cifrado sirve para notas y enlaces, no para contraseñas ni como sustituto de almacenamiento privado. Los permisos de Drive u otro destino siguen siendo los que protegen el documento enlazado. Para comprobantes, expedientes y documentos sensibles, conserva los archivos en una carpeta privada y guarda solo un enlace con acceso restringido.
 
 ## Vista previa local
 
-Desde esta carpeta, inicia un servidor estático (por ejemplo, `python -m http.server 8000`) y abre `http://localhost:8000`. La página necesita servirse por HTTP/HTTPS para cargar sus archivos JSON y usar Web Crypto. GitHub Pages funciona por HTTPS.
+Desde esta carpeta, inicia un servidor estático (por ejemplo, `python -m http.server 8000`) y abre `http://localhost:8000`. Las páginas usan archivos JSON y Web Crypto, por lo que deben servirse por HTTP/HTTPS. GitHub Pages ya funciona con HTTPS.
 
 ## Archivos principales
 
 - `index.html`, `style.css`, `main.js`: presentación, estilos, idioma y tema.
-- `publications.html`, `publications.js`, `data/publications.json`: catálogo y filtros.
-- `site-manager.html`, `site-manager.js`: editor local de los datos públicos de publicaciones.
-- `private-resources.html`, `private-resources.js`: lectura del espacio cifrado.
-- `resource-editor.html`, `resource-editor.js`, `vault-crypto.js`: edición y cifrado de recursos privados.
-- `data/private-resources.enc.json`: solo contiene el almacén cifrado publicado.
-- `img/`, `files/`: imágenes y archivos que ya formaban parte del sitio original.
-
-Las demás páginas conservan sus contenidos actuales. Sus textos fijos todavía se editan en los archivos HTML correspondientes.
+- `data/site-content.json`: textos bilingües y listas públicas administrables.
+- `data/publications.json`, `publications.html`, `publications.js`: publicaciones y filtros.
+- `site-manager.html`, `site-manager.js`: editor de contenido público.
+- `github-publisher.js`: commits hechos desde el navegador usando el token introducido en esa pestaña.
+- `resource-editor.html`, `resource-editor.js`, `vault-crypto.js`: edición y cifrado de recursos personales.
+- `data/private-resources.enc.json`: almacén cifrado publicado.
+- `img/`, `files/`, `uploads/`: imágenes, materiales existentes y nuevos archivos subidos.

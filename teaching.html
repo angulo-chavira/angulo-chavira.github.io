@@ -26,11 +26,11 @@
     <main id="main-content">
       
       <section class="content-section">
-        <h3 class="section-title" data-i18n="teachingTitle">Docencia</h3>
+        <h3 class="section-title" data-cms-copy="pageCopy.teaching.title" data-i18n="teachingTitle">Docencia</h3>
         
-        <h4 class="subsection-title" data-i18n="teachUndergrad">Cursos de Licenciatura</h4>
+        <h4 class="subsection-title" data-cms-copy="pageCopy.teaching.undergraduateTitle" data-i18n="teachUndergrad">Cursos de Licenciatura</h4>
         <table class="publications-table">
-          <tbody>
+          <tbody id="teachingUndergraduateRows">
             <tr>
               <td class="pub-year">2024</td>
               <td class="pub-ref">Teaching of the Extracurricular Course Time Series Analysis Applied to Eye-Tracking Projects, for students of the Psycholinguistics Laboratory, August 6–December 10, 2024.</td>
@@ -74,9 +74,9 @@
           </tbody>
         </table>
 
-        <h4 class="subsection-title" data-i18n="teachGrad">Cursos de Posgrado</h4>
+        <h4 class="subsection-title" data-cms-copy="pageCopy.teaching.graduateTitle" data-i18n="teachGrad">Cursos de Posgrado</h4>
         <table class="publications-table">
-          <tbody>
+          <tbody id="teachingGraduateRows">
             <tr>
               <td class="pub-year">2019</td>
               <td class="pub-ref">Teaching of the Extracurricular Workshop Biological Signal Processing for Neuroscience Studies, for students of the Master’s in Behavioral Sciences, University of Guadalajara. 36 hours, January 25–May 24, 2019.</td>
@@ -96,6 +96,7 @@
   <footer id="footer-placeholder" class="footer"></footer>
 
   <script src="main.js"></script>
+  <script src="site-content.js"></script>
 
 </body>
 </html>
