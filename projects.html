@@ -4,98 +4,73 @@
   <meta charset="UTF-8" />
   <title>Proyectos - Armando Q. Angulo Chavira</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Proyectos de investigación de Armando Q. Angulo Chavira" />
-  
+  <meta name="description" content="Proyectos de neurociencia cognitiva, modelado computacional y experimentación de Armando Q. Angulo Chavira." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <header id="header">
-    <div id="header-placeholder"></div>
-  </header>
-
+  <header id="header"><div id="header-placeholder"></div></header>
   <div id="layout-container">
-    
-    <aside id="sidebar">
-      <div id="sidebar-placeholder"></div>
-    </aside>
-
+    <aside id="sidebar"><div id="sidebar-placeholder"></div></aside>
     <main id="main-content">
-      
-      <section class="content-section">
-        <h3 class="section-title" data-i18n="projTitle">Proyectos</h3>
-        
-        <h4 class="subsection-title" style="margin-bottom: 0;">PAPIIT</h4>
-        <table class="publications-table">
-          <tbody>
-            <tr>
-              <td class="pub-year">2025</td>
-              <td class="pub-ref">Collaborator on the research project PAPIIT, UNAM IN304825 Representation of Conceptual Knowledge: Analysis of the Sensorimotor Content of Concepts Using Artificial Intelligence Tools and Experimentation with Sentence Contexts, 2025–2027.</td>
-            </tr>
-            <tr>
-              <td class="pub-year">2024</td>
-              <td class="pub-ref">Collaborator on the research project PAPIIT, UNAM AG300224 Linguistic Prediction in Spanish-English Monolinguals and Bilinguals, 2024–2026.</td>
-            </tr>
-            <tr>
-              <td class="pub-year">2021</td>
-              <td class="pub-ref">Collaborator on the research project PAPIIT, UNAM IN303221 Effect of Sentence Restriction and Word Similarity on EEG Activity, 2021–2023.</td>
-            </tr>
-            <tr>
-              <td class="pub-year">2014</td>
-              <td class="pub-ref">Collaborator in the Department of Applied Linguistics on the project IN401613-RN401613 “Lexical Discrimination in Bilinguals through Eye-Tracking” under Dr. Alina María Signoret Dorcasberro. Period: December 2014–December 2015.</td>
-            </tr>
-          </tbody>
-        </table>
+      <section class="content-section projects-page">
+        <p class="eyebrow" data-i18n="projEyebrow">Neurociencia cognitiva · Modelado · Experimentación</p>
+        <h1 class="section-title" data-i18n="projTitle">Proyectos de investigación</h1>
+        <p class="projects-intro" data-i18n="projIntro">Mi trabajo actual combina preguntas sobre cognición y cerebro con herramientas computacionales y experimentales.</p>
 
-        <h4 class="subsection-title" style="margin-top: 40px; margin-bottom: 0;">SECIHTI</h4>
-        <table class="publications-table">
-          <tbody>
-            <tr>
-              <td class="pub-year">2013</td>
-              <td class="pub-ref">Research Assistant at the Psycholinguistics Laboratory under Dr. Natalia Arias Trejo on the project “Mechanisms of the Formation and Modulation of Semantic Networks in Adolescence and Adulthood”, funded by CONACyT-167900. Period: June 2013–December 2015.</td>
-            </tr>
-          </tbody>
-        </table>
+        <section id="en-desarrollo" aria-labelledby="projCurrentTitle">
+          <div class="projects-heading"><div><p class="eyebrow" data-i18n="projCurrentEyebrow">En desarrollo</p><h2 id="projCurrentTitle" class="subsection-title" data-i18n="projCurrentTitleText">Líneas de trabajo</h2></div><p data-i18n="projCurrentDesc">Proyectos que conectan modelos, actividad cerebral y diseño experimental.</p></div>
+          <div class="projects-grid">
+            <article id="modelado" class="project-card" data-cursor-size="1.25">
+              <span class="project-number">01</span><p class="project-status" data-i18n="projStatus">En desarrollo</p>
+              <h3 data-i18n="projModelTitle">Modelado computacional del lenguaje</h3>
+              <p data-i18n="projModelDesc">Desarrollo de modelos para estudiar cómo se representan y procesan el lenguaje y sus significados.</p>
+              <span class="project-topic" data-i18n="projModelTag">Lenguaje · Modelos computacionales</span>
+            </article>
+            <article id="habla-interna" class="project-card" data-cursor-size="1.25">
+              <span class="project-number">02</span><p class="project-status" data-i18n="projStatus">En desarrollo</p>
+              <h3 data-i18n="projInnerTitle">Decodificación de habla interna</h3>
+              <p data-i18n="projInnerDesc">Estudio con EEG y análisis computacional de las representaciones implicadas en el habla interna y su relación con la producción verbal.</p>
+              <span class="project-topic">EEG · Decodificación · RSA</span>
+            </article>
+            <article id="experimentacion-en-linea" class="project-card" data-cursor-size="1.25">
+              <span class="project-number">03</span><p class="project-status" data-i18n="projStatus">En desarrollo</p>
+              <h3 data-i18n="projOnlineTitle">Experimentación en línea</h3>
+              <p data-i18n="projOnlineDesc">Desarrollo de una aplicación web para diseñar, ejecutar y validar experimentos desde el navegador.</p>
+              <span class="project-topic" data-i18n="projOnlineTag">Aplicaciones web · Métodos abiertos</span>
+            </article>
+            <article id="juicios-morales" class="project-card" data-cursor-size="1.25">
+              <span class="project-number">04</span><p class="project-status" data-i18n="projStatus">En desarrollo</p>
+              <h3 data-i18n="projMoralTitle">Juicios morales y cognición social</h3>
+              <p data-i18n="projMoralDesc">Diseño y validación de una tarea experimental para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.</p>
+              <span class="project-topic" data-i18n="projMoralTag">Cognición social · Diseño experimental</span>
+            </article>
+          </div>
+        </section>
 
-        <h4 class="subsection-title" style="margin-top: 40px; margin-bottom: 0;">Independent</h4>
-        <table class="publications-table">
-          <tbody>
-            <tr>
-              <td class="pub-year">2022</td>
-              <td class="pub-ref">Collaborator on the research project Prediction and Lexical Networks in People with Down Syndrome at the Psycholinguistics Laboratory, UNAM. Semester: 2022-2.</td>
-            </tr>
-            <tr>
-              <td class="pub-year">2022</td>
-              <td class="pub-ref">Collaborator on the research project Prediction in People with Down Syndrome at the Psycholinguistics Laboratory, UNAM. Semester: 2022-2.</td>
-            </tr>
-            <tr>
-              <td class="pub-year">2022</td>
-              <td class="pub-ref">Collaborator on the research project Priming during Aging with Eye-Tracking at the Psycholinguistics Laboratory, UNAM. Semester: 2022-2.</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h4 class="subsection-title" style="margin-top: 40px; margin-bottom: 0;">Seminars</h4>
-        <table class="publications-table">
-          <tbody>
-            <tr>
-              <td class="pub-year">2024</td>
-              <td class="pub-ref">Project Workshop Seminar PAPIIT-IG300224: Linguistic Prediction in Spanish-English Monolinguals and Bilinguals, National School of Languages, Linguistics and Translation, UNAM, August 2–November 22, 2024.</td>
-            </tr>
-          </tbody>
-        </table>
-
+        <details class="projects-archive">
+          <summary data-i18n="projOtherTitle">Otros proyectos y colaboraciones</summary>
+          <p class="muted-note" data-i18n="projOtherDesc">Participación en proyectos institucionales y colaborativos en distintas etapas de mi trayectoria.</p>
+          <h3 class="subsection-title" data-i18n="projPapiitTitle">PAPIIT · UNAM</h3>
+          <table class="publications-table"><tbody>
+            <tr><td class="pub-year">2025</td><td class="pub-ref" data-i18n="projPapiit1">Colaborador en IN304825, “Representación del conocimiento conceptual: análisis del contenido sensoriomotor de los conceptos mediante herramientas de inteligencia artificial y experimentación con contextos oracionales” (2025–2027).</td></tr>
+            <tr><td class="pub-year">2024</td><td class="pub-ref" data-i18n="projPapiit2">Colaborador en AG300224, “Predicción lingüística en monolingües y bilingües español-inglés” (2024–2026).</td></tr>
+            <tr><td class="pub-year">2021</td><td class="pub-ref" data-i18n="projPapiit3">Colaborador en IN303221, “Efecto de la restricción oracional y la similitud entre palabras en la actividad EEG” (2021–2023).</td></tr>
+            <tr><td class="pub-year">2014</td><td class="pub-ref" data-i18n="projPapiit4">Colaborador en el proyecto “Discriminación léxica en bilingües mediante seguimiento ocular”, Departamento de Lingüística Aplicada, bajo la dirección de la Dra. Alina María Signoret Dorcasberro (diciembre de 2014–diciembre de 2015).</td></tr>
+          </tbody></table>
+          <h3 class="subsection-title" data-i18n="projOtherInstitutionTitle">Otros proyectos institucionales</h3>
+          <table class="publications-table"><tbody>
+            <tr><td class="pub-year">2013</td><td class="pub-ref" data-i18n="projConacyt">Asistente de investigación en el Laboratorio de Psicolingüística, bajo la dirección de la Dra. Natalia Arias Trejo, en el proyecto “Mecanismos de formación y modulación de redes semánticas en adolescencia y adultez” (CONACyT-167900; junio de 2013–diciembre de 2015).</td></tr>
+            <tr><td class="pub-year">2022</td><td class="pub-ref" data-i18n="projIndependent">Colaboración en proyectos del Laboratorio de Psicolingüística sobre predicción y redes léxicas en personas con síndrome de Down, y priming durante el envejecimiento con seguimiento ocular (semestre 2022-2).</td></tr>
+            <tr><td class="pub-year">2024</td><td class="pub-ref" data-i18n="projSeminar">Seminario-taller del proyecto PAPIIT-IG300224 “Predicción lingüística en monolingües y bilingües español-inglés”, ENALLT, UNAM (2 de agosto–22 de noviembre de 2024).</td></tr>
+          </tbody></table>
+        </details>
       </section>
-
     </main>
   </div>
-
   <footer id="footer-placeholder" class="footer"></footer>
-
   <script src="main.js"></script>
-
 </body>
 </html>

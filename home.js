@@ -28,7 +28,7 @@
         if (item.firstAuthor) roleBadges.push(`<span>${escapeHTML(text.first)}</span>`);
         if (item.correspondingAuthor) roleBadges.push(`<span>${escapeHTML(text.corr)}</span>`);
         const href = safeURL(item.link || item.pdfLink);
-        return `<article class="home-pub-card"><span class="home-pub-year">${escapeHTML(item.year || "—")}</span><div class="home-pub-copy"><p class="home-pub-citation">${escapeHTML(item.title ? `${item.citation} ${item.title}` : item.citation)}</p>${roleBadges.length ? `<div class="home-pub-badges">${roleBadges.join("")}</div>` : ""}${href ? `<a href="${escapeHTML(href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(text.link)}</a>` : ""}</div></article>`;
+        return `<article class="home-pub-card" data-cursor-size="1.22"><span class="home-pub-year">${escapeHTML(item.year || "—")}</span><div class="home-pub-copy"><p class="home-pub-citation">${escapeHTML(item.title ? `${item.citation} ${item.title}` : item.citation)}</p>${roleBadges.length ? `<div class="home-pub-badges">${roleBadges.join("")}</div>` : ""}${href ? `<a href="${escapeHTML(href)}" target="_blank" rel="noopener noreferrer">${escapeHTML(text.link)}</a>` : ""}</div></article>`;
       }).join("") : `<p class="muted-note">${escapeHTML(text.error)}</p>`;
     } catch (error) {
       target.innerHTML = `<p class="muted-note">${escapeHTML(labels[lang()].error)}</p>`;

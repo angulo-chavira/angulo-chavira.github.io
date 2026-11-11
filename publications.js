@@ -73,7 +73,7 @@
     const details = item.abstract || tags ? `<details><summary>${escapeHtml(item.abstract ? t().abstract : (lang()==="en" ? "Topics" : "Temas"))}</summary>${item.abstract ? `<p class="pub-abstract">${escapeHtml(item.abstract)}</p>` : ""}${tags ? `<div class="pub-tags">${tags}</div>` : ""}</details>` : "";
     const links = `${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t().article)} ↗</a>` : ""}${pdf ? `<a href="${escapeHtml(pdf)}" target="_blank" rel="noopener noreferrer">${escapeHtml(t().pdf)} ↗</a>` : ""}`;
     const heading = title ? `<span class="pub-title">${escapeHtml(title)}</span>` : "";
-    return `<article class="pub-card"><div class="pub-year-badge">${escapeHtml(item.year || "—")}</div><div><h2>${heading}${escapeHtml(citation)}</h2>${roles.length ? `<div class="pub-badges">${roles.join("")}</div>` : ""}${tags && !details ? `<div class="pub-tags">${tags}</div>` : ""}${links ? `<div class="pub-card-actions">${links}</div>` : ""}${details}</div></article>`;
+    return `<article class="pub-card" data-cursor-size="1.22"><div class="pub-year-badge">${escapeHtml(item.year || "—")}</div><div><h2>${heading}${escapeHtml(citation)}</h2>${roles.length ? `<div class="pub-badges">${roles.join("")}</div>` : ""}${tags && !details ? `<div class="pub-tags">${tags}</div>` : ""}${links ? `<div class="pub-card-actions">${links}</div>` : ""}${details}</div></article>`;
   }
 
   function render() {

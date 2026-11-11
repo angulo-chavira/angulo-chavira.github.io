@@ -27,31 +27,33 @@ const i18n = {
     member3: "Interdisciplinary Network for Cognitive and Behavioral Sciences",
 
     // Inicio
-    homeEyebrow: "Psicolingüística · Neurociencia cognitiva",
-    homeTitle: "Lenguaje, predicción y cerebro",
-    homeLead: "Investigo cómo las personas anticipan, reconocen y aprenden el lenguaje. Combino experimentos conductuales y psicofisiológicos con análisis computacionales para estudiar cómo interactúan el significado, el sonido y el contexto.",
+    homeEyebrow: "Neurociencia cognitiva · Modelado computacional",
+    homeTitle: "Cerebro, cognición y computación",
+    homeLead: "Investigo cómo representamos, anticipamos y producimos información. Actualmente desarrollo proyectos de modelado computacional del lenguaje, decodificación de habla interna con EEG, experimentación en línea y juicios morales, desde una perspectiva de neurociencia cognitiva.",
     homeCredential1: "Doctor en Psicología · Neurociencias de la Conducta",
     homeCredential2: "Facultad de Psicología · UNAM",
     homeCtaPubs: "Explorar publicaciones <span aria-hidden=\"true\">↗</span>",
     homeCtaProjects: "Ver proyectos",
     homePhotoCaption: "Psicología · Psicolingüística",
-    homeFocusEyebrow: "Líneas de trabajo",
-    homeFocusTitle: "Preguntas que guían mi investigación",
-    homeFocusIntro: "Del procesamiento de una palabra al desarrollo de sistemas de lenguaje y pensamiento.",
-    homeArea1Title: "Comprensión y predicción",
-    homeArea1Desc: "Cómo el significado, los sonidos y el contexto guían la comprensión del lenguaje en tiempo real.",
-    homeArea2Title: "Bilingüismo y acceso léxico",
-    homeArea2Desc: "Cómo interactúan las lenguas de una persona bilingüe durante el reconocimiento de palabras.",
-    homeArea3Title: "Desarrollo del lenguaje",
-    homeArea3Desc: "Cómo cambian el aprendizaje y la predicción lingüística desde las primeras etapas de la vida.",
-    homeArea4Title: "Lenguaje y cognición multimodal",
-    homeArea4Desc: "Cómo se relacionan palabras, imágenes, sonidos y señales conductuales o neurales.",
-    homeAreaLink: "Líneas y proyectos <span aria-hidden=\"true\">↗</span>",
+    homeFocusEyebrow: "Agenda de investigación",
+    homeFocusTitle: "Cerebro, modelos y experimentos",
+    homeFocusIntro: "Una agenda que conecta procesos cognitivos, herramientas computacionales y nuevas formas de investigar.",
+    homeArea1Title: "Modelado computacional del lenguaje",
+    homeArea1Desc: "Construir y comparar modelos que expliquen cómo se representa, comprende y anticipa el lenguaje.",
+    homeArea2Title: "Habla interna y decodificación",
+    homeArea2Desc: "Usar EEG y análisis computacional para estudiar las representaciones cerebrales del habla no pronunciada.",
+    homeArea3Title: "Juicios morales y cognición social",
+    homeArea3Desc: "Diseñar experimentos para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.",
+    homeArea4Title: "Herramientas digitales para investigar",
+    homeArea4Desc: "Desarrollar aplicaciones de experimentación en línea, validación de tareas y flujos reproducibles.",
+    homeAreaLink: "Proyectos relacionados <span aria-hidden=\"true\">↗</span>",
     homeMethodsEyebrow: "Métodos",
-    homeMethodsTitle: "Medir el lenguaje mientras ocurre",
+    homeMethodsTitle: "Del fenómeno cognitivo al modelo y al experimento",
     homeMethodPupil: "Pupilometría",
     homeMethodModels: "Modelos computacionales",
     homeMethodNetworks: "Redes léxico-semánticas",
+    homeMethodOnline: "Experimentos en línea",
+    homeMethodOpenScience: "Ciencia abierta",
     homeRecentEyebrow: "Producción académica",
     homeRecentTitle: "Publicaciones recientes",
     homeAllPubs: "Ver todas las publicaciones <span aria-hidden=\"true\">↗</span>",
@@ -104,7 +106,35 @@ const i18n = {
     m2Bio2: "Colabora en proyectos del Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM como parte de su servicio social.",
 
     // Proyectos
-    projTitle: "Proyectos de Investigación",
+    projEyebrow: "Neurociencia cognitiva · Modelado · Experimentación",
+    projTitle: "Proyectos de investigación",
+    projIntro: "Mi trabajo actual combina preguntas sobre cognición y cerebro con herramientas computacionales y experimentales.",
+    projCurrentEyebrow: "En desarrollo",
+    projCurrentTitleText: "Líneas de trabajo",
+    projCurrentDesc: "Proyectos que conectan modelos, actividad cerebral y diseño experimental.",
+    projStatus: "En desarrollo",
+    projModelTitle: "Modelado computacional del lenguaje",
+    projModelDesc: "Desarrollo de modelos para estudiar cómo se representan y procesan el lenguaje y sus significados.",
+    projModelTag: "Lenguaje · Modelos computacionales",
+    projInnerTitle: "Decodificación de habla interna",
+    projInnerDesc: "Estudio con EEG y análisis computacional de las representaciones implicadas en el habla interna y su relación con la producción verbal.",
+    projOnlineTitle: "Experimentación en línea",
+    projOnlineDesc: "Desarrollo de una aplicación web para diseñar, ejecutar y validar experimentos desde el navegador.",
+    projOnlineTag: "Aplicaciones web · Métodos abiertos",
+    projMoralTitle: "Juicios morales y cognición social",
+    projMoralDesc: "Diseño y validación de una tarea experimental para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.",
+    projMoralTag: "Cognición social · Diseño experimental",
+    projOtherTitle: "Otros proyectos y colaboraciones",
+    projOtherDesc: "Participación en proyectos institucionales y colaborativos en distintas etapas de mi trayectoria.",
+    projPapiitTitle: "PAPIIT · UNAM",
+    projPapiit1: "Colaborador en IN304825, “Representación del conocimiento conceptual: análisis del contenido sensoriomotor de los conceptos mediante herramientas de inteligencia artificial y experimentación con contextos oracionales” (2025–2027).",
+    projPapiit2: "Colaborador en AG300224, “Predicción lingüística en monolingües y bilingües español-inglés” (2024–2026).",
+    projPapiit3: "Colaborador en IN303221, “Efecto de la restricción oracional y la similitud entre palabras en la actividad EEG” (2021–2023).",
+    projPapiit4: "Colaborador en el proyecto “Discriminación léxica en bilingües mediante seguimiento ocular”, Departamento de Lingüística Aplicada, bajo la dirección de la Dra. Alina María Signoret Dorcasberro (diciembre de 2014–diciembre de 2015).",
+    projOtherInstitutionTitle: "Otros proyectos institucionales",
+    projConacyt: "Asistente de investigación en el Laboratorio de Psicolingüística, bajo la dirección de la Dra. Natalia Arias Trejo, en el proyecto “Mecanismos de formación y modulación de redes semánticas en adolescencia y adultez” (CONACyT-167900; junio de 2013–diciembre de 2015).",
+    projIndependent: "Colaboración en proyectos del Laboratorio de Psicolingüística sobre predicción y redes léxicas en personas con síndrome de Down, y priming durante el envejecimiento con seguimiento ocular (semestre 2022-2).",
+    projSeminar: "Seminario-taller del proyecto PAPIIT-IG300224 “Predicción lingüística en monolingües y bilingües español-inglés”, ENALLT, UNAM (2 de agosto–22 de noviembre de 2024).",
 
     // Divulgación
     outreachTitle: "Divulgación Científica",
@@ -224,31 +254,33 @@ const i18n = {
     member3: "Interdisciplinary Network for Cognitive and Behavioral Sciences",
 
     // Home
-    homeEyebrow: "Psycholinguistics · Cognitive neuroscience",
-    homeTitle: "Language, prediction, and the brain",
-    homeLead: "I study how people anticipate, recognize, and learn language. I combine behavioral and psychophysiological experiments with computational analyses to understand how meaning, sound, and context interact.",
+    homeEyebrow: "Cognitive neuroscience · Computational modeling",
+    homeTitle: "Brain, cognition, and computation",
+    homeLead: "I study how we represent, anticipate, and produce information. I am currently developing projects in computational language modeling, EEG decoding of inner speech, online experimentation, and moral judgment from a cognitive neuroscience perspective.",
     homeCredential1: "PhD in Psychology · Behavioral Neuroscience",
     homeCredential2: "Faculty of Psychology · UNAM",
     homeCtaPubs: "Explore publications <span aria-hidden=\"true\">↗</span>",
     homeCtaProjects: "View projects",
     homePhotoCaption: "Psychology · Psycholinguistics",
-    homeFocusEyebrow: "Research areas",
-    homeFocusTitle: "Questions that guide my research",
-    homeFocusIntro: "From processing a single word to the development of language and thought.",
-    homeArea1Title: "Comprehension and prediction",
-    homeArea1Desc: "How meaning, sounds, and context guide language comprehension in real time.",
-    homeArea2Title: "Bilingualism and lexical access",
-    homeArea2Desc: "How a bilingual person's languages interact during word recognition.",
-    homeArea3Title: "Language development",
-    homeArea3Desc: "How learning and linguistic prediction change from the earliest stages of life.",
-    homeArea4Title: "Language and multimodal cognition",
-    homeArea4Desc: "How words, images, sounds, and behavioral or neural signals relate to one another.",
-    homeAreaLink: "Research and projects <span aria-hidden=\"true\">↗</span>",
+    homeFocusEyebrow: "Research agenda",
+    homeFocusTitle: "Brains, models, and experiments",
+    homeFocusIntro: "An agenda connecting cognitive processes, computational tools, and new ways of doing research.",
+    homeArea1Title: "Computational language modeling",
+    homeArea1Desc: "Building and comparing models to explain how language is represented, understood, and predicted.",
+    homeArea2Title: "Inner speech and decoding",
+    homeArea2Desc: "Using EEG and computational analyses to study the neural representations of unspoken language.",
+    homeArea3Title: "Moral judgment and social cognition",
+    homeArea3Desc: "Designing experiments to study how people evaluate actions, intentions, and social situations.",
+    homeArea4Title: "Digital research tools",
+    homeArea4Desc: "Developing online experiment applications, task validation, and reproducible workflows.",
+    homeAreaLink: "Related projects <span aria-hidden=\"true\">↗</span>",
     homeMethodsEyebrow: "Methods",
-    homeMethodsTitle: "Measuring language as it unfolds",
+    homeMethodsTitle: "From cognitive phenomena to models and experiments",
     homeMethodPupil: "Pupillometry",
     homeMethodModels: "Computational models",
     homeMethodNetworks: "Lexical-semantic networks",
+    homeMethodOnline: "Online experiments",
+    homeMethodOpenScience: "Open science",
     homeRecentEyebrow: "Research output",
     homeRecentTitle: "Recent publications",
     homeAllPubs: "Browse all publications <span aria-hidden=\"true\">↗</span>",
@@ -301,7 +333,35 @@ const i18n = {
     m2Bio2: "She collaborates on projects at the Psycholinguistics Laboratory, Faculty of Psychology, UNAM, as part of her social service.",
 
     // Projects
-    projTitle: "Research Projects",
+    projEyebrow: "Cognitive neuroscience · Modeling · Experimentation",
+    projTitle: "Research projects",
+    projIntro: "My current work combines questions about cognition and the brain with computational and experimental tools.",
+    projCurrentEyebrow: "In development",
+    projCurrentTitleText: "Research directions",
+    projCurrentDesc: "Projects connecting models, brain activity, and experimental design.",
+    projStatus: "In development",
+    projModelTitle: "Computational language modeling",
+    projModelDesc: "Developing models to study how language and meaning are represented and processed.",
+    projModelTag: "Language · Computational models",
+    projInnerTitle: "Inner speech decoding",
+    projInnerDesc: "Using EEG and computational analyses to study the representations involved in inner speech and their relation to verbal production.",
+    projOnlineTitle: "Online experimentation",
+    projOnlineDesc: "Developing a web application to design, run, and validate experiments in a browser.",
+    projOnlineTag: "Web applications · Open methods",
+    projMoralTitle: "Moral judgment and social cognition",
+    projMoralDesc: "Designing and validating an experimental task to study how we evaluate actions, intentions, and social situations.",
+    projMoralTag: "Social cognition · Experimental design",
+    projOtherTitle: "Other projects and collaborations",
+    projOtherDesc: "Participation in institutional and collaborative projects at different stages of my career.",
+    projPapiitTitle: "PAPIIT · UNAM",
+    projPapiit1: "Collaborator on IN304825, “Representation of conceptual knowledge: analysis of the sensorimotor content of concepts using artificial intelligence tools and experimentation with sentence contexts” (2025–2027).",
+    projPapiit2: "Collaborator on AG300224, “Linguistic prediction in Spanish-English monolinguals and bilinguals” (2024–2026).",
+    projPapiit3: "Collaborator on IN303221, “Effect of sentence restriction and word similarity on EEG activity” (2021–2023).",
+    projPapiit4: "Collaborator on “Lexical discrimination in bilinguals through eye-tracking”, Department of Applied Linguistics, under Dr. Alina María Signoret Dorcasberro (December 2014–December 2015).",
+    projOtherInstitutionTitle: "Other institutional projects",
+    projConacyt: "Research assistant at the Psycholinguistics Laboratory, under Dr. Natalia Arias Trejo, on “Mechanisms in the formation and modulation of semantic networks in adolescence and adulthood” (CONACyT-167900; June 2013–December 2015).",
+    projIndependent: "Collaborated on Psycholinguistics Laboratory projects on prediction and lexical networks in people with Down syndrome, and priming during aging using eye-tracking (semester 2022-2).",
+    projSeminar: "Workshop seminar for PAPIIT-IG300224, “Linguistic prediction in Spanish-English monolinguals and bilinguals,” ENALLT, UNAM (August 2–November 22, 2024).",
 
     // Outreach
     outreachTitle: "Science Communication & Outreach",
@@ -463,10 +523,47 @@ function setTheme(theme) {
   try { localStorage.setItem("site_theme", selected); } catch (_) { /* storage is optional */ }
 }
 
+function initCursor() {
+  const supportsCustomPointer = window.matchMedia
+    && window.matchMedia("(hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference)").matches;
+  if (!supportsCustomPointer || document.getElementById("siteCursor")) return;
+
+  const cursor = document.createElement("div");
+  cursor.id = "siteCursor";
+  cursor.setAttribute("aria-hidden", "true");
+  cursor.innerHTML = '<span class="cursor-ring"><span class="cursor-core"></span><span class="cursor-arrow">↗</span></span>';
+  document.body.appendChild(cursor);
+  document.body.classList.add("custom-pointer");
+
+  function moveCursor(event) {
+    const target = event.target instanceof Element ? event.target : event.target?.parentElement;
+    if (!target) return;
+
+    cursor.style.setProperty("--cursor-x", `${event.clientX}px`);
+    cursor.style.setProperty("--cursor-y", `${event.clientY}px`);
+
+    const region = target.closest("[data-cursor-size]");
+    const regionScale = Number(region?.getAttribute("data-cursor-size") || 1);
+    const interactive = target.closest("a, button, [role=\"button\"], .research-card, .project-card, .pub-card, .resource-card, .person-card, .home-pub-card, .blog-post, .vault-card, .training-grid article");
+    const link = target.closest("a, button, [role=\"button\"]");
+    const editing = target.closest("input, textarea, select, [contenteditable=\"true\"]");
+
+    cursor.style.setProperty("--cursor-scale", String(Math.max(.72, Math.min(2.1, regionScale * (interactive ? 1.3 : 1)))));
+    cursor.classList.toggle("is-link", Boolean(link));
+    cursor.classList.toggle("is-hidden", Boolean(editing));
+    cursor.classList.add("is-visible");
+  }
+
+  window.addEventListener("pointermove", moveCursor, { passive: true });
+  window.addEventListener("pointerleave", () => cursor.classList.remove("is-visible"));
+  window.addEventListener("blur", () => cursor.classList.remove("is-visible"));
+}
+
 function initControls() {
   let savedLanguage = "es";
   try { savedLanguage = localStorage.getItem("site_lang") || "es"; } catch (_) { /* storage is optional */ }
   setLanguage(savedLanguage);
+  initCursor();
 
   document.addEventListener("click", (event) => {
     if (event.target.closest("#langToggle")) {
