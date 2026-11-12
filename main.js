@@ -17,6 +17,8 @@ const i18n = {
     navBlog: "Blog",
 
     // Barra Lateral
+    profileSummary: "Perfil y contacto",
+    profileSummaryHint: "Afiliación y enlaces académicos",
     roleTitle: "Investigador en Neurociencia Cognitiva",
     affilUni: "<strong>Facultad de Psicología, UNAM</strong>",
     affilLoc: "Ciudad de México, México",
@@ -244,6 +246,8 @@ const i18n = {
     navBlog: "Blog",
 
     // Sidebar
+    profileSummary: "Profile and contact",
+    profileSummaryHint: "Affiliation and academic links",
     roleTitle: "Cognitive Neuroscience Researcher",
     affilUni: "<strong>Faculty of Psychology, UNAM</strong>",
     affilLoc: "Mexico City, Mexico",
@@ -486,6 +490,18 @@ async function loadComponents() {
   }
 }
 
+function initProfileDisclosure() {
+  const disclosure = document.querySelector(".profile-disclosure");
+  if (!disclosure || !window.matchMedia) return;
+
+  const mobile = window.matchMedia("(max-width: 720px)");
+  const syncDisclosure = () => { disclosure.open = !mobile.matches; };
+  syncDisclosure();
+
+  if (mobile.addEventListener) mobile.addEventListener("change", syncDisclosure);
+  else if (mobile.addListener) mobile.addListener(syncDisclosure);
+}
+
 // ==========================================
 // 3. IDIOMA, TEMA Y NAVEGACIÓN
 // ==========================================
@@ -607,6 +623,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.documentElement.dataset.theme = savedTheme;
   document.documentElement.lang = savedLanguage;
   loadComponents().then(() => {
+    initProfileDisclosure();
     initControls();
     setTheme(savedTheme);
     highlightCurrentPage();
