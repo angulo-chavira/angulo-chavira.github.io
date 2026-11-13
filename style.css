@@ -98,7 +98,7 @@ img { max-width: 100%; }
 }
 #sidebar-placeholder, .profile-disclosure, .profile-card-content { min-width: 0; width: 100%; }
 .profile-summary { display: none; }
-.profile-pic { display: block; width: 100%; aspect-ratio: 1 / 1.04; object-fit: cover; margin: 0 0 18px; border-radius: 12px; }
+.profile-pic { display: block; width: 100%; height: auto; object-fit: contain; margin: 0 0 18px; border-radius: 12px; }
 #sidebar .role { margin: 0 0 14px; color: var(--ink); font-weight: 730; line-height: 1.4; }
 .affiliation p { margin: 4px 0; color: var(--muted); font-size: .9rem; }
 .memberships { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .88rem; }
@@ -247,7 +247,7 @@ img { max-width: 100%; }
   .profile-summary-icon::after { transform: rotate(90deg); transition: transform .18s ease; }
   .profile-disclosure[open] .profile-summary-icon::after { transform: rotate(0); }
   .profile-card-content { display: grid; grid-template-columns: 72px minmax(0,1fr); gap: 6px 12px; padding: 14px; border-top: 1px solid var(--line); }
-  .profile-pic { grid-column: 1; grid-row: 1 / span 2; width: 72px; height: 72px; aspect-ratio: 1; margin: 0; border-radius: 50%; }
+  .profile-pic { grid-column: 1; grid-row: 1 / span 2; width: 72px; height: 72px; aspect-ratio: 1; object-fit: cover; margin: 0; border-radius: 50%; }
   #sidebar .role { grid-column: 2; align-self: end; margin: 0; font-size: .9rem; }
   #sidebar .affiliation { grid-column: 2; align-self: start; }
   #sidebar .affiliation p { margin: 1px 0; font-size: .8rem; line-height: 1.45; }
