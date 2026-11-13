@@ -132,15 +132,10 @@
       return `<article class="blog-post">${image ? `<img class="blog-post-image" src="${escapeHtml(image)}" alt="" loading="lazy">` : ""}<h4>${escapeHtml(text(item.title))}</h4><span>${escapeHtml(text(item.date))}</span><p>${escapeHtml(text(item.excerpt))}</p>${href ? `<a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(content.pageCopy?.blog?.readMore?.[lang()] || labels[lang()].link)}</a>` : ""}</article>`;
     }).join("") || `<div class="empty-state">${escapeHtml(labels[lang()].empty)}</div>`;
 
-    const areas = document.getElementById("researchAreas");
-    if (areas) areas.innerHTML = (content.areas || []).map((item, index) => {
-      const href = safeHref(item.link);
-      return `<article class="research-card" data-cursor-size="1.45"><span class="card-index">${escapeHtml(item.number || String(index + 1).padStart(2, "0"))}</span><h3>${escapeHtml(text(item.title))}</h3><p>${escapeHtml(text(item.description))}</p>${href ? `<a href="${escapeHtml(href)}">${escapeHtml(content.homeCopy?.homeAreaLink?.[lang()] || labels[lang()].projects)} <span aria-hidden="true">↗</span></a>` : ""}</article>`;
-    }).join("");
     const methods = document.getElementById("homeMethods");
     if (methods) methods.innerHTML = (content.methods || []).map((item) => `<span>${escapeHtml(text(item.label))}</span>`).join("");
     const education = document.getElementById("educationList");
-    if (education) education.innerHTML = (content.education || []).map((item) => `<article><span>${escapeHtml(item.year)}</span><div><h3>${escapeHtml(text(item.degree))}</h3><p>${escapeHtml(text(item.institution))}</p></div></article>`).join("");
+    if (education) education.innerHTML = (content.education || []).map((item) => `<article class="trajectory-entry"><span>${escapeHtml(item.year)}</span><div><h3>${escapeHtml(text(item.degree))}</h3><p>${escapeHtml(text(item.institution))}</p></div></article>`).join("");
   }
 
   document.addEventListener("DOMContentLoaded", async () => {

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-11",
+  "updated": "2026-11-12",
   "profile": {
     "name": "Armando Q. Angulo Chavira",
     "role": {
@@ -77,92 +77,32 @@
   },
   "homeCopy": {
     "homeEyebrow": {
-      "es": "Neurociencia cognitiva · Métodos experimentales",
-      "en": "Cognitive neuroscience · Experimental methods"
+      "es": "Neurociencia cognitiva",
+      "en": "Cognitive neuroscience"
     },
     "homeTitle": {
       "es": "Cerebro, cognición y conducta",
       "en": "Brain, cognition, and behavior"
     },
     "homeLead": {
-      "es": "Estudio cómo el cerebro anticipa, integra y transforma información. Combino experimentos conductuales con seguimiento ocular, pupilometría, EEG y análisis computacional. Mis publicaciones hasta ahora se han centrado principalmente en predicción y desarrollo del lenguaje, con trabajos también sobre atención, emoción y cognición en poblaciones clínicas. Actualmente amplío esta trayectoria con proyectos de modelado computacional del lenguaje, decodificación de habla interna, juicios morales y experimentación en línea.",
-      "en": "I study how the brain anticipates, integrates, and transforms information. I combine behavioral experiments with eye tracking, pupillometry, EEG, and computational analyses. My publications to date have focused mainly on language prediction and development, with additional work on attention, emotion, and cognition in clinical populations. I am now extending this trajectory through projects in computational language modeling, inner-speech decoding, moral judgment, and online experimentation."
+      "es": "Estudio cómo las representaciones mentales y la actividad cerebral guían la conducta. Mi trabajo publicado aborda la predicción y el desarrollo del lenguaje, además de procesos de atención, emoción y cognición. Actualmente desarrollo nuevas líneas sobre modelado computacional del lenguaje, decodificación de habla interna, juicios morales y experimentación en línea.",
+      "en": "I study how mental representations and brain activity guide behavior. My published work examines language prediction and development, alongside attention, emotion, and cognition. I am developing new directions in computational language modeling, inner-speech decoding, moral judgment, and online experimentation."
     },
-    "homeCredential1": {
-      "es": "Doctor en Psicología · Neurociencias de la Conducta",
-      "en": "PhD in Psychology · Behavioral Neuroscience"
-    },
-    "homeCredential2": {
-      "es": "Facultad de Psicología · UNAM",
-      "en": "Faculty of Psychology · UNAM"
-    },
-    "homeFocusEyebrow": {
-      "es": "Proyectos en desarrollo",
-      "en": "Projects in development"
-    },
-    "homeFocusTitle": {
-      "es": "Nuevas preguntas sobre cerebro y cognición",
-      "en": "New questions about brain and cognition"
-    },
-    "homeFocusIntro": {
-      "es": "Estas líneas extienden mi trayectoria publicada hacia el modelado computacional, el habla interna, la cognición social y los experimentos en línea.",
-      "en": "These lines extend my published work into computational modeling, inner speech, social cognition, and online experiments."
-    },
-    "homeMethodsEyebrow": {
+    "homeMethodsTitle": {
       "es": "Métodos",
       "en": "Methods"
     },
-    "homeMethodsTitle": {
-      "es": "Conducta, actividad cerebral y análisis computacional",
-      "en": "Behavior, brain activity, and computational analysis"
-    },
-    "homeRecentEyebrow": {
-      "es": "Producción académica",
-      "en": "Research output"
-    },
-    "homeRecentTitle": {
-      "es": "Publicaciones recientes",
-      "en": "Recent publications"
-    },
-    "homeRecentIntro": {
-      "es": "Una selección que se actualiza a partir del catálogo de publicaciones del sitio.",
-      "en": "A selection drawn from the website's publication catalog."
-    },
-    "homeTrainingEyebrow": {
-      "es": "Formación",
-      "en": "Education"
-    },
     "homeTrainingTitle": {
       "es": "Trayectoria académica",
-      "en": "Academic background"
-    },
-    "homeContactEyebrow": {
-      "es": "Contacto",
-      "en": "Contact"
-    },
-    "homeContactTitle": {
-      "es": "¿Te interesa colaborar?",
-      "en": "Interested in collaborating?"
-    },
-    "homeContactText": {
-      "es": "Estoy abierto a conversaciones sobre investigación, datos y proyectos en ciencias cognitivas.",
-      "en": "I welcome conversations about research, data, and projects in cognitive science."
+      "en": "Academic trajectory"
     },
     "homeCtaPubs": {
       "es": "Explorar publicaciones ↗",
-      "en": "Explore publications ↗"
+      "en": "Browse publications ↗"
     },
     "homeCtaProjects": {
       "es": "Ver proyectos",
       "en": "View projects"
-    },
-    "homeContactButton": {
-      "es": "Escríbeme ↗",
-      "en": "Get in touch ↗"
-    },
-    "homeAreaLink": {
-      "es": "Proyectos relacionados ↗",
-      "en": "Related projects ↗"
     }
   },
   "pageCopy": {
@@ -297,57 +237,13 @@
       }
     }
   },
-  "areas": [
-    {
-      "number": "01",
-      "title": {
-        "es": "Modelado computacional del lenguaje",
-        "en": "Computational language modeling"
-      },
-      "description": {
-        "es": "Construir y comparar modelos que expliquen cómo se representa, comprende y anticipa el lenguaje.",
-        "en": "Building and comparing models to explain how language is represented, understood, and predicted."
-      },
-      "link": "projects.html#modelado"
-    },
-    {
-      "number": "02",
-      "title": {
-        "es": "Habla interna y decodificación",
-        "en": "Inner speech and decoding"
-      },
-      "description": {
-        "es": "Usar EEG y análisis computacional para estudiar las representaciones cerebrales del habla no pronunciada.",
-        "en": "Using EEG and computational analyses to study the neural representations of unspoken language."
-      },
-      "link": "projects.html#habla-interna"
-    },
-    {
-      "number": "03",
-      "title": {
-        "es": "Juicios morales y cognición social",
-        "en": "Moral judgment and social cognition"
-      },
-      "description": {
-        "es": "Diseñar experimentos para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.",
-        "en": "Designing experiments to study how people evaluate actions, intentions, and social situations."
-      },
-      "link": "projects.html#juicios-morales"
-    },
-    {
-      "number": "04",
-      "title": {
-        "es": "Herramientas digitales para investigar",
-        "en": "Digital research tools"
-      },
-      "description": {
-        "es": "Desarrollar aplicaciones de experimentación en línea, validación de tareas y flujos reproducibles.",
-        "en": "Developing online experiment applications, task validation, and reproducible workflows."
-      },
-      "link": "projects.html#experimentacion-en-linea"
-    }
-  ],
   "methods": [
+    {
+      "label": {
+        "es": "Experimentos conductuales",
+        "en": "Behavioral experiments"
+      }
+    },
     {
       "label": {
         "es": "EEG / ERP",
@@ -356,7 +252,7 @@
     },
     {
       "label": {
-        "es": "Eye-tracking",
+        "es": "Seguimiento ocular",
         "en": "Eye-tracking"
       }
     },
@@ -368,26 +264,8 @@
     },
     {
       "label": {
-        "es": "Modelos computacionales",
-        "en": "Computational models"
-      }
-    },
-    {
-      "label": {
-        "es": "RSA",
-        "en": "RSA"
-      }
-    },
-    {
-      "label": {
-        "es": "Experimentos en línea",
-        "en": "Online experiments"
-      }
-    },
-    {
-      "label": {
-        "es": "Ciencia abierta",
-        "en": "Open science"
+        "es": "Experimentación en línea",
+        "en": "Online experimentation"
       }
     }
   ],
@@ -400,7 +278,7 @@
       },
       "institution": {
         "es": "Universidad Nacional Autónoma de México",
-        "en": "Universidad Nacional Autónoma de México"
+        "en": "National Autonomous University of Mexico"
       }
     },
     {
@@ -411,7 +289,7 @@
       },
       "institution": {
         "es": "Universidad de Guadalajara",
-        "en": "Universidad de Guadalajara"
+        "en": "University of Guadalajara"
       }
     },
     {
@@ -422,7 +300,7 @@
       },
       "institution": {
         "es": "Universidad de Guadalajara",
-        "en": "Universidad de Guadalajara"
+        "en": "University of Guadalajara"
       }
     }
   ],

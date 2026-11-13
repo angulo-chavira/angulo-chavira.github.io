@@ -15,86 +15,49 @@
   <header id="header"><div id="header-placeholder"></div></header>
 
   <main class="home-shell">
-    <section class="home-hero" aria-labelledby="homeTitle" data-cursor-size="1">
-      <div class="hero-copy">
-        <p class="eyebrow" data-cms-copy="homeCopy.homeEyebrow" data-i18n="homeEyebrow">Neurociencia cognitiva · Métodos experimentales</p>
-        <h1 id="homeTitle" data-cms-copy="homeCopy.homeTitle" data-i18n="homeTitle">Cerebro, cognición y conducta</h1>
-        <p class="hero-lead" data-cms-copy="homeCopy.homeLead" data-i18n="homeLead">Estudio cómo el cerebro anticipa, integra y transforma información. Combino experimentos conductuales con seguimiento ocular, pupilometría, EEG y análisis computacional. Mis publicaciones hasta ahora se han centrado principalmente en predicción y desarrollo del lenguaje, con trabajos también sobre atención, emoción y cognición en poblaciones clínicas. Actualmente amplío esta trayectoria con proyectos de modelado computacional del lenguaje, decodificación de habla interna, juicios morales y experimentación en línea.</p>
-        <div class="hero-credentials">
-          <span data-cms-copy="homeCopy.homeCredential1" data-i18n="homeCredential1">Doctor en Psicología · Neurociencias de la Conducta</span>
-          <span data-cms-copy="homeCopy.homeCredential2" data-i18n="homeCredential2">Facultad de Psicología · UNAM</span>
+    <section class="home-profile" aria-labelledby="homeTitle" data-cursor-size="1">
+      <div class="home-profile-head">
+        <div class="hero-copy">
+          <p class="eyebrow" data-cms-copy="homeCopy.homeEyebrow" data-i18n="homeEyebrow">Neurociencia cognitiva</p>
+          <h1 id="homeTitle" data-cms-copy="homeCopy.homeTitle" data-i18n="homeTitle">Cerebro, cognición y conducta</h1>
+          <p class="hero-lead" data-cms-copy="homeCopy.homeLead" data-i18n="homeLead">Estudio cómo las representaciones mentales y la actividad cerebral guían la conducta. Mis publicaciones han abordado la predicción y el desarrollo del lenguaje, así como procesos de atención, emoción y cognición. Actualmente desarrollo nuevas líneas sobre modelado computacional del lenguaje, habla interna, juicios morales y experimentación en línea.</p>
+          <p class="hero-position"><span data-profile-field="role">Investigador en Neurociencia Cognitiva</span><span aria-hidden="true"> · </span><span data-profile-field="affiliation">Facultad de Psicología, UNAM</span></p>
+          <div class="hero-actions">
+            <a class="action-button" href="publications.html" data-cms-copy="homeCopy.homeCtaPubs" data-i18n="homeCtaPubs">Publicaciones <span aria-hidden="true">↗</span></a>
+            <a class="action-button secondary" href="projects.html" data-cms-copy="homeCopy.homeCtaProjects" data-i18n="homeCtaProjects">Proyectos en desarrollo</a>
+          </div>
+          <div id="homeProfileLinks" class="profile-links" aria-label="Perfiles académicos">
+            <a class="profile-link" href="https://scholar.google.com/citations?user=4qdTuuMAAAAJ&amp;hl=es&amp;oi=ao" target="_blank" rel="noopener noreferrer"><img src="img/Google_Scholar_logo.png" alt="" /><span>Google Scholar</span><span class="profile-arrow" aria-hidden="true">↗</span></a>
+            <a class="profile-link" href="https://orcid.org/0000-0002-6756-6717" target="_blank" rel="noopener noreferrer"><img src="img/ORCID.png" alt="" /><span>ORCID</span><span class="profile-arrow" aria-hidden="true">↗</span></a>
+            <a class="profile-link" href="https://www.researchgate.net/profile/Armando-Angulo-Chavira" target="_blank" rel="noopener noreferrer"><img src="img/ResearchGate.png" alt="" /><span>ResearchGate</span><span class="profile-arrow" aria-hidden="true">↗</span></a>
+          </div>
         </div>
-        <div class="hero-actions">
-          <a class="action-button" href="publications.html" data-cms-copy="homeCopy.homeCtaPubs" data-i18n="homeCtaPubs">Explorar publicaciones <span aria-hidden="true">↗</span></a>
-          <a class="action-button secondary" href="projects.html" data-cms-copy="homeCopy.homeCtaProjects" data-i18n="homeCtaProjects">Ver proyectos</a>
+        <figure class="hero-portrait" data-cursor-size="1.25">
+          <img data-profile-photo src="img/profile.jpeg" alt="Armando Q. Angulo Chavira" fetchpriority="high" />
+        </figure>
+      </div>
+
+      <div class="home-profile-details">
+        <div class="trajectory-block">
+          <h2 id="trainingTitle" class="profile-detail-heading" data-cms-copy="homeCopy.homeTrainingTitle" data-i18n="homeTrainingTitle">Trayectoria académica</h2>
+          <div id="educationList" class="trajectory-list">
+            <article class="trajectory-entry"><span>2025</span><div><h3 data-i18n="homePhd">Doctorado en Psicología · Neurociencias de la Conducta</h3><p data-i18n="homeUnam">Universidad Nacional Autónoma de México</p></div></article>
+            <article class="trajectory-entry"><span>2018</span><div><h3 data-i18n="homeMsc">Maestría en Ciencias del Comportamiento · Neurociencias</h3><p data-i18n="homeUdeg">Universidad de Guadalajara</p></div></article>
+            <article class="trajectory-entry"><span>2015</span><div><h3 data-i18n="homeBa">Licenciatura en Psicología</h3><p data-i18n="homeUdeg">Universidad de Guadalajara</p></div></article>
+          </div>
         </div>
-        <div id="homeProfileLinks" class="profile-links" aria-label="Perfiles académicos">
-          <a class="profile-link" href="https://scholar.google.com/citations?user=4qdTuuMAAAAJ&amp;hl=es&amp;oi=ao" target="_blank" rel="noopener noreferrer">
-            <img src="img/Google_Scholar_logo.png" alt="" /><span>Google Scholar</span><span class="profile-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="profile-link" href="https://orcid.org/0000-0002-6756-6717" target="_blank" rel="noopener noreferrer">
-            <img src="img/ORCID.png" alt="" /><span>ORCID</span><span class="profile-arrow" aria-hidden="true">↗</span>
-          </a>
-          <a class="profile-link" href="https://www.researchgate.net/profile/Armando-Angulo-Chavira" target="_blank" rel="noopener noreferrer">
-            <img src="img/ResearchGate.png" alt="" /><span>ResearchGate</span><span class="profile-arrow" aria-hidden="true">↗</span>
-          </a>
+        <div class="methods-block">
+          <h2 id="methodsTitle" class="profile-detail-heading" data-cms-copy="homeCopy.homeMethodsTitle" data-i18n="homeMethodsTitle">Métodos</h2>
+          <div id="homeMethods" class="methods-list">
+            <span data-i18n="homeMethodBehavior">Experimentos conductuales</span><span>EEG / ERP</span><span data-i18n="homeMethodEyeTracking">Seguimiento ocular</span><span data-i18n="homeMethodPupil">Pupilometría</span><span data-i18n="homeMethodOnline">Experimentación en línea</span>
+          </div>
         </div>
       </div>
-      <figure class="hero-portrait" data-cursor-size="1.35">
-        <img data-profile-photo src="img/profile.jpeg" alt="Armando Q. Angulo Chavira" fetchpriority="high" />
-      </figure>
-    </section>
-
-    <section class="home-section research-section" aria-labelledby="researchFocusTitle" data-cursor-size="0.95">
-      <div class="home-section-heading">
-        <div><p class="eyebrow" data-cms-copy="homeCopy.homeFocusEyebrow" data-i18n="homeFocusEyebrow">Proyectos en desarrollo</p><h2 id="researchFocusTitle" data-cms-copy="homeCopy.homeFocusTitle" data-i18n="homeFocusTitle">Nuevas preguntas sobre cerebro y cognición</h2></div>
-        <p data-cms-copy="homeCopy.homeFocusIntro" data-i18n="homeFocusIntro">Estas líneas extienden mi trayectoria publicada hacia el modelado computacional, el habla interna, la cognición social y los experimentos en línea.</p>
-      </div>
-      <div id="researchAreas" class="research-grid">
-        <article class="research-card" data-cursor-size="1.45"><span class="card-index">01</span><h3 data-i18n="homeArea1Title">Modelado computacional del lenguaje</h3><p data-i18n="homeArea1Desc">Construir y comparar modelos que expliquen cómo se representa, comprende y anticipa el lenguaje.</p><a href="projects.html#modelado" data-i18n="homeAreaLink">Proyectos relacionados <span aria-hidden="true">↗</span></a></article>
-        <article class="research-card" data-cursor-size="1.45"><span class="card-index">02</span><h3 data-i18n="homeArea2Title">Habla interna y decodificación</h3><p data-i18n="homeArea2Desc">Usar EEG y análisis computacional para estudiar las representaciones cerebrales del habla no pronunciada.</p><a href="projects.html#habla-interna" data-i18n="homeAreaLink">Proyectos relacionados <span aria-hidden="true">↗</span></a></article>
-        <article class="research-card" data-cursor-size="1.45"><span class="card-index">03</span><h3 data-i18n="homeArea3Title">Juicios morales y cognición social</h3><p data-i18n="homeArea3Desc">Diseñar experimentos para estudiar cómo evaluamos acciones, intenciones y situaciones sociales.</p><a href="projects.html#juicios-morales" data-i18n="homeAreaLink">Proyectos relacionados <span aria-hidden="true">↗</span></a></article>
-        <article class="research-card" data-cursor-size="1.45"><span class="card-index">04</span><h3 data-i18n="homeArea4Title">Herramientas digitales para investigar</h3><p data-i18n="homeArea4Desc">Desarrollar aplicaciones de experimentación en línea, validación de tareas y flujos reproducibles.</p><a href="projects.html#experimentacion-en-linea" data-i18n="homeAreaLink">Proyectos relacionados <span aria-hidden="true">↗</span></a></article>
-      </div>
-    </section>
-
-    <section class="methods-band" aria-label="Métodos de investigación" data-cursor-size="0.82">
-      <div class="methods-intro"><p class="eyebrow" data-cms-copy="homeCopy.homeMethodsEyebrow" data-i18n="homeMethodsEyebrow">Métodos</p><h2 data-cms-copy="homeCopy.homeMethodsTitle" data-i18n="homeMethodsTitle">Conducta, actividad cerebral y análisis computacional</h2></div>
-      <div id="homeMethods" class="methods-list"><span>EEG / ERP</span><span>Eye-tracking</span><span data-i18n="homeMethodPupil">Pupilometría</span><span data-i18n="homeMethodModels">Modelos computacionales</span><span>RSA</span><span data-i18n="homeMethodOnline">Experimentos en línea</span><span data-i18n="homeMethodOpenScience">Ciencia abierta</span></div>
-    </section>
-
-    <section class="home-section recent-section" aria-labelledby="recentTitle" data-cursor-size="0.92">
-      <div class="home-section-heading">
-        <div><p class="eyebrow" data-cms-copy="homeCopy.homeRecentEyebrow" data-i18n="homeRecentEyebrow">Producción académica</p><h2 id="recentTitle" data-cms-copy="homeCopy.homeRecentTitle" data-i18n="homeRecentTitle">Publicaciones recientes</h2></div>
-        <a class="text-link" href="publications.html" data-i18n="homeAllPubs">Ver todas las publicaciones <span aria-hidden="true">↗</span></a>
-      </div>
-      <p class="home-section-intro" data-cms-copy="homeCopy.homeRecentIntro" data-i18n="homeRecentIntro">Una selección que se actualiza a partir del catálogo de publicaciones del sitio.</p>
-      <div id="homePublications" class="home-publications" aria-live="polite">
-        <p class="muted-note" data-i18n="homeLoading">Cargando publicaciones…</p>
-      </div>
-    </section>
-
-    <section class="home-section training-section" aria-labelledby="trainingTitle" data-cursor-size="1.08">
-      <div class="home-section-heading">
-        <div><p class="eyebrow" data-cms-copy="homeCopy.homeTrainingEyebrow" data-i18n="homeTrainingEyebrow">Formación</p><h2 id="trainingTitle" data-cms-copy="homeCopy.homeTrainingTitle" data-i18n="homeTrainingTitle">Trayectoria académica</h2></div>
-        <a class="text-link" href="teaching.html" data-i18n="homeTeachingLink">Docencia y actividades <span aria-hidden="true">↗</span></a>
-      </div>
-      <div id="educationList" class="training-grid">
-        <article><span>2025</span><div><h3 data-i18n="homePhd">Doctorado en Psicología · Neurociencias de la Conducta</h3><p>Universidad Nacional Autónoma de México</p></div></article>
-        <article><span>2018</span><div><h3 data-i18n="homeMsc">Maestría en Ciencias del Comportamiento · Neurociencias</h3><p>Universidad de Guadalajara</p></div></article>
-        <article><span>2015</span><div><h3 data-i18n="homeBa">Licenciatura en Psicología</h3><p>Universidad de Guadalajara</p></div></article>
-      </div>
-    </section>
-
-    <section class="home-contact" data-cursor-size="1.35">
-      <div><p class="eyebrow" data-cms-copy="homeCopy.homeContactEyebrow" data-i18n="homeContactEyebrow">Contacto</p><h2 data-cms-copy="homeCopy.homeContactTitle" data-i18n="homeContactTitle">¿Te interesa colaborar?</h2><p data-cms-copy="homeCopy.homeContactText" data-i18n="homeContactText">Estoy abierto a conversaciones sobre investigación, datos y proyectos en ciencias cognitivas.</p></div>
-      <a class="action-button" href="mailto:angulo_chavira@comunidad.unam.mx" data-cms-copy="homeCopy.homeContactButton" data-i18n="homeContactButton">Escríbeme <span aria-hidden="true">↗</span></a>
     </section>
   </main>
 
   <footer id="footer-placeholder" class="footer"></footer>
   <script src="main.js"></script>
   <script src="site-content.js"></script>
-  <script src="home.js"></script>
 </body>
 </html>

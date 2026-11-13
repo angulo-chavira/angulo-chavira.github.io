@@ -9,7 +9,7 @@ El archivo `site-manager.html` funciona como un administrador sencillo para el c
 Desde el administrador puedes editar:
 
 - Perfil, enlaces académicos, membresías y textos de inicio.
-- Áreas de investigación, métodos y formación.
+- Portada con perfil, trayectoria académica y métodos.
 - Publicaciones, con año, etiquetas, resumen, BibTeX, DOI/PDF y filtros de primer autor y autor de correspondencia.
 - Proyectos, presentaciones, divulgación, docencia, miembros del grupo y colaboradores.
 - Recursos públicos y entradas del blog.
