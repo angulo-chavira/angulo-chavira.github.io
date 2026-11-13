@@ -71,10 +71,32 @@
       ]
     },
     {
-      id: "group", label: "Miembros del grupo", objects: [
+      id: "group", label: "Estudiantes", objects: [
         { title: "Textos de la sección", path: ["pageCopy", "group"], fields: [localized("title", "Título", "text"), localized("intro", "Introducción")] }
       ], collections: [
-        { title: "Estudiantes y miembros", path: ["groupMembers"], fields: [localized("name", "Nombre", "text"), localized("bio", "Descripción"), F("photo", "Fotografía", "asset")] }
+        { title: "Estudiantes", path: ["groupMembers"], fields: [
+          localized("name", "Nombre", "text"),
+          F("participationTypes", "Modalidad de participación", "multiselect", { hint: "Puedes seleccionar más de una modalidad.", options: [
+            { value: "servicio-social", label: "Servicio social" },
+            { value: "tesista", label: "Tesista" },
+            { value: "voluntariado", label: "Voluntariado" },
+            { value: "practicas-profesionales", label: "Prácticas profesionales" },
+            { value: "asistente-investigacion", label: "Asistente de investigación" },
+            { value: "estancia", label: "Estancia de investigación" },
+            { value: "otro", label: "Otra modalidad" }
+          ] }),
+          F("academicLevel", "Nivel académico", "select", { options: [
+            { value: "", label: "Sin especificar" },
+            { value: "bachillerato", label: "Bachillerato" },
+            { value: "licenciatura", label: "Licenciatura" },
+            { value: "maestria", label: "Maestría" },
+            { value: "doctorado", label: "Doctorado" },
+            { value: "posdoctorado", label: "Posdoctorado" },
+            { value: "otro", label: "Otro nivel" }
+          ] }),
+          localized("bio", "Descripción"),
+          F("photo", "Fotografía", "asset")
+        ] }
       ]
     },
     {
@@ -155,7 +177,7 @@
   function defaultValue(field) {
     if (field.type === "localized") return { es: "", en: "" };
     if (field.type === "checkbox") return false;
-    if (field.type === "tags") return [];
+    if (field.type === "tags" || field.type === "multiselect") return [];
     return "";
   }
 
@@ -169,6 +191,7 @@
 
   function renderField(field, value, path, ownerId) {
     const pathAttr = stringifyPath(path);
+    const rootName = path[0] === "items" ? "publications" : "content";
     if (field.type === "localized") {
       const data = value && typeof value === "object" ? value : { es: "", en: "" };
       const control = (language) => {
@@ -177,6 +200,13 @@
         return `<label class="cms-locale-field"><span>${language === "es" ? "Español" : "English"}</span>${actualType === "textarea" ? `<textarea data-root="content" data-path="${stringifyPath([...path, language])}" rows="3">${current}</textarea>` : `<input type="${actualType}" data-root="content" data-path="${stringifyPath([...path, language])}" value="${current}">`}</label>`;
       };
       return `<fieldset class="cms-localized"><legend>${escapeHtml(field.label)}</legend><div class="cms-locale-grid">${control("es")}${control("en")}</div></fieldset>`;
+    }
+    if (field.type === "multiselect") {
+      const selected = new Set(Array.isArray(value) ? value : []);
+      return `<fieldset class="cms-multiselect" data-root="${rootName}" data-path="${pathAttr}" data-value-type="multiselect"><legend>${escapeHtml(field.label)}</legend>${field.hint ? `<span class="cms-field-hint">${escapeHtml(field.hint)}</span>` : ""}<div class="cms-multiselect-options">${(field.options || []).map((option) => `<label class="cms-check-field"><input type="checkbox" value="${escapeHtml(option.value)}" ${selected.has(option.value) ? "checked" : ""}><span>${escapeHtml(option.label)}</span></label>`).join("")}</div></fieldset>`;
+    }
+    if (field.type === "select") {
+      return `<label>${escapeHtml(field.label)}<select data-root="${rootName}" data-path="${pathAttr}" data-value-type="select">${(field.options || []).map((option) => `<option value="${escapeHtml(option.value)}" ${String(value ?? "") === option.value ? "selected" : ""}>${escapeHtml(option.label)}</option>`).join("")}</select></label>`;
     }
     if (field.type === "checkbox") return `<label class="cms-check-field"><input type="checkbox" data-root="${path[0] === "items" ? "publications" : "content"}" data-path="${pathAttr}" ${value ? "checked" : ""}><span>${escapeHtml(field.label)}</span></label>`;
     if (field.type === "asset") {
@@ -237,6 +267,7 @@
   function clearDraft() { try { localStorage.removeItem(DRAFT_KEY); localStorage.removeItem(LEGACY_PUBLICATIONS_DRAFT_KEY); } catch (_) { /* storage is optional */ } }
 
   function cleanValue(control) {
+    if (control.dataset.valueType === "multiselect") return [...control.querySelectorAll('input[type="checkbox"]:checked')].map((input) => input.value);
     if (control.type === "checkbox") return control.checked;
     if (control.dataset.valueType === "number") return control.value === "" ? "" : Number(control.value);
     if (control.dataset.valueType === "tags") return control.value.split(",").map((tag) => tag.trim()).filter(Boolean);
@@ -438,6 +469,47 @@
         else setStatus("Contenido publicado cargado. Puedes elegir una sección para editar.");
       }
     } catch (_) { setStatus("Contenido publicado cargado. Puedes elegir una sección para editar."); }
+    if (content.profile?.photo === "img/profile.jpeg" && baselineContent.profile?.photo) {
+      content.profile.photo = baselineContent.profile.photo;
+    }
+    const currentGroupCopy = baselineContent.pageCopy?.group || {};
+    const obsoleteGroupCopy = {
+      title: { es: "Miembros del Grupo de Investigación", en: "Research Group Members" },
+      intro: {
+        es: "Estudiantes y colegas que colaboran en proyectos del Laboratorio de Psicolingüística y en investigación sobre lenguaje y cognición.",
+        en: "Students and colleagues collaborating on Psycholinguistics Laboratory projects and research on language and cognition."
+      }
+    };
+    for (const key of ["title", "intro"]) {
+      for (const language of ["es", "en"]) {
+        if (content.pageCopy?.group?.[key]?.[language] === obsoleteGroupCopy[key][language] && currentGroupCopy[key]?.[language]) {
+          content.pageCopy.group[key][language] = currentGroupCopy[key][language];
+        }
+      }
+    }
+    content.groupMembers ||= [];
+    const currentStudents = new Map((baselineContent.groupMembers || []).map((student) => [student.name?.es, student]));
+    content.groupMembers.forEach((student) => {
+      const current = currentStudents.get(student.name?.es);
+      if (!Array.isArray(student.participationTypes)) student.participationTypes = copy(current?.participationTypes || []);
+      if (typeof student.academicLevel !== "string") student.academicLevel = current?.academicLevel || "";
+      const oldBios = {
+        "Alexandra Rosselli González Balderrama": {
+          es: "Estudiante de Psicología y especialista en monitoreo de redes empresariales en Totalplay.",
+          en: "Psychology student and enterprise network monitoring specialist at Totalplay."
+        },
+        "Arely Pérez Ramírez": {
+          es: "Profesora de inglés y francés para niñas, niños, adolescentes y adultos. Sus intereses incluyen la educación consciente, la psicolingüística y las neurociencias.\nColabora en proyectos del Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM como parte de su servicio social.",
+          en: "English and French teacher for children, teenagers, and adults. Her interests include conscious education, psycholinguistics, and neuroscience.\nShe collaborates on projects at the Psycholinguistics Laboratory, Faculty of Psychology, UNAM, as part of her social service."
+        }
+      };
+      const oldBio = oldBios[student.name?.es];
+      if (oldBio && current?.bio) {
+        for (const language of ["es", "en"]) {
+          if (student.bio?.[language] === oldBio[language]) student.bio[language] = current.bio[language];
+        }
+      }
+    });
     addEditorIds();
   }
 

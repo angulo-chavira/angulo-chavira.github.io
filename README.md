@@ -9,12 +9,13 @@ El archivo `site-manager.html` funciona como un administrador sencillo para el c
 Desde el administrador puedes editar:
 
 - Perfil, enlaces académicos, membresías y textos de inicio.
+- Estudiantes, con modalidades de participación múltiples y nivel académico.
 - Portada con perfil, trayectoria académica y métodos.
 - Publicaciones, con año, etiquetas, resumen, BibTeX, DOI/PDF y filtros de primer autor y autor de correspondencia.
-- Proyectos, presentaciones, divulgación, docencia, miembros del grupo y colaboradores.
+- Proyectos, presentaciones, divulgación, docencia y colaboradores.
 - Recursos públicos y entradas del blog.
 
-En cada lista puedes agregar registros, corregirlos, eliminarlos y cambiar su orden. Los campos bilingües se editan en español e inglés. Puedes subir archivos permitidos desde los registros; el archivo se agrega al mismo commit que los datos.
+En cada lista puedes agregar registros, corregirlos, eliminarlos y cambiar su orden. Los campos bilingües se editan en español e inglés. En **Estudiantes** puedes asignar una o varias modalidades de participación —servicio social, tesista, voluntariado, prácticas, asistente de investigación o estancia— y un nivel académico. Puedes subir archivos permitidos desde los registros; el archivo se agrega al mismo commit que los datos.
 
 ### Primera instalación
 

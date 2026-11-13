@@ -6,6 +6,52 @@
     es: { projects: "Proyectos relacionados", download: "Descargar", link: "Abrir recurso", cite: "Para citar:", empty: "No hay elementos publicados en esta sección." },
     en: { projects: "Related projects", download: "Download", link: "Open resource", cite: "How to cite:", empty: "There are no published items in this section." }
   };
+  const studentLabels = {
+    es: {
+      participation: "Modalidad de participación",
+      badges: "Modalidad de participación y nivel académico",
+      level: "Nivel",
+      types: {
+        "servicio-social": "Servicio social",
+        tesista: "Tesista",
+        voluntariado: "Voluntariado",
+        "practicas-profesionales": "Prácticas profesionales",
+        "asistente-investigacion": "Asistente de investigación",
+        estancia: "Estancia de investigación",
+        otro: "Otra modalidad"
+      },
+      levels: {
+        bachillerato: "Bachillerato",
+        licenciatura: "Licenciatura",
+        maestria: "Maestría",
+        doctorado: "Doctorado",
+        posdoctorado: "Posdoctorado",
+        otro: "Otro nivel"
+      }
+    },
+    en: {
+      participation: "Participation type",
+      badges: "Participation type and academic level",
+      level: "Level",
+      types: {
+        "servicio-social": "Social service",
+        tesista: "Thesis student",
+        voluntariado: "Volunteer",
+        "practicas-profesionales": "Professional internship",
+        "asistente-investigacion": "Research assistant",
+        estancia: "Research placement",
+        otro: "Other role"
+      },
+      levels: {
+        bachillerato: "High school",
+        licenciatura: "Undergraduate",
+        maestria: "Master's",
+        doctorado: "Doctoral",
+        posdoctorado: "Postdoctoral",
+        otro: "Other level"
+      }
+    }
+  };
   const safeHref = (value) => {
     const raw = String(value ?? "").trim();
     if (!raw || raw === "#") return "";
@@ -37,8 +83,35 @@
     document.querySelectorAll("[data-profile-name]").forEach((el) => { el.textContent = profile.name || ""; });
     document.querySelectorAll("[data-profile-photo]").forEach((el) => {
       const photo = safeHref(profile.photo);
-      if (photo) el.src = photo;
       el.alt = `${lang() === "es" ? "Foto de " : "Photo of "}${profile.name || ""}`;
+      if (!photo) {
+        el.removeAttribute("src");
+        el.dataset.profilePhotoStatus = "empty";
+        el.classList.add("profile-photo-loading");
+        return;
+      }
+
+      const target = new URL(photo, document.baseURI).href;
+      if (el.dataset.profilePhotoTarget === target && ["loading", "loaded", "error"].includes(el.dataset.profilePhotoStatus)) return;
+      el.removeAttribute("src");
+      el.dataset.profilePhotoTarget = target;
+      el.dataset.profilePhotoStatus = "loading";
+      el.classList.add("profile-photo-loading");
+      const finish = (loaded) => {
+        if (el.dataset.profilePhotoTarget !== target) return;
+        if (loaded && el.naturalWidth > 0) {
+          el.dataset.profilePhotoStatus = "loaded";
+          el.classList.remove("profile-photo-loading");
+        } else {
+          el.dataset.profilePhotoStatus = "error";
+          el.removeAttribute("src");
+          el.classList.add("profile-photo-loading");
+        }
+      };
+      el.addEventListener("load", () => finish(true), { once: true });
+      el.addEventListener("error", () => finish(false), { once: true });
+      el.src = target;
+      if (el.complete) finish(el.naturalWidth > 0);
     });
     document.querySelectorAll('[data-profile-field="role"]').forEach((el) => { el.textContent = text(profile.role); });
     document.querySelectorAll('[data-profile-field="affiliation"]').forEach((el) => { el.textContent = text(profile.affiliation); });
@@ -77,7 +150,17 @@
       } else {
         details = [item.degree, item.position, item.interests].map((part) => text(part)).filter(Boolean).map((line) => `<li>${escapeHtml(line)}</li>`).join("");
       }
-      return `<article class="person-card" data-cursor-size="1.22"><div class="group-member-text"><h4>${name}</h4><ul class="member-details">${details}</ul></div>${photo ? `<div class="group-member-image"><img src="${escapeHtml(photo)}" alt="${name}" class="profile-placeholder" loading="lazy"></div>` : ""}</article>`;
+      const badges = kind === "group" ? (() => {
+        const dictionary = studentLabels[lang()];
+        const roleBadges = (Array.isArray(item.participationTypes) ? item.participationTypes : [])
+          .map((type) => dictionary.types[type])
+          .filter(Boolean)
+          .map((label) => `<span class="student-badge">${escapeHtml(label)}</span>`);
+        const level = dictionary.levels[item.academicLevel];
+        if (level) roleBadges.push(`<span class="student-badge student-badge--level">${escapeHtml(dictionary.level)}: ${escapeHtml(level)}</span>`);
+        return roleBadges.length ? `<div class="student-badges" aria-label="${escapeHtml(dictionary.badges)}">${roleBadges.join("")}</div>` : "";
+      })() : "";
+      return `<article class="person-card${kind === "group" ? " student-card" : ""}" data-cursor-size="1.22"><div class="group-member-text"><h4>${name}</h4>${badges}<ul class="member-details">${details}</ul></div>${photo ? `<div class="group-member-image"><img src="${escapeHtml(photo)}" alt="${name}" loading="lazy" decoding="async"></div>` : ""}</article>`;
     }).join("") : `<div class="empty-state">${escapeHtml(labels[lang()].empty)}</div>`;
   }
 
@@ -93,17 +176,13 @@
       const href = safeHref(item.link);
       return `<article id="${escapeHtml(item.id || `proyecto-${index + 1}`)}" class="project-card" data-cursor-size="1.25"><span class="project-number">${String(index + 1).padStart(2, "0")}</span><p class="project-status">${escapeHtml(text(item.status))}</p><h3>${escapeHtml(text(item.title))}</h3><p>${escapeHtml(text(item.description))}</p><span class="project-topic">${escapeHtml(text(item.topics))}</span>${href ? `<p><a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels[lang()].link)} ↗</a></p>` : ""}</article>`;
     }).join("") || `<div class="empty-state">${escapeHtml(labels[lang()].empty)}</div>`;
-    const archiveRows = document.getElementById("projectsArchiveRows");
-    if (archiveRows) {
+    const details = document.getElementById("projectsArchive");
+    if (details) {
       const archive = content.projectsArchive || [];
       const categories = [...new Set(archive.map((item) => text(item.category)).filter(Boolean))];
-      archiveRows.innerHTML = archive.map(row).join("");
-      const details = document.getElementById("projectsArchive");
-      if (details) {
-        const wasOpen = details.open;
-        details.innerHTML = `<summary>${escapeHtml(text(content.pageCopy?.projects?.archiveTitle))}</summary><p class="muted-note">${escapeHtml(text(content.pageCopy?.projects?.archiveIntro))}</p>${categories.map((category) => `<h3 class="subsection-title">${escapeHtml(category)}</h3><table class="publications-table"><tbody>${archive.filter((item) => text(item.category) === category).map(row).join("")}</tbody></table>`).join("")}`;
-        details.open = wasOpen;
-      }
+      const wasOpen = details.open;
+      details.innerHTML = `<summary>${escapeHtml(text(content.pageCopy?.projects?.archiveTitle))}</summary><p class="muted-note">${escapeHtml(text(content.pageCopy?.projects?.archiveIntro))}</p>${categories.map((category) => `<h3 class="subsection-title">${escapeHtml(category)}</h3><table class="publications-table"><tbody>${archive.filter((item) => text(item.category) === category).map(row).join("")}</tbody></table>`).join("")}`;
+      details.open = wasOpen;
     }
 
     const setRows = (id, items) => { const target = document.getElementById(id); if (target) target.innerHTML = (items || []).map(row).join(""); };
@@ -148,6 +227,11 @@
       window.addEventListener("site:components-loaded", renderProfile);
     } catch (error) {
       console.error("No se pudo cargar el contenido administrable:", error);
+      document.querySelectorAll("[data-profile-photo]").forEach((el) => {
+        el.removeAttribute("src");
+        el.dataset.profilePhotoStatus = "error";
+        el.classList.add("profile-photo-loading");
+      });
     }
   });
 })();

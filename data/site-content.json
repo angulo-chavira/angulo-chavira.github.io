@@ -194,12 +194,12 @@
     },
     "group": {
       "title": {
-        "es": "Miembros del Grupo de Investigación",
-        "en": "Research Group Members"
+        "es": "Estudiantes",
+        "en": "Students"
       },
       "intro": {
-        "es": "Estudiantes y colegas que colaboran en proyectos del Laboratorio de Psicolingüística y en investigación sobre lenguaje y cognición.",
-        "en": "Students and colleagues collaborating on Psycholinguistics Laboratory projects and research on language and cognition."
+        "es": "Estudiantes que colaboran en proyectos de investigación y procesos de formación. Las etiquetas indican su modalidad de participación y nivel académico.",
+        "en": "Students involved in research projects and research training. Badges show their participation type and academic level."
       }
     },
     "collaborations": {
@@ -991,10 +991,12 @@
         "en": "Alexandra Rosselli González Balderrama"
       },
       "bio": {
-        "es": "Estudiante de Psicología y especialista en monitoreo de redes empresariales en Totalplay.",
-        "en": "Psychology student and enterprise network monitoring specialist at Totalplay."
+        "es": "Especialista en monitoreo de redes empresariales en Totalplay.",
+        "en": "Enterprise network monitoring specialist at Totalplay."
       },
-      "photo": "img/alexandra.jpeg"
+      "photo": "img/alexandra.jpeg",
+      "participationTypes": [],
+      "academicLevel": "licenciatura"
     },
     {
       "name": {
@@ -1002,10 +1004,14 @@
         "en": "Arely Pérez Ramírez"
       },
       "bio": {
-        "es": "Profesora de inglés y francés para niñas, niños, adolescentes y adultos. Sus intereses incluyen la educación consciente, la psicolingüística y las neurociencias.\nColabora en proyectos del Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM como parte de su servicio social.",
-        "en": "English and French teacher for children, teenagers, and adults. Her interests include conscious education, psycholinguistics, and neuroscience.\nShe collaborates on projects at the Psycholinguistics Laboratory, Faculty of Psychology, UNAM, as part of her social service."
+        "es": "Profesora de inglés y francés para niñas, niños, adolescentes y adultos. Sus intereses incluyen la educación consciente, la psicolingüística y las neurociencias.\nColabora en proyectos del Laboratorio de Psicolingüística de la Facultad de Psicología de la UNAM.",
+        "en": "English and French teacher for children, teenagers, and adults. Her interests include conscious education, psycholinguistics, and neuroscience.\nShe collaborates on projects at the Psycholinguistics Laboratory, Faculty of Psychology, UNAM."
       },
-      "photo": "img/arely.jpeg"
+      "photo": "img/arely.jpeg",
+      "participationTypes": [
+        "servicio-social"
+      ],
+      "academicLevel": ""
     }
   ],
   "collaborators": [

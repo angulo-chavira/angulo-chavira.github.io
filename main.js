@@ -11,7 +11,8 @@ const i18n = {
     navOutreach: "Divulgación",
     navProjects: "Proyectos",
     navTeaching: "Docencia",
-    navGroup: "Grupo de investigación",
+    navGroup: "Estudiantes",
+    groupDocumentTitle: "Estudiantes - Armando Q. Angulo Chavira",
     navCollab: "Colaboraciones",
     navResources: "Recursos",
     navBlog: "Blog",
@@ -66,9 +67,9 @@ const i18n = {
     presTitle: "Presentaciones y Conferencias",
     presDesc: "Selección de ponencias, conferencias magistrales, carteles y talleres presentados en congresos e instituciones académicas.",
 
-    // Grupo de investigación
-    groupPageTitle: "Miembros del Grupo de Investigación",
-    groupDesc: "Estudiantes y colegas que colaboran en proyectos del Laboratorio de Psicolingüística y en investigación sobre lenguaje y cognición.",
+    // Estudiantes
+    groupPageTitle: "Estudiantes",
+    groupDesc: "Estudiantes que colaboran en proyectos de investigación y procesos de formación. Las etiquetas indican su modalidad de participación y nivel académico.",
     
     m1Name: "Alexandra Rosselli González Balderrama",
     m1Bio: "Estudiante de Psicología y especialista en monitoreo de redes empresariales en Totalplay.",
@@ -210,7 +211,8 @@ const i18n = {
     navOutreach: "Outreach",
     navProjects: "Projects",
     navTeaching: "Teaching",
-    navGroup: "Research Group",
+    navGroup: "Students",
+    groupDocumentTitle: "Students - Armando Q. Angulo Chavira",
     navCollab: "Collaborations",
     navResources: "Resources",
     navBlog: "Blog",
@@ -265,9 +267,9 @@ const i18n = {
     presTitle: "Presentations and Conferences",
     presDesc: "Selection of lectures, keynotes, posters, and workshops presented at academic conferences and institutions.",
 
-    // Research Group
-    groupPageTitle: "Research Group Members",
-    groupDesc: "Students and colleagues collaborating on Psycholinguistics Laboratory projects and research on language and cognition.",
+    // Students
+    groupPageTitle: "Students",
+    groupDesc: "Students involved in research projects and research training. Badges show their participation type and academic level.",
     
     m1Name: "Alexandra Rosselli González Balderrama",
     m1Bio: "Psychology student and enterprise network monitoring specialist at Totalplay.",
@@ -411,6 +413,9 @@ async function loadComponents() {
       fetch('sidebar.html'),
       fetch('footer.html')
     ]);
+    if (!headerRes.ok || !sidebarRes.ok || !footerRes.ok) {
+      throw new Error(`No se pudieron cargar los componentes del sitio (${headerRes.status}, ${sidebarRes.status}, ${footerRes.status}).`);
+    }
 
     const headerHtml = await headerRes.text();
     const sidebarHtml = await sidebarRes.text();
