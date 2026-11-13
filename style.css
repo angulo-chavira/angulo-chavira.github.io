@@ -98,7 +98,7 @@ img { max-width: 100%; }
 }
 #sidebar-placeholder, .profile-disclosure, .profile-card-content { min-width: 0; width: 100%; }
 .profile-summary { display: none; }
-.profile-pic { display: block; width: 100%; aspect-ratio: 1 / 1.04; object-fit: cover; margin: 0 0 18px; border-radius: 12px; }
+.profile-pic { display: block; width: 100%; height: auto; object-fit: contain; margin: 0 0 18px; border-radius: 12px; }
 #sidebar .role { margin: 0 0 14px; color: var(--ink); font-weight: 730; line-height: 1.4; }
 .affiliation p { margin: 4px 0; color: var(--muted); font-size: .9rem; }
 .memberships { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--line); font-size: .88rem; }
@@ -327,6 +327,8 @@ img { max-width: 100%; }
 .person-card .group-member-image { position: relative; }
 .person-card .group-member-image::before { position: absolute; inset: -4px 4px 4px -4px; border: 1px solid var(--line-strong); border-radius: 12px; content: ""; }
 .person-card .group-member-image img { position: relative; width: 88px; height: 104px; border: 3px solid var(--surface); border-radius: 12px; object-fit: cover; }
+/* The group portraits are square source images; keep their natural framing. */
+.group-roster .person-card .group-member-image img { height: auto; object-fit: contain; }
 
 @media (max-width: 1050px) {
   .hero-copy h1 { font-size: clamp(2.6rem, 5.5vw, 3.8rem); }
@@ -387,6 +389,7 @@ img { max-width: 100%; }
   .project-card:hover { transform: translateY(-3px); border-color: var(--line-strong); box-shadow: var(--shadow); }
   .person-card .group-member-image img { transition: transform .24s ease; }
   .person-card:hover .group-member-image img { transform: scale(1.035); }
+  .group-roster .person-card:hover .group-member-image img { transform: none; }
   .hero-portrait img { transition: transform .35s cubic-bezier(.2,.7,.2,1); }
   .hero-portrait:hover img { transform: scale(1.012); }
 }
