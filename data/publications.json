@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-10",
+  "updated": "2026-11-13",
   "items": [
     {
       "year": 2025,
@@ -359,6 +359,41 @@
       "firstAuthor": false,
       "correspondingAuthor": false,
       "bibtex": ""
+    },
+    {
+      "year": 2026,
+      "title": "Video game practice is associated with enhanced value-guided exploitation under probabilistic uncertainty",
+      "journal": " Psychological Research",
+      "citation": "Llamas-Alonso, L.A., Quevedo-Calderon, A.J., Quiñones-Beltran, S.L. et al. Video game practice is associated with enhanced value-guided exploitation under probabilistic uncertainty. Psychological Research 90, 142 (2026). https://doi.org/10.1007/s00426-026-02349-8",
+      "link": "https://doi.org/10.1007/s00426-026-02349-8",
+      "pdfLink": "uploads/llamas-alonso-l-a-quevedo-calderon-a-j-quinones-beltran.org10-1794612084521-yg6b3-pdflink-llamas-alonso-2026-video-game-practice-is-associated-wi.pdf",
+      "tags": [
+        "Videogame",
+        "Learning"
+      ],
+      "abstract": "This study examined whether habitual video game play influences reinforcement learning dynamics, feedback adaptation, consolidation, and motivational biases. Two groups of participants (gamers and controls) completed a Probabilistic Selection Task that assessed learning from positive and negative feedback across three phases: Learning, Test, and Transfer. Mixed-effects modeling revealed that gamers showed enhanced learning trajectories, particularly under high-uncertainty conditions; however, computational modeling indicated no differences in learning rate (α), suggesting comparable value updating across groups. Gamers exhibited a higher tendency toward model-based exploitative (value-consistent) choices during learning compared to controls. In the Test phase, gamers demonstrated higher accuracy, especially on difficult stimulus pairs, suggesting more effective use of learned value representations under no-feedback conditions. This was further supported by greater model-based exploitative choices for challenging pairs. However, while no group differences emerged in transfer-phase approach/avoidance biases (VLBI), gamers showed greater decision consistency (higher inverse temperature, β) and increased exploitative choices in high-value (A-present) trials, indicating more deterministic value-guided behavior during generalization. These findings suggest that habitual video game play improves how efficiently learned values are translated into action under uncertainty, highlighting the potential of game-like environments to enhance value-guided decision-making and adaptive behavior in educational and clinical settings.",
+      "bibtex": "",
+      "firstAuthor": false,
+      "correspondingAuthor": true
+    },
+    {
+      "year": 2026,
+      "title": "When Gender Arrives: Predictive Language Processing in the Third Year",
+      "journal": "Journal of Experimental Child Psychology",
+      "citation": "Castellón-Flores, A. M., Angulo-Chavira, A. Q., Gambi, C., & Arias-Trejo, N. (2027). When gender arrives: Predictive language processing in the third year. Journal of Experimental Child Psychology, 274, 106667. https://doi.org/10.1016/j.jecp.2026.106667",
+      "link": "https://doi.org/10.1016/j.jecp.2026.106667",
+      "pdfLink": "uploads/pdflink-1794612353615-aegvg-pdflink-castellon-flores-2026-when-gender-arrives-predictive-la.pdf",
+      "tags": [
+        "linguistic prediction",
+        "grammatical gender",
+        "language development",
+        "morphosyntax",
+        "visual-world paradigm"
+      ],
+      "abstract": "Predictive language comprehension allows children to use prior context to anticipate upcoming information before it becomes available in speech. Although young children use sentence meaning to guide real-time comprehension, less is known about when they generate more specific expectations about upcoming words without direct cues. Across two visual-world eye-tracking experiments, we used a grammatical contrast in Spanish as a test case to examine whether children aged 24, 30, and 36 months could use sentence context to guide attention before the expected word was heard. Highly predictable sentence contexts were followed by a silent interval before the final noun, allowing us to distinguish anticipatory looking from later word recognition. In Experiment 1, visual displays included a gender-matched object that shared grammatical gender with the expected noun and also carried transparent surface-form cues. In Experiment 2, those cues were removed, providing a stricter test of whether children could use internally generated expectations before word onset. Results showed anticipatory looks to the expected target across age groups, indicating context-based prediction. However, looks to the gender-matched object followed a more selective developmental pattern. With surface cues, the Gender-matched > Unrelated contrast was reliable at 30 and 36 months and larger at 36 than at 24 months. Without surface cues, it was reliable only at 36 months. These findings suggest that children’s predictions develop from broad expectations about upcoming words toward more specific, linguistically structured expectations between 24 and 36 months. More generally, early predictive processing becomes increasingly precise as language representations become more stable and accessible.",
+      "bibtex": "",
+      "firstAuthor": false,
+      "correspondingAuthor": false
     }
   ]
 }
