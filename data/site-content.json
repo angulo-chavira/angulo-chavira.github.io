@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-12",
+  "updated": "2026-11-13",
   "profile": {
     "name": "Armando Q. Angulo Chavira",
     "role": {
@@ -15,7 +15,7 @@
       "es": "Ciudad de México, México",
       "en": "Mexico City, Mexico"
     },
-    "photo": "img/profile.jpeg",
+    "photo": "uploads/photo-1794591483231-lspa0-photo-1794336864374.jpg",
     "email": "angulo_chavira@comunidad.unam.mx",
     "memberships": [
       {
