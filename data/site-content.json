@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-11-13",
+  "updated": "2026-11-14",
   "profile": {
     "name": "Armando Q. Angulo Chavira",
     "role": {
@@ -37,7 +37,7 @@
           "es": "Interdisciplinary Network for Cognitive and Behavioral Sciences",
           "en": "Interdisciplinary Network for Cognitive and Behavioral Sciences"
         },
-        "url": ""
+        "url": "https://incobes.github.io/"
       }
     ],
     "socialLinks": [
