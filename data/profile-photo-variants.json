@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "photos": {
+    "uploads/photo-1794591483231-lspa0-photo-1794336864374.jpg": {
+      "width": 2709,
+      "height": 3368,
+      "sources": [
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-72.webp",
+          "width": 72
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-96.webp",
+          "width": 96
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-128.webp",
+          "width": 128
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-160.webp",
+          "width": 160
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-192.webp",
+          "width": 192
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-224.webp",
+          "width": 224
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-256.webp",
+          "width": 256
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-288.webp",
+          "width": 288
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-320.webp",
+          "width": 320
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-384.webp",
+          "width": 384
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-448.webp",
+          "width": 448
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-512.webp",
+          "width": 512
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-640.webp",
+          "width": 640
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-768.webp",
+          "width": 768
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-960.webp",
+          "width": 960
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-1200.webp",
+          "width": 1200
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-1600.webp",
+          "width": 1600
+        },
+        {
+          "src": "img/profile-responsive/profile-01e61238fa-r1-2048.webp",
+          "width": 2048
+        }
+      ]
+    }
+  }
+}

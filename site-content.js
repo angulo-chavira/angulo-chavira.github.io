@@ -61,6 +61,83 @@
   };
   const pathValue = (object, path) => String(path || "").split(".").reduce((value, key) => value?.[key], object);
   let content = null;
+  let profilePhotoVariants = new Map();
+  let profilePhotoResizeObserver = null;
+  const observedProfilePhotos = new WeakSet();
+  let profilePhotoSizeFrame = 0;
+
+  // La foto original sigue definida una sola vez en profile.photo.
+  // Este catálogo opcional contiene únicamente sus copias filtradas al reducirlas.
+  async function loadProfilePhotoVariants() {
+    const variants = new Map();
+    try {
+      const response = await fetch("data/profile-photo-variants.json", { cache: "no-store" });
+      if (!response.ok) return variants;
+      const data = await response.json();
+      if (data?.schemaVersion !== 1 || !data.photos || typeof data.photos !== "object") return variants;
+      Object.entries(data.photos).forEach(([source, entry]) => {
+        const href = safeHref(source);
+        const width = Number(entry?.width), height = Number(entry?.height);
+        if (!href || !Number.isInteger(width) || width < 1 || !Number.isInteger(height) || height < 1) return;
+        const sources = (Array.isArray(entry.sources) ? entry.sources : []).map((item) => ({
+          src: safeHref(item?.src), width: Number(item?.width)
+        })).filter((item) => item.src && Number.isInteger(item.width) && item.width > 0 && item.width <= width)
+          .sort((a, b) => a.width - b.width);
+        if (sources.length) variants.set(new URL(href, document.baseURI).href, { width, height, sources });
+      });
+    } catch (_) { /* Sin catálogo, se muestra la foto original. */ }
+    return variants;
+  }
+
+  function applyProfilePhotoCandidate(el, variants) {
+    const width = el.getBoundingClientRect().width;
+    const fallback = el.classList.contains("profile-pic") ? 72 : 164;
+    const zoom = Math.max(1, Number(window.visualViewport?.scale) || 1);
+    const density = Math.max(0.5, Number(window.devicePixelRatio) || 1);
+    const displayWidth = (width || fallback) * zoom;
+    const requiredWidth = Math.ceil(displayWidth * density);
+    const selected = variants.sources.find((item) => item.width >= requiredWidth) || {
+      src: el.dataset.profilePhotoTarget, width: variants.width
+    };
+    // sizes expresa píxeles CSS; el navegador incorpora la densidad de la pantalla.
+    const sizes = `${Math.max(1, Math.ceil(displayWidth))}px`;
+    if (el.sizes !== sizes) el.sizes = sizes;
+    // Ofrecer la copia elegida también obliga a cambiar a una más pequeña al alejar el zoom.
+    // Así no se sigue reduciendo una copia grande que quedó en caché después de acercar.
+    const srcset = `${selected.src} ${selected.width}w`;
+    if (el.srcset !== srcset) el.srcset = srcset;
+  }
+
+  function updateProfilePhotoSize(el) {
+    if (!el.hasAttribute("srcset")) return;
+    const variants = profilePhotoVariants.get(el.dataset.profilePhotoTarget);
+    if (variants) applyProfilePhotoCandidate(el, variants);
+  }
+
+  function queueProfilePhotoSizes() {
+    if (profilePhotoSizeFrame) return;
+    profilePhotoSizeFrame = requestAnimationFrame(() => {
+      profilePhotoSizeFrame = 0;
+      document.querySelectorAll("[data-profile-photo][srcset]").forEach(updateProfilePhotoSize);
+    });
+  }
+
+  function clearProfilePhotoVariants(el) {
+    ["srcset", "sizes", "width", "height"].forEach((attribute) => el.removeAttribute(attribute));
+  }
+
+  function configureProfilePhotoVariants(el, target) {
+    const variants = profilePhotoVariants.get(target);
+    if (!variants) return;
+    el.width = variants.width;
+    el.height = variants.height;
+    applyProfilePhotoCandidate(el, variants);
+    if (typeof ResizeObserver === "function" && !observedProfilePhotos.has(el)) {
+      if (!profilePhotoResizeObserver) profilePhotoResizeObserver = new ResizeObserver(queueProfilePhotoSizes);
+      profilePhotoResizeObserver.observe(el);
+      observedProfilePhotos.add(el);
+    }
+  }
 
   function applyCopy() {
     if (!content) return;
@@ -85,6 +162,7 @@
       const photo = safeHref(profile.photo);
       el.alt = `${lang() === "es" ? "Foto de " : "Photo of "}${profile.name || ""}`;
       if (!photo) {
+        clearProfilePhotoVariants(el);
         el.removeAttribute("src");
         el.dataset.profilePhotoStatus = "empty";
         el.classList.add("profile-photo-loading");
@@ -93,6 +171,7 @@
 
       const target = new URL(photo, document.baseURI).href;
       if (el.dataset.profilePhotoTarget === target && ["loading", "loaded", "error"].includes(el.dataset.profilePhotoStatus)) return;
+      clearProfilePhotoVariants(el);
       el.removeAttribute("src");
       el.dataset.profilePhotoTarget = target;
       el.dataset.profilePhotoStatus = "loading";
@@ -109,9 +188,18 @@
         }
       };
       el.addEventListener("load", () => finish(true), { once: true });
-      el.addEventListener("error", () => finish(false), { once: true });
+      el.addEventListener("error", () => {
+        if (el.dataset.profilePhotoTarget !== target) return;
+        if (el.hasAttribute("srcset")) {
+          // Si aún no se subieron todas las copias, intentar la original.
+          clearProfilePhotoVariants(el);
+          el.addEventListener("error", () => finish(false), { once: true });
+          el.src = target;
+        } else finish(false);
+      }, { once: true });
+      configureProfilePhotoVariants(el, target);
       el.src = target;
-      if (el.complete) finish(el.naturalWidth > 0);
+      if (el.complete && el.naturalWidth > 0) finish(true);
     });
     document.querySelectorAll('[data-profile-field="role"]').forEach((el) => { el.textContent = text(profile.role); });
     document.querySelectorAll('[data-profile-field="affiliation"]').forEach((el) => { el.textContent = text(profile.affiliation); });
@@ -219,15 +307,23 @@
 
   document.addEventListener("DOMContentLoaded", async () => {
     try {
-      const response = await fetch("data/site-content.json", { cache: "no-store" });
+      const [response, variants] = await Promise.all([
+        fetch("data/site-content.json", { cache: "no-store" }),
+        loadProfilePhotoVariants()
+      ]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       content = await response.json();
+      profilePhotoVariants = variants;
       renderContent();
       document.addEventListener("site:language", renderContent);
       window.addEventListener("site:components-loaded", renderProfile);
+      window.addEventListener("resize", queueProfilePhotoSizes, { passive: true });
+      window.visualViewport?.addEventListener("resize", queueProfilePhotoSizes, { passive: true });
+      document.addEventListener("toggle", queueProfilePhotoSizes, true);
     } catch (error) {
       console.error("No se pudo cargar el contenido administrable:", error);
       document.querySelectorAll("[data-profile-photo]").forEach((el) => {
+        clearProfilePhotoVariants(el);
         el.removeAttribute("src");
         el.dataset.profilePhotoStatus = "error";
         el.classList.add("profile-photo-loading");
