@@ -577,3 +577,32 @@ body.custom-pointer select { cursor: auto !important; }
     max-height: 36px !important;
   }
 }
+
+/* En móvil, mostrar más píxeles de las fotos de perfil para reducir el aspecto borroso. */
+@media (max-width: 720px) {
+  .hero-portrait {
+    width: min(100%, 210px) !important;
+  }
+  .hero-portrait img {
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+    object-fit: contain !important;
+    object-position: center;
+    image-rendering: auto;
+    transform: none !important;
+  }
+  .profile-card-content {
+    grid-template-columns: 84px minmax(0, 1fr) !important;
+  }
+  .profile-pic {
+    width: 84px !important;
+    height: 84px !important;
+    aspect-ratio: 1 / 1;
+    object-fit: cover !important;
+    object-position: center;
+    image-rendering: auto;
+    transform: none !important;
+  }
+}
