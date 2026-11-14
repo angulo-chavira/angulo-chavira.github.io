@@ -74,8 +74,8 @@ img[data-profile-photo].profile-photo-loading { visibility: hidden; }
 .header-logos a:hover { transform: translateY(-2px); opacity: .82; }
 .inst-logo { display: block; width: auto; height: 39px; max-width: 84px; object-fit: contain; opacity: .96; }
 .header-logos .incobes-mark {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   padding: 0;
   overflow: hidden;
   border: 0;
@@ -392,7 +392,7 @@ img[data-profile-photo].profile-photo-loading { visibility: hidden; }
 @media (max-width: 720px) {
   .header-logos { gap: 8px; }
   .inst-logo { height: 30px; max-width: 60px; }
-  .header-logos .incobes-mark { width: 30px; height: 30px; padding: 3px; }
+  .header-logos .incobes-mark { width: 38px; height: 36px; padding: 3px; }
 }
 
 /* Interacciones discretas y cursor contextual */
