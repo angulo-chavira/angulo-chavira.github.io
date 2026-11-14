@@ -578,10 +578,10 @@ body.custom-pointer select { cursor: auto !important; }
   }
 }
 
-/* En móvil, mostrar más píxeles de las fotos de perfil para reducir el aspecto borroso. */
+/* En móvil, conservar el encuadre vertical 4:5 usado en escritorio. */
 @media (max-width: 720px) {
   .hero-portrait {
-    width: min(100%, 210px) !important;
+    width: min(100%, 178px) !important;
   }
   .hero-portrait img {
     display: block;
@@ -594,14 +594,16 @@ body.custom-pointer select { cursor: auto !important; }
     transform: none !important;
   }
   .profile-card-content {
-    grid-template-columns: 84px minmax(0, 1fr) !important;
+    grid-template-columns: 72px minmax(0, 1fr) !important;
   }
   .profile-pic {
-    width: 84px !important;
-    height: 84px !important;
-    aspect-ratio: 1 / 1;
-    object-fit: cover !important;
+    display: block;
+    width: 72px !important;
+    height: auto !important;
+    aspect-ratio: 4 / 5;
+    object-fit: contain !important;
     object-position: center;
+    border-radius: 12px !important;
     image-rendering: auto;
     transform: none !important;
   }
