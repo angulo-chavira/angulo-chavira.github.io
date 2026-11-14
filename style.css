@@ -73,16 +73,7 @@ img[data-profile-photo].profile-photo-loading { visibility: hidden; }
 .header-logos a { display: grid; place-items: center; width: auto; height: 44px; padding: 0; border: 0; border-radius: 0; background: transparent; transition: transform .18s ease, opacity .18s ease; }
 .header-logos a:hover { transform: translateY(-2px); opacity: .82; }
 .inst-logo { display: block; width: auto; height: 39px; max-width: 84px; object-fit: contain; opacity: .96; }
-.header-logos .incobes-mark {
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  overflow: hidden;
-  border: 0;
-  border-radius: 0;
-  background: transparent;
-  box-shadow: none;
-}
+.header-logos .incobes-mark { width: 46px; height: 43px; padding: 0; overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
 .header-logos .incobes-mark .inst-logo { width: 100%; height: 100%; max-width: none; object-fit: contain; opacity: 1; filter: none; mix-blend-mode: normal; }
 .header-controls { display: flex; align-items: center; gap: 8px; }
 .icon-toggle, .menu-toggle {
@@ -392,7 +383,7 @@ img[data-profile-photo].profile-photo-loading { visibility: hidden; }
 @media (max-width: 720px) {
   .header-logos { gap: 8px; }
   .inst-logo { height: 30px; max-width: 60px; }
-  .header-logos .incobes-mark { width: 38px; height: 36px; padding: 3px; }
+  .header-logos .incobes-mark { width: 38px; height: 36px; padding: 0; }
 }
 
 /* Interacciones discretas y cursor contextual */
@@ -545,4 +536,44 @@ body.custom-pointer select { cursor: auto !important; }
   .editor-actions { align-items: stretch; }
   .editor-actions .action-button { flex: 1 1 auto; }
   .cms-commit-message { flex-basis: 100%; }
+}
+
+/* INCOBES: medidas explícitas para evitar que otras reglas del header las cambien. */
+.header-logos a.incobes-mark {
+  flex: 0 0 46px !important;
+  width: 46px !important;
+  min-width: 46px !important;
+  max-width: 46px !important;
+  height: 43px !important;
+  min-height: 43px !important;
+  max-height: 43px !important;
+  padding: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+.header-logos a.incobes-mark > img.incobes-color-logo {
+  display: block;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  image-rendering: auto;
+  opacity: 1 !important;
+  filter: none !important;
+  transform: none !important;
+}
+@media (max-width: 720px) {
+  .header-logos a.incobes-mark {
+    flex-basis: 38px !important;
+    width: 38px !important;
+    min-width: 38px !important;
+    max-width: 38px !important;
+    height: 36px !important;
+    min-height: 36px !important;
+    max-height: 36px !important;
+  }
 }
