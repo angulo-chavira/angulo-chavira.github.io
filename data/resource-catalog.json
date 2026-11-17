@@ -1,0 +1,609 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "anew-mx",
+      "matchFile": "files/ANEW_mexican_word_average.csv",
+      "shortTitle": {
+        "es": "ANEW · Español de México",
+        "en": "ANEW · Mexican Spanish"
+      },
+      "enabled": true,
+      "kind": "anew",
+      "version": "Consulta 1",
+      "articleUrl": "https://doi.org/10.3758/s13428-025-02703-5",
+      "keyColumn": "Word",
+      "variables": [
+        {
+          "key": "source_row",
+          "label": {
+            "es": "Índice de origen",
+            "en": "Source row"
+          },
+          "description": {
+            "es": "Índice de la primera columna, sin nombre en el CSV original. Se etiqueta source_row para la consulta.",
+            "en": "Index in the unnamed first source column. Labeled source_row for browsing."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "Word",
+          "label": {
+            "es": "Palabra",
+            "en": "Word"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "text",
+          "visible": true,
+          "filter": false
+        },
+        {
+          "key": "N",
+          "label": {
+            "es": "Evaluaciones",
+            "en": "Ratings"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Val",
+          "label": {
+            "es": "Valencia",
+            "en": "Valence"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9).",
+            "en": "Mean of SAM ratings (1–9 scale)."
+          },
+          "type": "number",
+          "visible": true,
+          "filter": true
+        },
+        {
+          "key": "SD_Val",
+          "label": {
+            "es": "DE Valencia",
+            "en": "SD Valence"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9).",
+            "en": "Standard deviation of SAM ratings (1–9 scale)."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Aro",
+          "label": {
+            "es": "Activación",
+            "en": "Arousal"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9).",
+            "en": "Mean of SAM ratings (1–9 scale)."
+          },
+          "type": "number",
+          "visible": true,
+          "filter": true
+        },
+        {
+          "key": "SD_Aro",
+          "label": {
+            "es": "DE Activación",
+            "en": "SD Arousal"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9).",
+            "en": "Standard deviation of SAM ratings (1–9 scale)."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Dom",
+          "label": {
+            "es": "Dominancia",
+            "en": "Dominance"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9).",
+            "en": "Mean of SAM ratings (1–9 scale)."
+          },
+          "type": "number",
+          "visible": true,
+          "filter": true
+        },
+        {
+          "key": "SD_Dom",
+          "label": {
+            "es": "DE Dominancia",
+            "en": "SD Dominance"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9).",
+            "en": "Standard deviation of SAM ratings (1–9 scale)."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "N_Female",
+          "label": {
+            "es": "Evaluaciones · mujeres",
+            "en": "Ratings · women"
+          },
+          "description": {
+            "es": "Número de evaluaciones del grupo indicado en el archivo.",
+            "en": "Number of ratings for the group identified in the source file."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "N_Male",
+          "label": {
+            "es": "Evaluaciones · hombres",
+            "en": "Ratings · men"
+          },
+          "description": {
+            "es": "Número de evaluaciones del grupo indicado en el archivo.",
+            "en": "Number of ratings for the group identified in the source file."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Val_Female",
+          "label": {
+            "es": "Valencia · mujeres",
+            "en": "Valence · women"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9) · mujeres.",
+            "en": "Mean of SAM ratings (1–9 scale) · women."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Val_Male",
+          "label": {
+            "es": "Valencia · hombres",
+            "en": "Valence · men"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9) · hombres.",
+            "en": "Mean of SAM ratings (1–9 scale) · men."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "SD_Val_Female",
+          "label": {
+            "es": "DE Valencia · mujeres",
+            "en": "SD Valence · women"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9) · mujeres.",
+            "en": "Standard deviation of SAM ratings (1–9 scale) · women."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "SD_Val_Male",
+          "label": {
+            "es": "DE Valencia · hombres",
+            "en": "SD Valence · men"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9) · hombres.",
+            "en": "Standard deviation of SAM ratings (1–9 scale) · men."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Aro_Female",
+          "label": {
+            "es": "Activación · mujeres",
+            "en": "Arousal · women"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9) · mujeres.",
+            "en": "Mean of SAM ratings (1–9 scale) · women."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Aro_Male",
+          "label": {
+            "es": "Activación · hombres",
+            "en": "Arousal · men"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9) · hombres.",
+            "en": "Mean of SAM ratings (1–9 scale) · men."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "SD_Aro_Female",
+          "label": {
+            "es": "DE Activación · mujeres",
+            "en": "SD Arousal · women"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9) · mujeres.",
+            "en": "Standard deviation of SAM ratings (1–9 scale) · women."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "SD_Aro_Male",
+          "label": {
+            "es": "DE Activación · hombres",
+            "en": "SD Arousal · men"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9) · hombres.",
+            "en": "Standard deviation of SAM ratings (1–9 scale) · men."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Dom_Female",
+          "label": {
+            "es": "Dominancia · mujeres",
+            "en": "Dominance · women"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9) · mujeres.",
+            "en": "Mean of SAM ratings (1–9 scale) · women."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "M_Dom_Male",
+          "label": {
+            "es": "Dominancia · hombres",
+            "en": "Dominance · men"
+          },
+          "description": {
+            "es": "Media de las evaluaciones SAM (escala 1–9) · hombres.",
+            "en": "Mean of SAM ratings (1–9 scale) · men."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "SD_Dom_Female",
+          "label": {
+            "es": "DE Dominancia · mujeres",
+            "en": "SD Dominance · women"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9) · mujeres.",
+            "en": "Standard deviation of SAM ratings (1–9 scale) · women."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "SD_Dom_Male",
+          "label": {
+            "es": "DE Dominancia · hombres",
+            "en": "SD Dominance · men"
+          },
+          "description": {
+            "es": "Desviación estándar de las evaluaciones SAM (escala 1–9) · hombres.",
+            "en": "Standard deviation of SAM ratings (1–9 scale) · men."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "Item",
+          "label": {
+            "es": "ID ANEW",
+            "en": "ANEW ID"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "English",
+          "label": {
+            "es": "Inglés",
+            "en": "English"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "text",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "Syllables_separation",
+          "label": {
+            "es": "Separación silábica",
+            "en": "Syllable separation"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "text",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "Syllables",
+          "label": {
+            "es": "Sílabas",
+            "en": "Syllables"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": true
+        },
+        {
+          "key": "Length",
+          "label": {
+            "es": "Longitud",
+            "en": "Length"
+          },
+          "description": {
+            "es": "Valor conservado del archivo original.",
+            "en": "Value retained from the source file."
+          },
+          "type": "number",
+          "visible": true,
+          "filter": true
+        },
+        {
+          "key": "Frequency",
+          "label": {
+            "es": "Frecuencia del archivo",
+            "en": "Source frequency"
+          },
+          "description": {
+            "es": "Frecuencia incluida en el CSV. La unidad y el corpus de esta columna no se especifican dentro del archivo; no se convierte a logaritmo ni a frecuencia por millón.",
+            "en": "Frequency included in the CSV. Its unit and corpus are not specified inside the file; no logarithmic or per-million conversion is applied."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": true
+        },
+        {
+          "key": "Categories",
+          "label": {
+            "es": "Código de categoría",
+            "en": "Category code"
+          },
+          "description": {
+            "es": "Código original 0–4. El CSV no incluye una correspondencia entre los códigos y sus categorías; se conservan sin reinterpretarlos.",
+            "en": "Original code 0–4. The CSV does not map codes to category names; codes are preserved without reinterpretation."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": false
+        }
+      ],
+      "notes": {
+        "es": "Las medias y desviaciones se conservan del CSV publicado. Las escalas afectivas SAM tienen nueve puntos. Los valores por grupo están disponibles en el diccionario y en la selección de columnas. La búsqueda puede ignorar tildes; siempre distingue la letra ñ.",
+        "en": "Means and standard deviations are retained from the published CSV. Affective SAM ratings use nine-point scales. Group-specific values are available in the dictionary and column selector. Search can ignore accents while keeping ñ distinct."
+      },
+      "bibtex": "@article{HuertaChavez2025ANEW,\n  author = {Huerta-Chávez, V. and Llamas-Alonso, L. A. and Angulo-Chavira, A. Q.},\n  title = {Mexican Spanish adaptation for the Affective Norms for English Words (ANEW)},\n  journal = {Behavior Research Methods},\n  year = {2025},\n  volume = {57},\n  pages = {169},\n  doi = {10.3758/s13428-025-02703-5}\n}",
+      "summary": {
+        "es": "Consulta normas de valencia, activación y dominancia para palabras en español de México. Busca estímulos, filtra sus propiedades y exporta tu selección.",
+        "en": "Browse valence, arousal and dominance norms for Mexican Spanish words. Find stimuli, filter their properties and export your selection."
+      }
+    },
+    {
+      "id": "cloze-mx",
+      "matchFile": "files/corpus_data_clean5.xlsx",
+      "shortTitle": {
+        "es": "Completamiento de oraciones",
+        "en": "Sentence completion norms"
+      },
+      "enabled": true,
+      "kind": "cloze",
+      "version": "Consulta 1",
+      "articleUrl": "https://doi.org/10.3758/s13428-023-02160-y",
+      "keyColumn": "Sentence",
+      "variables": [
+        {
+          "key": "ID",
+          "label": {
+            "es": "ID del contexto",
+            "en": "Context ID"
+          },
+          "description": {
+            "es": "Identificador original; se mantienen los saltos de numeración.",
+            "en": "Original context identifier; numbering gaps are preserved."
+          },
+          "type": "text",
+          "visible": true,
+          "filter": false
+        },
+        {
+          "key": "Sentence",
+          "label": {
+            "es": "Contexto",
+            "en": "Context"
+          },
+          "description": {
+            "es": "Contexto de oración en español conservado del archivo.",
+            "en": "Original Spanish sentence context."
+          },
+          "type": "text",
+          "visible": true,
+          "filter": false
+        },
+        {
+          "key": "English",
+          "label": {
+            "es": "Traducción inglesa",
+            "en": "English translation"
+          },
+          "description": {
+            "es": "Traducción proporcionada en la hoja Sentences.",
+            "en": "English translation from the Sentences worksheet."
+          },
+          "type": "text",
+          "visible": false,
+          "filter": false
+        },
+        {
+          "key": "N",
+          "label": {
+            "es": "Respuestas válidas",
+            "en": "Valid responses"
+          },
+          "description": {
+            "es": "Número de respuestas válidas de los participantes ID_selected alineadas por celda con ID_responses.",
+            "en": "Valid responses by ID_selected participants, aligned by cell with ID_responses."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": true
+        },
+        {
+          "key": "Top_completion",
+          "label": {
+            "es": "Respuesta más frecuente",
+            "en": "Top completion"
+          },
+          "description": {
+            "es": "Respuesta Unified más frecuente; en empates se elige una por orden lexicográfico y se conservan todas en el detalle.",
+            "en": "Most frequent Unified response; ties use exact lexical order and all alternatives remain in the detail view."
+          },
+          "type": "text",
+          "visible": true,
+          "filter": false
+        },
+        {
+          "key": "Cloze_max",
+          "label": {
+            "es": "Cierre máximo",
+            "en": "Maximum cloze"
+          },
+          "description": {
+            "es": "Mayor frecuencia de respuesta dividida entre N; rango 0–1.",
+            "en": "Largest response count divided by N; range 0–1."
+          },
+          "type": "number",
+          "visible": true,
+          "filter": true
+        },
+        {
+          "key": "Entropy_bits",
+          "label": {
+            "es": "Entropía (bits)",
+            "en": "Entropy (bits)"
+          },
+          "description": {
+            "es": "Valor derivado: −Σ p log₂(p) para los tipos de respuesta válidos del contexto.",
+            "en": "Derived value: −Σ p log₂(p) over valid observed response types."
+          },
+          "type": "number",
+          "visible": true,
+          "filter": true
+        },
+        {
+          "key": "Response_types",
+          "label": {
+            "es": "Respuestas diferentes",
+            "en": "Response types"
+          },
+          "description": {
+            "es": "Número de tipos de respuesta Unified observados en el contexto.",
+            "en": "Number of observed Unified response types."
+          },
+          "type": "number",
+          "visible": false,
+          "filter": true
+        }
+      ],
+      "preparedFile": "data/resources/cloze-mx.json.gz",
+      "preparedFor": "files/corpus_data_clean5.xlsx",
+      "notes": {
+        "es": "Las medidas de consulta se recalculan desde Unified usando solo los participantes de ID_selected. Cada respuesta se alinea con su participante mediante las coordenadas de ID_responses. Se excluyen NA, na, NaN y vacíos. N es el número de respuestas válidas de cada contexto, no el total de participantes. Las probabilidades se calculan como frecuencia/N, la entropía como −Σ p log₂(p) y la sorpresa de cada alternativa como −log₂(p), en bits y sin suavizado. No son columnas precomputadas del archivo publicado. Unified incorpora las unificaciones de género, número y sentidos descritas en Readme. Los contextos con el mismo texto mantienen sus IDs independientes.",
+        "en": "Browsing measures are recalculated from Unified using only participants in ID_selected. Responses and participant IDs are matched by cell coordinates in ID_responses. NA, na, NaN and empty responses are excluded. N is the valid-response count for each context, not the overall participant sample. Probabilities are count/N; entropy is −Σ p log₂(p); alternative surprisal is −log₂(p), in bits without smoothing. These are derived browsing values, not precomputed columns in the published workbook. Unified includes the gender, number and sense unifications described in Readme. Contexts sharing the same sentence retain their separate IDs."
+      },
+      "bibtex": "@article{AnguloChavira2023Completion,\n  author = {Angulo-Chavira, A. Q. and Castellón-Flores, A. M. and Ciria, A. and Arias-Trejo, N.},\n  title = {Sentence-final completion norms for 2925 Mexican Spanish sentence contexts},\n  journal = {Behavior Research Methods},\n  year = {2023},\n  volume = {56},\n  pages = {2486--2498},\n  doi = {10.3758/s13428-023-02160-y}\n}",
+      "summary": {
+        "es": "Explora contextos de oración y sus completamientos. Consulta probabilidades de cierre, entropía y respuestas alternativas para preparar tus estímulos.",
+        "en": "Explore sentence contexts and their completions. Inspect cloze probabilities, entropy and alternative responses to prepare your stimuli."
+      }
+    }
+  ],
+  "collaborationInfo": {
+    "title": {
+      "es": "Trabajar conmigo",
+      "en": "Work with me"
+    },
+    "intro": {
+      "es": "Si te interesa colaborar en investigación sobre cognición y neurociencias, escríbeme con tu nivel académico, tus intereses y la modalidad que buscas. Revisaremos la afinidad con los proyectos y las posibilidades de participación.",
+      "en": "If you are interested in cognition and neuroscience research, email me with your academic level, research interests and preferred participation type. We can discuss project fit and possible ways to contribute."
+    },
+    "socialService": {
+      "es": "Servicio social: consulta las posibilidades de participación y los requisitos institucionales aplicables.",
+      "en": "Social service: ask about opportunities and the applicable institutional requirements."
+    },
+    "thesis": {
+      "es": "Tesis: comparte tu nivel académico y una pregunta o tema de investigación que te interese.",
+      "en": "Thesis: share your academic level and a research question or topic of interest."
+    },
+    "volunteer": {
+      "es": "Voluntariado: cuéntame qué te gustaría aprender y qué experiencia o habilidades aportarías.",
+      "en": "Volunteering: tell me what you would like to learn and which skills or experience you would bring."
+    }
+  }
+}

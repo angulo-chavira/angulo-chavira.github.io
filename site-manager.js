@@ -13,6 +13,8 @@
   let baselineContent = null;
   let baselinePublications = null;
   let pendingUploads = [];
+  const preparedResources = new Map();
+  let resourceCatalog = { items: [] };
   let activeSection = "profile";
   let connectedUser = "";
 
@@ -42,7 +44,7 @@
       id: "projects", label: "Proyectos", objects: [
         { title: "Textos de la sección", path: ["pageCopy", "projects"], fields: [localized("eyebrow", "Etiqueta superior", "text"), localized("title", "Título", "text"), localized("intro", "Introducción"), localized("currentEyebrow", "Etiqueta de proyectos actuales", "text"), localized("currentTitle", "Título de proyectos actuales", "text"), localized("currentIntro", "Introducción de proyectos actuales"), localized("archiveTitle", "Título del archivo", "text"), localized("archiveIntro", "Introducción del archivo")] }
       ], collections: [
-        { title: "Proyectos en desarrollo", path: ["projectsCurrent"], fields: [F("id", "Identificador del enlace", "text"), localized("status", "Estado", "text"), localized("title", "Título", "text"), localized("description", "Descripción"), localized("topics", "Temas", "text"), F("link", "Enlace", "url")] },
+        { title: "Proyectos en desarrollo", path: ["projectsCurrent"], fields: [F("id", "Identificador del enlace", "text"), localized("status", "Estado", "text"), localized("title", "Título", "text"), localized("description", "Descripción"), localized("topics", "Temas", "text"), localized("question", "Pregunta de investigación"), localized("methods", "Enfoques y métodos"), localized("progress", "Avances"), localized("participants", "Equipo y colaboradores"), F("resourceIds", "Recursos relacionados (IDs separados por comas)", "tags"), F("publicationLinks", "Publicaciones relacionadas (URLs separadas por comas)", "tags"), F("link", "Enlace", "url")] },
         { title: "Otros proyectos y colaboraciones", path: ["projectsArchive"], fields: [F("year", "Año", "text"), F("category", "Grupo o institución", "text"), localized("text", "Descripción", "textarea"), F("link", "Enlace", "url"), F("attachment", "Archivo adjunto", "asset")] }
       ]
     },
@@ -72,7 +74,8 @@
     },
     {
       id: "group", label: "Estudiantes", objects: [
-        { title: "Textos de la sección", path: ["pageCopy", "group"], fields: [localized("title", "Título", "text"), localized("intro", "Introducción")] }
+        { title: "Textos de la sección", path: ["pageCopy", "group"], fields: [localized("title", "Título", "text"), localized("intro", "Introducción")] },
+        { title: "Trabajar conmigo", path: ["collaborationInfo"], fields: [localized("title", "Título", "text"), localized("intro", "Introducción"), localized("socialService", "Servicio social"), localized("thesis", "Tesis"), localized("volunteer", "Voluntariado")] }
       ], collections: [
         { title: "Estudiantes", path: ["groupMembers"], fields: [
           localized("name", "Nombre", "text"),
@@ -110,7 +113,7 @@
       id: "resources", label: "Recursos públicos", objects: [
         { title: "Textos de la sección", path: ["pageCopy", "resources"], fields: [localized("title", "Título", "text"), localized("citationLabel", "Etiqueta de cita", "text")] }
       ], collections: [
-        { title: "Bases de datos y materiales", path: ["publicResources"], fields: [localized("title", "Título", "text"), localized("description", "Descripción"), localized("citation", "Cita"), localized("button", "Texto del botón", "text"), F("file", "Archivo para descargar", "asset"), F("url", "Enlace externo", "url")] }
+        { title: "Bases de datos y materiales", path: ["publicResources"], fields: [localized("title", "Título", "text"), localized("description", "Descripción"), localized("citation", "Cita"), localized("button", "Texto del botón", "text"), F("file", "Archivo para descargar", "asset"), F("url", "Enlace externo", "url"), F("explorer", "Explorador de datos", "explorer")] }
       ]
     },
     {
@@ -175,6 +178,7 @@
   }
 
   function defaultValue(field) {
+    if (field.type === "explorer") return { id: "", enabled: false, kind: "csv", version: "Consulta 1", keyColumn: "", shortTitle: {es:"",en:""}, notes: {es:"",en:""}, variables: [] };
     if (field.type === "localized") return { es: "", en: "" };
     if (field.type === "checkbox") return false;
     if (field.type === "tags" || field.type === "multiselect") return [];
@@ -192,6 +196,12 @@
   function renderField(field, value, path, ownerId) {
     const pathAttr = stringifyPath(path);
     const rootName = path[0] === "items" ? "publications" : "content";
+    if (field.type === "explorer") {
+      const cfg = value || {};
+      const fields = [F("enabled", "Habilitar consulta interactiva", "checkbox"), F("id", "ID del recurso (sin espacios)"), F("kind", "Estructura del archivo", "select", { options: [{value:"anew",label:"ANEW (CSV)"},{value:"cloze",label:"Completamiento (Excel con Unified e IDs)"},{value:"csv",label:"Tabla general (CSV)"}] }), localized("shortTitle", "Nombre breve", "text"), localized("summary", "Presentación breve del explorador"), F("version", "Versión de consulta"), F("keyColumn", "Columna principal de búsqueda"), F("articleUrl", "Artículo relacionado (DOI o URL)", "url"), F("bibtex", "Referencia BibTeX", "textarea"), localized("notes", "Método y notas de uso"), localized("license", "Condiciones de uso")];
+      const variables = Array.isArray(cfg.variables) ? cfg.variables : [];
+      return `<details class="cms-explorer-settings"><summary>Explorador de datos · ${escapeHtml(cfg.id || "sin configurar")}</summary><p class="cms-section-note">Activa el explorador, elige la estructura y sube el CSV o Excel en “Archivo para descargar”. Puedes leer sus columnas antes del commit. Al guardar se prepara una copia ligera para la consulta.</p><div class="cms-field-grid">${fields.map(f => renderField(f, cfg[f.key], [...path, f.key], ownerId)).join("")}</div><button type="button" class="action-button secondary" data-inspect-resource="${escapeHtml(ownerId)}">Leer columnas y preparar consulta</button><details class="rx-more"><summary>Variables, etiquetas y filtros (${variables.length})</summary>${variables.map((v,i)=>`<details class="cms-variable-record"><summary>${escapeHtml(v.key)} · ${escapeHtml(v.label?.es || "")}</summary><div class="cms-field-grid">${[localized("label","Nombre visible","text"),localized("description","Definición"),F("type","Tipo","select",{options:[{value:"text",label:"Texto"},{value:"number",label:"Número"}]}),F("visible","Visible de inicio","checkbox"),F("filter","Usar como filtro numérico","checkbox")].map(f=>renderField(f,v[f.key],[...path,"variables",i,f.key],ownerId)).join("")}</div></details>`).join("")}</details></details>`;
+    }
     if (field.type === "localized") {
       const data = value && typeof value === "object" ? value : { es: "", en: "" };
       const control = (language) => {
@@ -214,7 +224,7 @@
       const accept = ".pdf,.csv,.xlsx,.docx,.pptx,.png,.jpg,.jpeg,.webp";
       return `<div class="cms-asset-field"><label>${escapeHtml(field.label)}<input type="text" data-root="${path[0] === "items" ? "publications" : "content"}" data-path="${pathAttr}" value="${escapeHtml(value || "")}" placeholder="Ruta en el sitio o enlace"></label><label class="cms-file-picker">Subir archivo<input type="file" accept="${accept}" data-upload-owner="${escapeHtml(ownerId)}" data-upload-field="${escapeHtml(field.key)}"></label>${queued ? `<span class="cms-upload-pending">Listo para subir: ${escapeHtml(queued.file.name)}</span>` : ""}</div>`;
     }
-    if (field.type === "tags") return `<label>${escapeHtml(field.label)}<input type="text" data-root="publications" data-path="${pathAttr}" data-value-type="tags" value="${escapeHtml(Array.isArray(value) ? value.join(", ") : "")}" placeholder="Separadas por comas"></label>`;
+    if (field.type === "tags") return `<label>${escapeHtml(field.label)}<input type="text" data-root="${rootName}" data-path="${pathAttr}" data-value-type="tags" value="${escapeHtml(Array.isArray(value) ? value.join(", ") : "")}" placeholder="Separadas por comas"></label>`;
     if (field.type === "textarea") return `<label>${escapeHtml(field.label)}<textarea data-root="${path[0] === "items" ? "publications" : "content"}" data-path="${pathAttr}" rows="4">${escapeHtml(value || "")}</textarea></label>`;
     const type = ["number", "url", "email"].includes(field.type) ? field.type : "text";
     return `<label>${escapeHtml(field.label)}<input type="${type}" data-root="${path[0] === "items" ? "publications" : "content"}" data-path="${pathAttr}" data-value-type="${type}" value="${escapeHtml(value ?? "")}"></label>`;
@@ -348,6 +358,29 @@
     setStatus(`Archivo listo: ${file.name}. Se subirá con el siguiente commit.`);
   }
 
+  function mergeResourceColumns(owner, prepared) {
+    const prior = new Map((owner.explorer.variables || []).map(v => [v.key, v]));
+    owner.explorer.variables = prepared.columns.map((key, index) => prior.get(key) || { key, label: { es: key, en: key }, description: { es: "Columna del archivo de origen.", en: "Source file column." }, type: prepared.rows.slice(0,100).some(r => ResourceData.number(r[key]) != null) ? "number" : "text", visible: index < 5, filter: false });
+    if (!prepared.columns.includes(owner.explorer.keyColumn)) owner.explorer.keyColumn = prepared.columns.includes("Word") ? "Word" : prepared.columns[0];
+  }
+
+  async function inspectResource(ownerId) {
+    const owner = findById(content, ownerId);
+    if (!owner?.explorer) throw new Error("Selecciona la estructura del explorador.");
+    const pending = pendingFor(ownerId, "file"), path = pending?.path || owner.file;
+    if (!path) throw new Error("Selecciona el CSV o Excel en Archivo para descargar.");
+    setStatus("Leyendo el archivo y preparando los datos de consulta…");
+    await new Promise(resolve => requestAnimationFrame(resolve));
+    const response = pending ? null : await fetch(path, { cache: "no-store" });
+    if (response && !response.ok) throw new Error("No se pudo leer el archivo de origen.");
+    const bytes = new Uint8Array(pending ? await pending.file.arrayBuffer() : await response.arrayBuffer());
+    const prepared = await ResourceData.prepare(bytes, path, owner.explorer.kind);
+    preparedResources.set(ownerId, { data: prepared, path, kind: owner.explorer.kind });
+    mergeResourceColumns(owner, prepared);
+    saveDraft(); renderPanel();
+    setStatus(`Consulta preparada: ${prepared.rows.length} registros, ${prepared.columns.length} columnas. Guarda con un commit para publicarla.`);
+  }
+
   function findOwnerAndSet(root, id, key, value) {
     const target = findById(root, id);
     if (!target) return false;
@@ -384,6 +417,34 @@
         files.push({ path: upload.path, content: arrayBufferToBase64(await upload.file.arrayBuffer()), encoding: "base64" });
       }
 
+      const resourceIds = new Set();
+      for (const owner of nextContent.publicResources || []) {
+        if (!owner.explorer?.enabled) continue;
+        const cfg = owner.explorer;
+        if (!/^[a-z0-9_-]{1,80}$/i.test(cfg.id || "")) throw new Error("El ID de cada explorador debe contener letras, números, guiones o guiones bajos.");
+        if (resourceIds.has(cfg.id)) throw new Error("El ID de explorador " + cfg.id + " está repetido. Usa un ID distinto para cada recurso.");
+        resourceIds.add(cfg.id);
+        owner.resourceId = cfg.id;
+        if (!owner.file) throw new Error("El recurso " + cfg.id + " necesita un archivo CSV o Excel.");
+        let cached = preparedResources.get(owner._cmsId);
+        const uploaded = pendingUploads.some(u => u.ownerId === owner._cmsId && u.fieldKey === "file");
+        const needsPreparation = uploaded || !cfg.variables?.length || (cfg.kind === "cloze" && cfg.preparedFor !== owner.file);
+        if ((!cached || cached.path !== owner.file || cached.kind !== cfg.kind) && needsPreparation) {
+          const upload = pendingFor(owner._cmsId, "file");
+          const response = upload ? null : await fetch(owner.file, { cache: "no-store" });
+          if (response && !response.ok) throw new Error("No se pudo leer el origen de " + cfg.id);
+          const bytes = new Uint8Array(upload ? await upload.file.arrayBuffer() : await response.arrayBuffer());
+          cached = { data: await ResourceData.prepare(bytes, owner.file, cfg.kind), path: owner.file, kind: cfg.kind };
+        }
+        if (cached && cached.path === owner.file && cached.kind === cfg.kind) {
+          mergeResourceColumns(owner, cached.data);
+          const path = `data/resources/${cfg.id}-${Date.now()}-${(cached.data.sourceSha256 || "data").slice(0,8)}.json.gz`;
+          const compressed = fflate.gzipSync(fflate.strToU8(JSON.stringify(cached.data)), { level: 6 });
+          files.push({ path, content: arrayBufferToBase64(compressed.buffer.slice(compressed.byteOffset, compressed.byteOffset + compressed.byteLength)), encoding: "base64" });
+          cfg.preparedFile = path; cfg.preparedFor = owner.file;
+        }
+      }
+
       const normalizedContent = cleanInternal(nextContent);
       const normalizedPublications = cleanInternal(nextPublications);
       const contentChanged = !same(normalizedContent, baselineContent);
@@ -399,6 +460,7 @@
       if (contentChanged) content.updated = today;
       if (publicationsChanged) publications.updated = today;
       pendingUploads = [];
+      preparedResources.clear();
       baselineContent = cleanInternal(content);
       baselinePublications = cleanInternal(publications);
       clearDraft();
@@ -450,12 +512,14 @@
   }
 
   async function loadData() {
-    const [contentResponse, publicationsResponse] = await Promise.all([
+    const [contentResponse, publicationsResponse, catalog] = await Promise.all([
       fetch("data/site-content.json", { cache: "no-store" }),
-      fetch("data/publications.json", { cache: "no-store" })
+      fetch("data/publications.json", { cache: "no-store" }),
+      fetch("data/resource-catalog.json", { cache: "no-store" }).then(r => r.ok ? r.json() : {items:[]}).catch(() => ({items:[]}))
     ]);
     if (!contentResponse.ok || !publicationsResponse.ok) throw new Error("No se pudieron cargar los datos publicados del sitio.");
     content = await contentResponse.json();
+    resourceCatalog = catalog;
     publications = await publicationsResponse.json();
     baselineContent = cleanInternal(content);
     baselinePublications = cleanInternal(publications);
@@ -510,6 +574,18 @@
         }
       }
     });
+    content.collaborationInfo ||= copy(resourceCatalog.collaborationInfo || {title:{es:"",en:""},intro:{es:"",en:""},socialService:{es:"",en:""},thesis:{es:"",en:""},volunteer:{es:"",en:""}});
+    (content.projectsCurrent || []).forEach(project => {
+      for (const key of ["question","methods","progress","participants"]) project[key] ||= {es:"",en:""};
+      project.resourceIds ||= []; project.publicationLinks ||= [];
+    });
+    (content.publicResources || []).forEach(resource => {
+      const base = (resourceCatalog.items || []).find(c => c.id === resource.resourceId || c.id === resource.explorer?.id || c.matchFile === resource.file);
+      resource.explorer = { ...(base ? copy(base) : { id:"",enabled:false,kind:"csv",version:"Consulta 1",variables:[] }), ...(resource.explorer || {}) };
+      for (const key of ["shortTitle","summary","notes","license"]) resource.explorer[key] ||= {es:"",en:""};
+      resource.explorer.variables ||= [];
+      if (resource.explorer.id) resource.resourceId ||= resource.explorer.id;
+    });
     addEditorIds();
   }
 
@@ -534,6 +610,8 @@
         else handleFieldInput(event);
       });
       $("cmsEditorPanel").addEventListener("click", (event) => {
+        const inspect = event.target.closest("[data-inspect-resource]");
+        if (inspect) inspectResource(inspect.dataset.inspectResource).catch(error => setStatus(error.message, true));
         const add = event.target.closest("[data-add]");
         const remove = event.target.closest("[data-remove]");
         const move = event.target.closest("[data-move]");
@@ -542,7 +620,7 @@
         if (remove) removeCollectionItem(JSON.parse(remove.dataset.remove), remove.dataset.root);
         if (move) moveCollectionItem(JSON.parse(move.dataset.path), move.dataset.root, move.dataset.move === "up" ? -1 : 1);
         if (reset && window.confirm("¿Descartar el borrador local y volver al contenido publicado?")) {
-          clearDraft(); pendingUploads = []; loadData().then(() => { renderPanel(); setStatus("Borrador descartado; se restauraron los datos publicados."); }).catch((error) => setStatus(error.message, true));
+          clearDraft(); pendingUploads = []; preparedResources.clear(); loadData().then(() => { renderPanel(); setStatus("Borrador descartado; se restauraron los datos publicados."); }).catch((error) => setStatus(error.message, true));
         }
       });
     } catch (error) {

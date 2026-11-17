@@ -61,6 +61,7 @@
   };
   const pathValue = (object, path) => String(path || "").split(".").reduce((value, key) => value?.[key], object);
   let content = null;
+  let resourceCatalog = { items: [] };
   let profilePhotoVariants = new Map();
   let profilePhotoResizeObserver = null;
   const observedProfilePhotos = new WeakSet();
@@ -262,7 +263,7 @@
     const projectGrid = document.getElementById("projectsCurrent");
     if (projectGrid) projectGrid.innerHTML = (content.projectsCurrent || []).map((item, index) => {
       const href = safeHref(item.link);
-      return `<article id="${escapeHtml(item.id || `proyecto-${index + 1}`)}" class="project-card" data-cursor-size="1.25"><span class="project-number">${String(index + 1).padStart(2, "0")}</span><p class="project-status">${escapeHtml(text(item.status))}</p><h3>${escapeHtml(text(item.title))}</h3><p>${escapeHtml(text(item.description))}</p><span class="project-topic">${escapeHtml(text(item.topics))}</span>${href ? `<p><a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels[lang()].link)} ↗</a></p>` : ""}</article>`;
+      return `<article id="${escapeHtml(item.id || `proyecto-${index + 1}`)}" class="project-card" data-cursor-size="1.25"><span class="project-number">${String(index + 1).padStart(2, "0")}</span><p class="project-status">${escapeHtml(text(item.status))}</p><h3>${escapeHtml(text(item.title))}</h3><p>${escapeHtml(text(item.description))}</p><span class="project-topic">${escapeHtml(text(item.topics))}</span>${href ? `<p><a href="${escapeHtml(href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(labels[lang()].link)} ↗</a></p>` : ""}<details class="project-more"><summary>${lang() === "es" ? "Ficha y colaboración" : "Project details and collaboration"}</summary><dl><dt>${lang() === "es" ? "Estado" : "Status"}</dt><dd>${escapeHtml(text(item.status))}</dd>${text(item.question) ? `<dt>${lang() === "es" ? "Pregunta de investigación" : "Research question"}</dt><dd>${escapeHtml(text(item.question))}</dd>` : ""}<dt>${lang() === "es" ? "Enfoques y métodos" : "Approaches and methods"}</dt><dd>${escapeHtml((text(item.methods) || text(item.topics)))}</dd>${text(item.progress) ? `<dt>${lang() === "es" ? "Avances" : "Progress"}</dt><dd>${escapeHtml(text(item.progress))}</dd>` : ""}${text(item.participants) ? `<dt>${lang() === "es" ? "Equipo y colaboradores" : "Team and collaborators"}</dt><dd>${escapeHtml(text(item.participants))}</dd>` : ""}</dl><div class="resource-hub-actions">${(item.resourceIds || []).map(id => `<a href="resource.html?id=${encodeURIComponent(id)}">${lang() === "es" ? "Recurso" : "Resource"}: ${escapeHtml(id)} ↗</a>`).join("")}${(item.publicationLinks || []).map(safeHref).filter(Boolean).map(link => `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${lang() === "es" ? "Publicación relacionada" : "Related publication"} ↗</a>`).join("")}<a href="mailto:${escapeHtml(content.profile?.email || "")}?subject=${encodeURIComponent(text(item.title))}">${lang() === "es" ? "Contactar sobre este proyecto" : "Contact about this project"} ↗</a></div></details></article>`;
     }).join("") || `<div class="empty-state">${escapeHtml(labels[lang()].empty)}</div>`;
     const details = document.getElementById("projectsArchive");
     if (details) {
@@ -285,12 +286,18 @@
 
     const resourceList = document.getElementById("publicResourcesList");
     if (resourceList) resourceList.innerHTML = (content.publicResources || []).map((item) => {
-      const file = safeHref(item.file), url = safeHref(item.url);
-      const buttonText = escapeHtml(text(item.button) || (file ? labels[lang()].download : labels[lang()].link));
-      const href = file || url;
-      const action = href ? `<a href="${escapeHtml(href)}" ${file ? "download" : "target=\"_blank\" rel=\"noopener noreferrer\""} class="download-btn">${buttonText}</a>` : "";
-      return `<article class="resource-card" data-cursor-size="1.2"><h4 class="resource-title">${escapeHtml(text(item.title))}</h4><p>${escapeHtml(text(item.description))}</p>${text(item.citation) ? `<div class="citation-box"><strong>${escapeHtml(content.pageCopy?.resources?.citationLabel?.[lang()] || labels[lang()].cite)}</strong><br>${escapeHtml(text(item.citation))}</div>` : ""}${action}</article>`;
+      const base = (resourceCatalog.items || []).find(c => c.id === item.resourceId || c.id === item.explorer?.id || c.matchFile === item.file);
+      const explorer = { ...(base || {}), ...(item.explorer || {}) };
+      const id = explorer.id || item.resourceId;
+      const browse = explorer.enabled && /^[a-z0-9_-]+$/i.test(id || "") ? `resource.html?id=${encodeURIComponent(id)}` : "";
+      const file = safeHref(item.file), external = safeHref(item.url), article = safeHref(explorer.articleUrl);
+      return `<article class="resource-hub-card" data-cursor-size="1.2"><p class="eyebrow">${lang() === "es" ? "BASE DE DATOS Y MATERIALES" : "DATASET AND MATERIALS"}</p><h4>${escapeHtml((text(explorer.shortTitle) || text(item.title)))}</h4><p>${escapeHtml(text(explorer.summary) || text(item.description))}</p><div class="resource-hub-actions">${browse ? `<a class="action-button" href="${browse}">${lang() === "es" ? "Consultar base" : "Browse dataset"} ↗</a>` : ""}${file ? `<a href="${escapeHtml(file)}" download>${lang() === "es" ? "Archivo original" : "Original file"} ↧</a>` : ""}${article ? `<a href="${escapeHtml(article)}" target="_blank" rel="noopener noreferrer">${lang() === "es" ? "Artículo" : "Article"} ↗</a>` : external ? `<a href="${escapeHtml(external)}" target="_blank" rel="noopener noreferrer">${lang() === "es" ? "Abrir recurso" : "Open resource"} ↗</a>` : ""}${browse ? `<a href="${browse}#citation" data-resource-cite="${encodeURIComponent(id)}">${lang() === "es" ? "Cómo citar" : "How to cite"}</a>` : ""}</div><details class="rx-more"><summary>${lang() === "es" ? "Referencia bibliográfica" : "Citation"}</summary><p>${escapeHtml(text(item.citation))}</p></details></article>`;
     }).join("") || `<div class="empty-state">${escapeHtml(labels[lang()].empty)}</div>`;
+    const collaboration = document.getElementById("studentCollaboration");
+    if (collaboration) {
+      const info = content.collaborationInfo || resourceCatalog.collaborationInfo;
+      collaboration.innerHTML = info ? `<section class="student-collaboration"><h3>${escapeHtml(text(info.title))}</h3><p>${escapeHtml(text(info.intro))}</p><ul>${[info.socialService, info.thesis, info.volunteer].filter(Boolean).map(value => `<li>${escapeHtml(text(value))}</li>`).join("")}</ul><a class="action-button" href="mailto:${escapeHtml(content.profile?.email || "")}?subject=${encodeURIComponent(lang() === "es" ? "Interés en colaborar en investigación" : "Research collaboration enquiry")}">${lang() === "es" ? "Consultar posibilidades de colaboración" : "Ask about collaboration opportunities"} ↗</a></section>` : "";
+    }
 
     const blogList = document.getElementById("blogPostsList");
     if (blogList) blogList.innerHTML = (content.blogPosts || []).map((item) => {
@@ -307,13 +314,15 @@
 
   document.addEventListener("DOMContentLoaded", async () => {
     try {
-      const [response, variants] = await Promise.all([
+      const [response, variants, catalog] = await Promise.all([
         fetch("data/site-content.json", { cache: "no-store" }),
-        loadProfilePhotoVariants()
+        loadProfilePhotoVariants(),
+        fetch("data/resource-catalog.json", { cache: "no-store" }).then(r => r.ok ? r.json() : { items: [] }).catch(() => ({ items: [] }))
       ]);
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       content = await response.json();
       profilePhotoVariants = variants;
+      resourceCatalog = catalog;
       renderContent();
       document.addEventListener("site:language", renderContent);
       window.addEventListener("site:components-loaded", renderProfile);
