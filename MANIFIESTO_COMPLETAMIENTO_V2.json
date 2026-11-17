@@ -1,0 +1,53 @@
+{
+  "update": "completamiento-v2",
+  "date": "2026-11-17",
+  "requires": "actualizacion-recursos-v1 installed",
+  "files": [
+    {
+      "path": "resource.html",
+      "sha256": "42bb5fac1283f091ca568d2d48db38677e4d7fb1c9decf0d00fc892583c9cca1",
+      "bytes": 1206,
+      "change": "modified",
+      "baseline_sha256": "71fa5bef15fff4fc217f60639b18b6c68613906f261fa145796c4964cbb84eea"
+    },
+    {
+      "path": "resource-explorer.js",
+      "sha256": "8cda9128662b96bb436f22799bf2f74be1c7c78c70997b43f787529ca765094b",
+      "bytes": 38047,
+      "change": "modified",
+      "baseline_sha256": "20e90ea4d522c1f71fd1281b77f51868f9f16ae107a2735a7274da4513291b3d"
+    },
+    {
+      "path": "resource-explorer.css",
+      "sha256": "c4b8e71e67cf9d8a7225a6f17e3222b643c894cc09d69416f120db1b644e3cbf",
+      "bytes": 12304,
+      "change": "modified",
+      "baseline_sha256": "63bf79d3110a9275e95049c2583c9c96079a003130d3bffe1771d094ca560a61"
+    },
+    {
+      "path": "cloze-workbench.js",
+      "sha256": "4bc7d8f9ffe12c18f927f556ba0b3561d6651f390c5f33a3a71e65884354acae",
+      "bytes": 33033,
+      "change": "new"
+    },
+    {
+      "path": "LEEME_COMPLETAMIENTO_V2.md",
+      "sha256": "27169a807ae98f152715535945de0efd20974554bcc1153f54477f55f394e393",
+      "bytes": 5816,
+      "change": "instructions"
+    },
+    {
+      "path": "VALIDACION_COMPLETAMIENTO_V2.md",
+      "sha256": "d138a42ada5e61d6c2e38d095c747b8a1e38b27a81f906d1fc1ca1432bf393a2",
+      "bytes": 3062,
+      "change": "instructions"
+    }
+  ],
+  "unchanged": [
+    "data/site-content.json",
+    "data/publications.json",
+    "data/resources/cloze-mx.json.gz",
+    "style.css",
+    "main.js"
+  ]
+}
